@@ -1,32 +1,388 @@
-<!doctype html>
+<!DOCTYPE html>
 <html class="no-js" lang="">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>D's shoe store</title>
+    <link rel="stylesheet" href="assets/css/style.css" />
+    <link rel="icon" type="image/jpeg" href="logo shoe stor.jpeg" />
+    <meta name="description" content="" />
 
-<head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title></title>
-  <link rel="stylesheet" href="assets/css/style.css">
-  <meta name="description" content="">
+    <meta property="og:title" content="" />
+    <meta property="og:type" content="" />
+    <meta property="og:url" content="" />
+    <meta property="og:image" content="" />
+    <meta property="og:image:alt" content="" />
 
-  <meta property="og:title" content="">
-  <meta property="og:type" content="">
-  <meta property="og:url" content="">
-  <meta property="og:image" content="">
-  <meta property="og:image:alt" content="">
+    <link rel="icon" href="/favicon.ico" sizes="any" />
+    <link rel="icon" href="/icon.svg" type="image/svg+xml" />
+    <link rel="apple-touch-icon" href="icon.png" />
 
-  <link rel="icon" href="/favicon.ico" sizes="any">
-  <link rel="icon" href="/icon.svg" type="image/svg+xml">
-  <link rel="apple-touch-icon" href="icon.png">
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Darumadrop+One&display=swap"
+      rel="stylesheet"
+    />
 
-  <meta name="theme-color" content="#fafafa">
-</head>
+    <meta name="theme-color" content="#fafafa" />
+  </head>
+  <head>
+    <style>
+      body {
+        font-family: "Darumadrop One", serif;
+        background-color: #f0f0f0;
+        color: #000000;
+        text-align: center;
+      }
 
-<body>
+      header {
+        display: flex;
+        justify-content: space-between;
+        background-image: url("witttt.jpg");
+        background-size: 100%;
+        padding: 20px;
+      }
 
-  <!-- Add your site or application content here -->
-  <p>Hello world! This is HTML5 Boilerplate.</p>
+      header img {
+        /* logo */
+        width: 200px;
+      }
+      nav {
+        margin: 15px 0;
+      }
+      nav a {
+        font-size: 20px;
+        margin: 0 15px;
+        color: #000000;
+        text-decoration: none;
+      }
+      nav a:hover {
+        text-decoration: underline;
+      }
+      section {
+        margin: 20px;
+      }
+      .shoe-container {
+        display: flex;
+        gap: 50px;
+        flex-wrap: wrap;
+        flex-direction: row;
+        /* justify-items: center,right; */
+      }
+      .shoe {
+        border: 1px solid #575656;
+        padding: 20px;
+        background-color: #f1f0f1;
+        width: 90%;
+        max-width: 300px;
+      }
+      img {
+        width: 100%;
+        border: 2px solid #444;
+      }
+      .info {
+        color: #1a1a1a;
+        text-align: left;
+        margin: 10px auto;
+      }
+      footer {
+        background-color: #d6d6d6;
+        padding: 10px;
+        margin-top: 20px;
+      }
+      #main {
+        display: flex;
+        flex-direction: row;
+      }
+      #filter {
+        width: 400px;
+        background-color: #e0e0e0;
+        padding: 20px;
+      }
+      #filter-text {
+        background-color: #e0e0e0;
+        font-size: 40px;
+      }
+      #talen {
+        width: 20%;
+        height: 20%;
+        display: flex;
+      }
+    </style>
+  </head>
+  <body>
+    <header>
+      <div class="language-selector">
+        <label for="language">Language: </label>
+        <select id="language" onchange="changeLanguage()">
+          <option value="de">Deutsch</option>
+          <option value="nl">Nederlands</option>
+        </select>
+      </div>
+      <div>
+        <p>Free shipping on orders over $300</p>
+        <img src="logo shoe stor.jpeg" alt="Shoe store" />
+        <h1>~D's Shoe store~</h1>
+        <p>Exclusive sneakers</p>
+      </div>
+      <div id="zoekbalk">
+        Search:
+        <input type="text" id="search" placeholder="Search..." />
+      </div>
+    </header>
+
+    <nav>
+      <a href="#shoes">Shoes</a>
+      <a href="#clothes">Clothing</a>
+      <a href="#accessoires">Accessoires</a>
+    </nav>
+
+    <div id="main">
+      <section id="filter">
+        <div id="filter-text"><p>Filters</p></div>
+      </section>
+
+      <section id="Shoes">
+        <h2>All of our shoes!!</h2>
+        <div class="shoe-container">
+          <div class="shoe">
+            <h3>Asics gel nyc cream beige pink</h3>
+            <img
+              src="pink gel nyc pink.webp"
+              alt="Asics gel nyc cream mineral beige pink"
+            />
+            <p>Price: -$239,99-</p>
+            <div class="info">
+              <p><strong>Brand name:</strong> Asics</p>
+              <p><strong>Sizes Available:</strong> 36 - 38 - 42 - 43 - 45</p>
+            </div>
+          </div>
+
+          <div class="shoe">
+            <h3>Asics gel nyc cream kale</h3>
+            <img src="cream kale nyc.webp" alt="Asics gel nyc cream kale" />
+            <p>Price: -$979,99-</p>
+            <div class="info">
+              <p><strong>Brand name:</strong> Asics</p>
+              <p>
+                <strong>Sizes Available:</strong> 36 - 38 - 41 - 42 - 43 - 44
+              </p>
+            </div>
+          </div>
+          <div class="shoe">
+            <h3>Asics gel nyc panelled</h3>
+            <img src="pannelled.webp" alt="Asics gel nyc panelled" />
+            <p>Price: -$319,99-</p>
+            <div class="info">
+              <p><strong>Brand name:</strong> Asics</p>
+              <p><strong>Sizes Available:</strong> 39 - 40 - 44</p>
+            </div>
+          </div>
+
+          <div class="shoe">
+            <h3>Asics gel-NYC smoke grey</h3>
+            <img src="smoke grey.webp" alt="Asics gel-NYC smoke grey" />
+            <p>Price: -$279,99-</p>
+            <div class="info">
+              <p><strong>Brand name:</strong> Asics</p>
+              <p>
+                <strong>Sizes Available:</strong> 34 - 38 - 39 - 40 - 42 - 44
+              </p>
+            </div>
+          </div>
+
+          <div class="shoe">
+            <h3>x Gnarhunters SB Dunk Low sneakers</h3>
+            <img
+              src="gnarhunters.webp"
+              alt="x Gnarhunters SB Dunk Low sneakers"
+            />
+            <p>Price: -$699,99-</p>
+            <div class="info">
+              <p><strong>Brand name:</strong> Nike</p>
+              <p><strong>Sizes Available:</strong> 40 - 44 - 47</p>
+            </div>
+          </div>
+
+          <div class="shoe">
+            <h3>x Grateful Dead SB Dunk Low "Orange"</h3>
+            <img
+              src="grateful dreads.webp"
+              alt="x Grateful Dead SB Dunk Low Orange"
+            />
+            <p>Price: -$9829,99-</p>
+            <div class="info">
+              <p><strong>Brand name:</strong> Nike</p>
+              <p><strong>Sizes Available:</strong> 42 - 46</p>
+            </div>
+          </div>
+
+          <div class="shoe">
+            <h3>SB Dunk Low "Mummy" sneakers</h3>
+            <img src="mummy dunks.webp" alt="SB Dunk Low Mummy sneakers" />
+            <p>Price: -$779,99-</p>
+            <div class="info">
+              <p><strong>Brand name:</strong> Nike</p>
+              <p><strong>Sizes Available:</strong> 36 - 40 - 47</p>
+            </div>
+          </div>
+
+          <div class="shoe">
+            <h3>Air Jordan 4 Retro "Taupe Haze"</h3>
+            <img src="taupe haze.webp" alt="Air Jordan 4 Retro Taupe Haze" />
+            <p>Price: -$728,99-</p>
+            <div class="info">
+              <p><strong>Brand name:</strong> Nike Air Jordan</p>
+              <p><strong>Sizes Available:</strong> 44 - 45 - 48 - 49</p>
+            </div>
+          </div>
+
+          <div class="shoe">
+            <h3>Air Jordan 4 Retro SP "Union Off Noir"</h3>
+            <img src="unions.webp" alt="Air Jordan 4 Retro SP Union Off Noir" />
+            <p>Price: -$1375,99-</p>
+            <div class="info">
+              <p><strong>Brand name:</strong> Nike Air Jordan</p>
+              <p><strong>Sizes Available:</strong> 39 - 40 - 41 - 44 - 46</p>
+            </div>
+          </div>
+
+          <div class="shoe">
+            <h3>x Travis Scott Air Jordan 1 Low Golf</h3>
+            <img
+              src="travis golfs.webp"
+              alt="x Travis Scott Air Jordan 1 Low Golf"
+            />
+            <p>Price: -$1129.99-</p>
+            <div class="info">
+              <p><strong>Brand name:</strong> Nike Air Jordan</p>
+              <p><strong>Sizes Available:</strong> 44 - 45 - 49</p>
+            </div>
+          </div>
+
+          <div class="shoe">
+            <h3>Air Jordan 4 Retro Black Cat 2020</h3>
+            <img
+              src="black cats.webp"
+              alt="Air Jordan 4 Retro Black Cat 2020"
+            />
+            <p>Price: -$2149,99-</p>
+            <div class="info">
+              <p><strong>Brand name:</strong> Nike Air Jordan</p>
+              <p><strong>Sizes Available:</strong> 36 - 38 - 39 - 41 - 45</p>
+            </div>
+          </div>
+
+          <div class="shoe">
+            <h3>Air Jordan 4 Retro "Motorsports"</h3>
+            <img src="motorsports.webp" alt="Air Jordan 4 Retro Motorsports" />
+            <p>Price: -$959,99-</p>
+            <div class="info">
+              <p><strong>Brand name:</strong> Nike Air Jordan</p>
+              <p><strong>Sizes Available:</strong> 34 - 35 - 40 - 44</p>
+            </div>
+          </div>
+          <div class="shoe">
+            <h3>x Air Jordan 1 High OG "Dusted Clay"</h3>
+            <img
+              src="dusted clay.webp"
+              alt="Air Jordan 1 High OG Dusted Clay"
+            />
+            <p>Price: -$289,99-</p>
+            <div class="info">
+              <p><strong>Brand name:</strong> Nike</p>
+              <p><strong>Sizes Available:</strong> 40 - 41 - 50</p>
+            </div>
+          </div>
+
+          <div class="shoe">
+            <h3>Air Jordan 1 Retro High OG "Chicago"</h3>
+            <img src="chicago.webp" alt="Air Jordan 1 Retro High OG Chicago" />
+            <p>Price: -$2129,99-</p>
+            <div class="info">
+              <p><strong>Brand name:</strong> Nike Air Jordan</p>
+              <p><strong>Sizes Available:</strong> 43 - 46 - 49</p>
+            </div>
+          </div>
+
+          <div class="shoe">
+            <h3>Air Jordan 4 Retro "Pure Money"</h3>
+            <img src="pure moneys.webp" alt="Air Jordan 4 Retro Pure Money" />
+            <p>Price: -$2878,99-</p>
+            <div class="info">
+              <p><strong>Brand name:</strong> Nike Air Jordan</p>
+              <p><strong>Sizes Available:</strong> 36 - 46 - 47 - 49</p>
+            </div>
+          </div>
+
+          <div class="shoe">
+            <h3>Air Jordan 4 Retro Levis NRG white denim</h3>
+            <img src="levi.webp" alt="Air Jordan 4 Retro Levis NRG white denim" />
+            <p>Price: -$1868,99-</p>
+            <div class="info">
+              <p><strong>Brand name:</strong> Nike Air Jordan</p>
+              <p><strong>Sizes Available:</strong> 44 - 45 - 48 - 49</p>
+            </div>
+          </div>
+          <div class="shoe">
+            <h3>x Gnarhunters SB Dunk Low sneakers</h3>
+            <img
+              src="gnarhunters.webp"
+              alt="x Gnarhunters SB Dunk Low sneakers"
+            />
+            <p>Price: -$699,99-</p>
+            <div class="info">
+              <p><strong>Brand name:</strong> Nike</p>
+              <p><strong>Sizes Available:</strong> 40 - 44 - 47</p>
+            </div>
+          </div>
+
+          <div class="shoe">
+            <h3>x Grateful Dead SB Dunk Low "Orange"</h3>
+            <img
+              src="grateful dreads.webp"
+              alt="x Grateful Dead SB Dunk Low Orange"
+            />
+            <p>Price: -$9829,99-</p>
+            <div class="info">
+              <p><strong>Brand name:</strong> Nike</p>
+              <p><strong>Sizes Available:</strong> 42 - 46</p>
+            </div>
+          </div>
+
+          <div class="shoe">
+            <h3>SB Dunk Low "Mummy" sneakers</h3>
+            <img src="mummy dunks.webp" alt="SB Dunk Low Mummy sneakers" />
+            <p>Price: -$779,99-</p>
+            <div class="info">
+              <p><strong>Brand name:</strong> Nike</p>
+              <p><strong>Sizes Available:</strong> 36 - 40 - 47</p>
+            </div>
+          </div>
+
+          <div class="shoe">
+            <h3>Air Jordan 4 Retro "Taupe Haze"</h3>
+            <img src="taupe haze.webp" alt="Air Jordan 4 Retro Taupe Haze" />
+            <p>Price: -$728,99-</p>
+            <div class="info">
+              <p><strong>Brand name:</strong> Nike Air Jordan</p>
+              <p><strong>Sizes Available:</strong> 44 - 45 - 48 - 49</p>
+            </div>
+          </div>
+        </div>
+      </section>
+    </div>
+    <footer>
+      <p>&copy; 2024 shoe store| Exclusive sneakers</p>
+    </footer>
+  </body>
+  <script>
+    function changeLanguage() {
+      let lang = document.getElementById("language").value;
+      "Language changed to: " + (lang === "de" ? "Deutsch" : "Nederlands");
+    }
+  </script>
+
   <script src="assets/js/app.js"></script>
-
-</body>
-
 </html>
