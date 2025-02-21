@@ -29,10 +29,6 @@
   </head>
   <head>
     <style>
-        img {
-        width: 100%;
-        border: 2px solid #444;
-      }
       body {
         font-family: "Darumadrop One", serif;
         background-color: #f0f0f0;
@@ -40,7 +36,30 @@
         text-align: center;
       }
 
+      header {
+        display: flex;
+        flex-direction: column;
+        background-image: url("witttt.jpg");
+        background-size: 100%;
+        padding: 10px;
+      }
+
+      header #balk1 {
+        top: 0;
+        position: sticky;
+        width: 100%;
+        display: flex;
+        background-color: rgb(230, 230, 230);
+      }
+
+      header img {
+        /* logo */
+        width: 200px;
+      }
       nav {
+        background-color: #e3e3e3;
+        position: sticky;
+        top: 0;
         margin: 15px 0;
       }
       nav a {
@@ -69,8 +88,12 @@
         width: 90%;
         max-width: 300px;
       }
-
+      img {
+        width: 100%;
+        border: 2px solid #444;
+      }
       .info {
+        font-size: large;
         color: #1a1a1a;
         text-align: left;
         margin: 10px auto;
@@ -88,7 +111,6 @@
         width: 400px;
         background-color: #e0e0e0;
         padding: 20px;
-        flex-direction: column-reverse;
       }
       #filter-text {
         background-color: #e0e0e0;
@@ -114,16 +136,17 @@
         margin-left: 50px;
       }
       #inloggen {
-        color: #000000;
         display: flex;
         margin-left: 20px;
         margin-right: auto;
       }
       #Register {
-        color: #000000;
         display: flex;
         margin-left: auto;
         margin-right: 30px;
+      }
+      .prijs {
+        font-size: 20px;
       }
     </style>
   </head>
@@ -133,7 +156,7 @@
         <div class="language-selector">
           <label for="language">Language: </label>
           <select id="language" onchange="changeLanguage()">
-            <option value="de">Deutch</option>
+            <option value="de">Deutsch</option>
             <option value="nl">Nederlands</option>
           </select>
         </div>
@@ -178,7 +201,7 @@
               src="assets/img/pink gel nyc pink.webp"
               alt="Asics gel nyc cream mineral beige pink"
             />
-            <p>Price: -$239,99-</p>
+            <p class="prijs">Price: -$239,99-</p>
             <div class="info">
               <p><strong>Brand name:</strong> Asics</p>
               <p><strong>Sizes Available:</strong> 36 - 38 - 42 - 43 - 45</p>
@@ -191,7 +214,7 @@
               src="assets/img/cream kale nyc.webp"
               alt="Asics gel nyc cream kale"
             />
-            <p>Price: -$979,99-</p>
+            <p class="prijs">Price: -$979,99-</p>
             <div class="info">
               <p><strong>Brand name:</strong> Asics</p>
               <p>
@@ -202,7 +225,7 @@
           <div class="shoe">
             <h3>Asics gel nyc panelled</h3>
             <img src="assets/img/pannelled.webp" alt="Asics gel nyc panelled" />
-            <p>Price: -$319,99-</p>
+            <p class="prijs">Price: -$319,99-</p>
             <div class="info">
               <p><strong>Brand name:</strong> Asics</p>
               <p><strong>Sizes Available:</strong> 39 - 40 - 44</p>
@@ -215,9 +238,9 @@
               src="assets/img/smoke grey.webp"
               alt="Asics gel-NYC smoke grey"
             />
-            <p>Price: -$279,99-</p>
+            <p class="prijs">Price: -$279,99-</p>
             <div class="info">
-              <p><strong>Brand name:</strong> Asics</p>
+              <p class="prijs"><strong>Brand name:</strong> Asics</p>
               <p>
                 <strong>Sizes Available:</strong> 34 - 38 - 39 - 40 - 42 - 44
               </p>
@@ -230,7 +253,7 @@
               src="assets/img/gnarhunters.webp"
               alt="x Gnarhunters SB Dunk Low sneakers"
             />
-            <p>Price: -$699,99-</p>
+            <p class="prijs">Price: -$699,99-</p>
             <div class="info">
               <p><strong>Brand name:</strong> Nike</p>
               <p><strong>Sizes Available:</strong> 40 - 44 - 47</p>
@@ -243,7 +266,7 @@
               src="assets/img/grateful dreads.webp"
               alt="x Grateful Dead SB Dunk Low Orange"
             />
-            <p>Price: -$9829,99-</p>
+            <p class="prijs">Price: -$9829,99-</p>
             <div class="info">
               <p><strong>Brand name:</strong> Nike</p>
               <p><strong>Sizes Available:</strong> 42 - 46</p>
@@ -256,7 +279,7 @@
               src="assets/img/mummy dunks.webp"
               alt="SB Dunk Low Mummy sneakers"
             />
-            <p>Price: -$779,99-</p>
+            <p class="prijs">Price: -$779,99-</p>
             <div class="info">
               <p><strong>Brand name:</strong> Nike</p>
               <p><strong>Sizes Available:</strong> 36 - 40 - 47</p>
@@ -269,7 +292,7 @@
               src="assets/img/taupe haze.webp"
               alt="Air Jordan 4 Retro Taupe Haze"
             />
-            <p>Price: -$728,99-</p>
+            <p class="prijs">Price: -$728,99-</p>
             <div class="info">
               <p><strong>Brand name:</strong> Nike Air Jordan</p>
               <p><strong>Sizes Available:</strong> 44 - 45 - 48 - 49</p>
@@ -282,7 +305,7 @@
               src="assets/img/unions.webp"
               alt="Air Jordan 4 Retro SP Union Off Noir"
             />
-            <p>Price: -$1375,99-</p>
+            <p class="prijs">Price: -$1375,99-</p>
             <div class="info">
               <p><strong>Brand name:</strong> Nike Air Jordan</p>
               <p><strong>Sizes Available:</strong> 39 - 40 - 41 - 44 - 46</p>
@@ -295,7 +318,7 @@
               src="assets/img/travis golfs.webp"
               alt="x Travis Scott Air Jordan 1 Low Golf"
             />
-            <p>Price: -$1129.99-</p>
+            <p class="prijs">Price: -$1129.99-</p>
             <div class="info">
               <p><strong>Brand name:</strong> Nike Air Jordan</p>
               <p><strong>Sizes Available:</strong> 44 - 45 - 49</p>
@@ -308,7 +331,7 @@
               src="assets/img/black cats.webp"
               alt="Air Jordan 4 Retro Black Cat 2020"
             />
-            <p>Price: -$2149,99-</p>
+            <p class="prijs">Price: -$2149,99-</p>
             <div class="info">
               <p><strong>Brand name:</strong> Nike Air Jordan</p>
               <p><strong>Sizes Available:</strong> 36 - 38 - 39 - 41 - 45</p>
@@ -321,7 +344,7 @@
               src="assets/img/motorsports.webp"
               alt="Air Jordan 4 Retro Motorsports"
             />
-            <p>Price: -$959,99-</p>
+            <p class="prijs">Price: -$959,99-</p>
             <div class="info">
               <p><strong>Brand name:</strong> Nike Air Jordan</p>
               <p><strong>Sizes Available:</strong> 34 - 35 - 40 - 44</p>
@@ -333,7 +356,7 @@
               src="assets/img/dusted clay.webp"
               alt="Air Jordan 1 High OG Dusted Clay"
             />
-            <p>Price: -$289,99-</p>
+            <p class="prijs">Price: -$289,99-</p>
             <div class="info">
               <p><strong>Brand name:</strong> Nike</p>
               <p><strong>Sizes Available:</strong> 40 - 41 - 50</p>
@@ -346,7 +369,7 @@
               src="assets/img/chicago.webp"
               alt="Air Jordan 1 Retro High OG Chicago"
             />
-            <p>Price: -$2129,99-</p>
+            <p class="prijs">Price: -$2129,99-</p>
             <div class="info">
               <p><strong>Brand name:</strong> Nike Air Jordan</p>
               <p><strong>Sizes Available:</strong> 43 - 46 - 49</p>
@@ -359,7 +382,7 @@
               src="assets/img/pure moneys.webp"
               alt="Air Jordan 4 Retro Pure Money"
             />
-            <p>Price: -$2878,99-</p>
+            <p class="prijs">Price: -$2878,99-</p>
             <div class="info">
               <p><strong>Brand name:</strong> Nike Air Jordan</p>
               <p><strong>Sizes Available:</strong> 36 - 46 - 47 - 49</p>
@@ -372,7 +395,7 @@
               src="assets/img/levi.webp"
               alt="Air Jordan 4 Retro Levis NRG white denim"
             />
-            <p>Price: -$1868,99-</p>
+            <p class="prijs">Price: -$1868,99-</p>
             <div class="info">
               <p><strong>Brand name:</strong> Nike Air Jordan</p>
               <p><strong>Sizes Available:</strong> 44 - 45 - 48 - 49</p>
@@ -384,7 +407,7 @@
               src="assets/img/Air Jordan 4 SB Pine Green sneakers.webp"
               alt="Air Jordan 4 SB Pine Green sneakers"
             />
-            <p>Price: -$839,99-</p>
+            <p class="prijs">Price: -$839,99-</p>
             <div class="info">
               <p><strong>Brand name:</strong> Nike sb</p>
               <p><strong>Sizes Available:</strong> 40 - 44 - 47</p>
@@ -397,7 +420,7 @@
               src="assets/img/unc jordan off white.webp"
               alt="Air Jordan 1 Retro High Off-White-UNC"
             />
-            <p>Price: -$3429,99-</p>
+            <p class="prijs">Price: -$3429,99-</p>
             <div class="info">
               <p><strong>Brand name:</strong> Nike Air Jordan</p>
               <p><strong>Sizes Available:</strong> 42 - 46</p>
@@ -410,7 +433,7 @@
               src="assets/img/chicago off white.webp"
               alt="Off-White The 10: Air Jordan 1 Chicago sneakers"
             />
-            <p>Price: -$14894,99-</p>
+            <p class="prijs">Price: -$14894,99-</p>
             <div class="info">
               <p><strong>Brand name:</strong> Nike Air Jordan</p>
               <p><strong>Sizes Available:</strong> 40 - 47</p>
@@ -423,7 +446,7 @@
               src="assets/img/kaws.webp"
               alt=" Kaws Air Jordan 4 Retro sneakers"
             />
-            <p>Price: -$736,99-</p>
+            <p class="prijs">Price: -$736,99-</p>
             <div class="info">
               <p><strong>Brand name:</strong> Nike Air Jordan</p>
               <p><strong>Sizes Available:</strong> 41 - 45 - 47 - 49</p>

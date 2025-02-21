@@ -45,6 +45,8 @@
       }
 
       header #balk1 {
+        top: 0;
+        position: sticky;
         width: 100%;
         display: flex;
         background-color: rgb(230, 230, 230);
@@ -55,6 +57,9 @@
         width: 200px;
       }
       nav {
+        background-color: #e3e3e3;
+        position: sticky;
+        top: 0;
         margin: 15px 0;
       }
       nav a {
@@ -88,6 +93,7 @@
         border: 2px solid #444;
       }
       .info {
+        font-size: large;
         color: #1a1a1a;
         text-align: left;
         margin: 10px auto;
@@ -139,6 +145,9 @@
         margin-left: auto;
         margin-right: 30px;
       }
+      .prijs {
+        font-size: 20px;
+      }
     </style>
   </head>
   <body>
@@ -147,7 +156,7 @@
         <div class="language-selector">
           <label for="language">Language: </label>
           <select id="language" onchange="changeLanguage()">
-            <option value="de">Deutch</option>
+            <option value="de">Deutsch</option>
             <option value="nl">Nederlands</option>
           </select>
         </div>
@@ -187,8 +196,11 @@
         <div class="shoe-container">
           <div class="shoe">
             <h3>Archive denim trucker jacket</h3>
-            <img src="assets/img/supreme.webp" alt="Archive denim trucker jacket" />
-            <p>Price: -$1049,99-</p>
+            <img
+              src="assets/img/supreme.webp"
+              alt="Archive denim trucker jacket"
+            />
+            <p class="prijs">Price: -$1049,99-</p>
             <div class="info">
               <p><strong>Brand name:</strong> Supreme</p>
               <p><strong>Sizes Available:</strong> xs - s - m - l - xl</p>
@@ -197,8 +209,11 @@
 
           <div class="shoe">
             <h3>Brim "FW 22" zip-up hoodie</h3>
-            <img src="assets/img/zip hoodie supreme.webp" alt="Brim FW 22 zip-up hoodie" />
-            <p>Price: -$574,99-</p>
+            <img
+              src="assets/img/zip hoodie supreme.webp"
+              alt="Brim FW 22 zip-up hoodie"
+            />
+            <p class="prijs">Price: -$574,99-</p>
             <div class="info">
               <p><strong>Brand name:</strong> Supreme</p>
               <p><strong>Sizes Available:</strong> xs - s - m - l - xl</p>
@@ -210,7 +225,7 @@
               src="assets/img/supreme shirt met man erop.webp"
               alt="Andre 3000 photograph-print T-shirt"
             />
-            <p>Price: -$327,99-</p>
+            <p class="prijs">Price: -$327,99-</p>
             <div class="info">
               <p><strong>Brand name:</strong> Supreme</p>
               <p><strong>Sizes Available:</strong> xs - s - m - l - xl</p>
@@ -223,7 +238,7 @@
               src="assets/img/supreme jersey.webp"
               alt="x CCM All Stars hockey jersey T-shirt"
             />
-            <p>Price: -$465,99-</p>
+            <p class="prijs">Price: -$465,99-</p>
             <div class="info">
               <p><strong>Brand name:</strong> Supreme</p>
               <p><strong>Sizes Available:</strong> xs - s - m - l - xl</p>
@@ -232,8 +247,11 @@
 
           <div class="shoe">
             <h3>Box Logo hoodie</h3>
-            <img src="assets/img/beige Box Logo hoodie.webp" alt="Box Logo hoodie" />
-            <p>Price: -$529,99-</p>
+            <img
+              src="assets/img/beige Box Logo hoodie.webp"
+              alt="Box Logo hoodie"
+            />
+            <p class="prijs">Price: -$529,99-</p>
             <div class="info">
               <p><strong>Brand name:</strong> Supreme</p>
               <p><strong>Sizes Available:</strong> xs - s - m - l - xl</p>
@@ -243,7 +261,7 @@
           <div class="shoe">
             <h3>Box Logo hoodie</h3>
             <img src="assets/img/box logo grijs.webp" alt="Box Logo hoodie" />
-            <p>Price: -$529,99-</p>
+            <p class="prijs">Price: -$529,99-</p>
             <div class="info">
               <p><strong>Brand name:</strong> Supreme</p>
               <p><strong>Sizes Available:</strong> xs - s - m - l - xl</p>
@@ -253,7 +271,7 @@
           <div class="shoe">
             <h3>Box Logo hoodie</h3>
             <img src="assets/img/box logo zwart.webp" alt="Box Logo hoodie" />
-            <p>Price: -$529,99-</p>
+            <p class="prijs">Price: -$529,99-</p>
             <div class="info">
               <p><strong>Brand name:</strong> Supreme</p>
               <p><strong>Sizes Available:</strong> xs - s - m - l - xl</p>
@@ -263,7 +281,7 @@
           <div class="shoe">
             <h3>box logo hoodie</h3>
             <img src="assets/img/box logo roze.webp" alt="box logo hoodie" />
-            <p>Price: -$529,99-</p>
+            <p class="prijs">Price: -$529,99-</p>
             <div class="info">
               <p><strong>Brand name:</strong> Supreme</p>
               <p><strong>Sizes Available:</strong> xs - s - m - l - xl</p>
@@ -272,8 +290,11 @@
 
           <div class="shoe">
             <h3>Arc logo zip hoodie</h3>
-            <img src="assets/img/arc logo zip hoodie.webp" alt="Arc logo zip hoodie" />
-            <p>Price: -$749,99-</p>
+            <img
+              src="assets/img/arc logo zip hoodie.webp"
+              alt="Arc logo zip hoodie"
+            />
+            <p class="prijs">Price: -$749,99-</p>
             <div class="info">
               <p><strong>Brand name:</strong> Supreme</p>
               <p><strong>Sizes Available:</strong> xs - s - m - l - xl</p>
@@ -286,7 +307,7 @@
               src="assets/img/x The North Face Baltoro padded jacket.webp"
               alt="x The North Face Baltoro padded jacket"
             />
-            <p>Price: -$2074,99-</p>
+            <p class="prijs">Price: -$2074,99-</p>
             <div class="info">
               <p><strong>Brand name:</strong> Supreme | The North Face</p>
               <p><strong>Sizes Available:</strong> xs - s - m - l - xl</p>
@@ -299,7 +320,7 @@
               src="assets/img/Trompe L'oeil bomber jacket.webp"
               alt="Trompe L'oeil bomber jacket"
             />
-            <p>Price: -$1379.99-</p>
+            <p class="prijs">Price: -$1379.99-</p>
             <div class="info">
               <p><strong>Brand name:</strong> Supreme</p>
               <p><strong>Sizes Available:</strong> xs - s - m - l - xl</p>
@@ -312,7 +333,7 @@
               src="assets/img/x The North Face Nuptse jacket.webp"
               alt="x The North Face Nuptse jacket"
             />
-            <p>Price: -$1579,99-</p>
+            <p class="prijs">Price: -$1579,99-</p>
             <div class="info">
               <p><strong>Brand name:</strong> Supreme | The North Face</p>
               <p><strong>Sizes Available:</strong> xs - s - m - l - xl</p>
@@ -324,7 +345,7 @@
               src="assets/img/S.Matthew cotton track pants.webp"
               alt="S.Matthew cotton track pants"
             />
-            <p>Price: -$289,99-</p>
+            <p class="prijs">Price: -$289,99-</p>
             <div class="info">
               <p><strong>Brand name:</strong> Off-White</p>
               <p><strong>Sizes Available:</strong> xs - s - m - l - xl</p>
@@ -337,7 +358,7 @@
               src="assets/img/x Levi's Cotton Wreath-print straight-leg jeans.webp"
               alt="x Levi's Cotton Wreath-print straight-leg jeans"
             />
-            <p>Price: -$249,99-</p>
+            <p class="prijs">Price: -$249,99-</p>
             <div class="info">
               <p><strong>Brand name:</strong> Denim Tears</p>
               <p><strong>Sizes Available:</strong> xs - s - m - l - xl</p>
@@ -350,7 +371,7 @@
               src="assets/img/x Damiano David P-Martyans sweatpants.webp"
               alt="x Damiano David P-Martyans sweatpants"
             />
-            <p>Price: -$287,99-</p>
+            <p class="prijs">Price: -$287,99-</p>
             <div class="info">
               <p><strong>Brand name:</strong> Diesel</p>
               <p><strong>Sizes Available:</strong> xs - s - m - l - xl</p>
@@ -363,7 +384,7 @@
               src="assets/img/x ToFF graphic-print slim-fit jeans.webp"
               alt="ToFF graphic-print slim-fit jeans"
             />
-            <p>Price: -$1868,99-</p>
+            <p class="prijs">Price: -$1868,99-</p>
             <div class="info">
               <p><strong>Brand name:</strong> Diesel</p>
               <p><strong>Sizes Available:</strong> xs - s - m - l - xl</p>
@@ -375,7 +396,7 @@
               src="assets/img/logo-print drawstring sweatpants.webp"
               alt="logo-print drawstring sweatpants"
             />
-            <p>Price: -$680,99-</p>
+            <p class="prijs">Price: -$680,99-</p>
             <div class="info">
               <p><strong>Brand name:</strong> Palm Angels</p>
               <p><strong>Sizes Available:</strong> xs - s - m - l - xl</p>
@@ -384,8 +405,11 @@
 
           <div class="shoe">
             <h3>Glory track pants</h3>
-            <img src="assets/img/Glory track pants.webp" alt="Glory track pants" />
-            <p>Price: -$1074,99-</p>
+            <img
+              src="assets/img/Glory track pants.webp"
+              alt="Glory track pants"
+            />
+            <p class="prijs">Price: -$1074,99-</p>
             <div class="info">
               <p><strong>Brand name:</strong> Who Decides War</p>
               <p><strong>Sizes Available:</strong> xs - s - m - l - xl</p>
@@ -398,7 +422,7 @@
               src="assets/img/logo-print straight-leg jeans.webp"
               alt="logo-print straight-leg jeans"
             />
-            <p>Price: -$1346,99-</p>
+            <p class="prijs">Price: -$1346,99-</p>
             <div class="info">
               <p><strong>Brand name:</strong> Heron Preston</p>
               <p><strong>Sizes Available:</strong> xs - s - m - l - xl</p>
@@ -408,7 +432,7 @@
           <div class="shoe">
             <h3>Blown jeans</h3>
             <img src="assets/img/Blown jeans.webp" alt="Blown jeans" />
-            <p>Price: -$728,99-</p>
+            <p class="prijs">Price: -$728,99-</p>
             <div class="info">
               <p><strong>Brand name:</strong> Who Decides War</p>
               <p><strong>Sizes Available:</strong> xs - s - m - l - xl</p>
