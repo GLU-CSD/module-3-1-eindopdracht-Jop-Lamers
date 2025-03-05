@@ -18,12 +18,9 @@
     <link rel="icon" href="/icon.svg" type="image/svg+xml" />
     <link rel="apple-touch-icon" href="icon.png" />
 
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Darumadrop+One&display=swap"
-      rel="stylesheet"
-    />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Darumadrop+One&family=Noto+Sans:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
 
     <meta name="theme-color" content="#fafafa" />
   </head>
@@ -48,8 +45,6 @@
       body a:hover{
         color: black;
       }
-
-
 
   .slidecontainer {
   width: 100%;
@@ -192,7 +187,6 @@ input[type=text]:focus {
       }
 
       header #balk1 {
-        top: 0;
         position: sticky;
         width: 100%;
         display: flex;
@@ -210,13 +204,9 @@ input[type=text]:focus {
         margin: 15px 0;
       }
       nav a {
-        font-size: 20px;
+        font-size: 30px;
         margin: 0 15px;
         color: #000000;
-        text-decoration: none;
-      }
-      nav a:hover {
-        text-decoration: underline;
       }
       section {
         margin: 20px;
@@ -228,7 +218,7 @@ input[type=text]:focus {
         flex-direction: row;
       }
       .shoe {
-        border: 1px solid #575656;
+        border: 1px solid #636262;
         padding: 20px;
         background-color: #f1f0f1;
         width: 90%;
@@ -296,10 +286,6 @@ input[type=text]:focus {
       .prijs {
         font-size: 20px;
       }
-
-      .language-selector {
-        margin-left: 290px;
-      }
       #font-adjust {
         background-color: #dedede;
         font-size: 30px;
@@ -314,6 +300,16 @@ input[type=text]:focus {
       }
       #social-font {
         font-size: 30px;
+      }
+      #copyrighttxt {
+        font-size: 16px;
+        background-color: #c6c6c6;
+      }
+      #cart {
+        margin-left: 700px;
+        margin-top: 12px;
+        width: 40px;
+        height: 40px;
       }
     </style>
   </head>
@@ -345,13 +341,22 @@ input[type=text]:focus {
       </div>
     </header>
 
-    <nav>
+    <nav style="display:flex; justify-content: space-between;">
+      <div></div>
+      <div>
       <a href="index.html">Shoes</a>
       <a href="clothing.html">Clothing</a>
       <a href="accessoires.html">Accessoires</a>
+    </div>
+    <div>
+      <a href="shoppingcart.html">
+        <img id="cart" src="shopping cart-Photoroom.png" alt="Cart">
+      </a>
+    </div>
     </nav>
 
     <div id="main">
+
       <div class="sidenav">
       <h1 class = "filter-text">-Filters-</h1>
     
@@ -423,7 +428,8 @@ input[type=text]:focus {
         
       
 
-      <section id="Shoes">
+      <div id="Shoes">
+        
         <div class="shoe-container">
           <div class="shoe">
             <h3>Asics gel nyc cream beige pink</h3>
@@ -683,7 +689,7 @@ input[type=text]:focus {
             </div>
           </div>
         </div>
-      </section>
+      </div>
 
     </div>
 
@@ -696,7 +702,7 @@ input[type=text]:focus {
     <h4><a href="#">Twitter</a></h4>
     <h4><a href="#">TikTok</a></h4>
   </div>
-    <p>-2025- D's Store @D's_store.</p></footer>
+    <p id="copyrighttxt">-2025- D's Store @D's_store.</p></footer>
   </body>
   <script>
     function changeLanguage() {
