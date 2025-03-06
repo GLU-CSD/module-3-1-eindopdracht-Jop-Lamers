@@ -18,12 +18,9 @@
     <link rel="icon" href="/icon.svg" type="image/svg+xml" />
     <link rel="apple-touch-icon" href="icon.png" />
 
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Darumadrop+One&display=swap"
-      rel="stylesheet"
-    />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Darumadrop+One&family=Noto+Sans:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
 
     <meta name="theme-color" content="#fafafa" />
   </head>
@@ -35,6 +32,64 @@
         color: #000000;
         text-align: center;
       }
+
+      body a{
+        font-size: 1.5em;
+        text-decoration: none;
+        color: black;
+      
+      }
+      body a:visited{
+        color: black;
+      }
+      body a:hover{
+        color: black;
+      }
+
+  .slidecontainer {
+  width: 100%;
+  }
+
+  .slider {
+  appearance: none;
+  width: 90%;
+  height: 15px;
+  border-radius: 5px;  
+  background: #d3d3d3;
+  outline: none;
+  opacity: 0.7;
+  -webkit-transition: .2s;
+  transition: opacity .2s;
+}
+
+.slider::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  appearance: none;
+  width: 25px;
+  height: 25px;
+  border-radius: 50%; 
+  background: #a1a1a1;
+  cursor: pointer;
+}
+
+.slider::-moz-range-thumb {
+  width: 25px;
+  height: 25px;
+  border-radius: 50%;
+  background: #4e4e4e;
+  cursor: pointer;
+}
+
+
+      input[type=text] {
+  width: 150px;
+  -webkit-transition: width 0.4s ease-in-out;
+  transition: width 0.4s ease-in-out;
+}
+
+input[type=text]:focus {
+  width: 22%;
+}
 
   .container {
   display: block;
@@ -101,13 +156,9 @@
   -ms-transform: rotate(45deg);
   transform: rotate(45deg);
 }
-      .sidenav {
+  .sidenav {
   height: 100%;
-  width: 250px;
-  position: fixed;
-  z-index: 1;
-  top: 0;
-  left: 0;
+  width: 280px;
   background-color: #e7e7e7;
   padding-top: 20px;
 }
@@ -120,11 +171,7 @@
   display: block;
 }
 
-.main {
-  margin-left: 340px; 
-  font-size: 28px; 
-  padding: 0px 10px;
-}
+
 
 @media screen and (max-height: 450px) {
   .sidenav {padding-top: 15px;}
@@ -140,7 +187,6 @@
       }
 
       header #balk1 {
-        top: 0;
         position: sticky;
         width: 100%;
         display: flex;
@@ -158,13 +204,9 @@
         margin: 15px 0;
       }
       nav a {
-        font-size: 20px;
+        font-size: 30px;
         margin: 0 15px;
         color: #000000;
-        text-decoration: none;
-      }
-      nav a:hover {
-        text-decoration: underline;
       }
       section {
         margin: 20px;
@@ -174,10 +216,9 @@
         gap: 50px;
         flex-wrap: wrap;
         flex-direction: row;
-        /* justify-items: center,right; */
       }
       .shoe {
-        border: 1px solid #575656;
+        border: 1px solid #636262;
         padding: 20px;
         background-color: #f1f0f1;
         width: 90%;
@@ -245,9 +286,30 @@
       .prijs {
         font-size: 20px;
       }
-
-      .language-selector {
-        margin-left: 290px;
+      #font-adjust {
+        background-color: #dedede;
+        font-size: 30px;
+      } 
+      .filter-text {
+        background-color: #cccccc;
+        font-size: 40px;
+      }
+      #price-amount {
+        background-color: #cccccc;
+        font-size: 30px;
+      }
+      #social-font {
+        font-size: 30px;
+      }
+      #copyrighttxt {
+        font-size: 16px;
+        background-color: #c6c6c6;
+      }
+      #cart {
+        margin-left: 700px;
+        margin-top: 12px;
+        width: 40px;
+        height: 40px;
       }
     </style>
   </head>
@@ -269,9 +331,7 @@
         </div>
 
         <img id="zoekicoon" src="zoek icoon-Photoroom.png" alt="zoek-icoon" />
-        <div id="zoekbalk">
-          <input type="text" id="search" placeholder="Search..." />
-        </div>
+        <input type="text" name="search" placeholder="Search..">
       </div>
       <div>
         <p>Free shipping on orders over $300</p>
@@ -281,42 +341,95 @@
       </div>
     </header>
 
-    <nav>
+    <nav style="display:flex; justify-content: space-between;">
+      <div></div>
+      <div>
       <a href="index.html">Shoes</a>
       <a href="clothing.html">Clothing</a>
       <a href="accessoires.html">Accessoires</a>
+    </div>
+    <div>
+      <a href="shoppingcart.html">
+        <img id="cart" src="shopping cart-Photoroom.png" alt="Cart">
+      </a>
+    </div>
     </nav>
 
     <div id="main">
-      <div class="sidenav">
-      <h1>-Filters-</h1>
-    
 
+      <div class="sidenav">
+      <h1 class = "filter-text">-Filters-</h1>
+    
+<p id = "font-adjust">-Category's-</p>
         <label class="container"> Shoes
           <input type="checkbox" checked="checked">
           <span class="checkmark"></span>
         </label>
-        <label class="container"> Clothing
+        <label class="container"> Pants
           <input type="checkbox">
           <span class="checkmark"></span>
         </label>
-        <label class="container"> Accessoires
+        <label class="container"> Jackets
           <input type="checkbox">
           <span class="checkmark"></span>
+        </label>
+        <label class="container"> Hoodies
+          <input type="checkbox">
+          <span class="checkmark"></span>
+        </label>
+        <label class="container"> Belts
+          <input type="checkbox">
+          <span class="checkmark"></span>
+        </label>
+        <label class="container"> Sunglasses
+          <input type="checkbox">
+          <span class="checkmark"></span>
+        </label>
+        <label class="container"> Outerwear
+          <input type="checkbox">
+          <span class="checkmark"></span>
+        </label>
+       
+<p id = "font-adjust">- Popular Brands-</p>
         </label>
         <label class="container"> Supreme
           <input type="checkbox">
           <span class="checkmark"></span>
         </label>
-      </div>
-      
-      <div class="main">
-        
-      </div>
-      </section>
+        <label class="container"> Nike Air Jordan
+          <input type="checkbox">
+          <span class="checkmark"></span>
+        </label>
+        <label class="container"> Nike SB
+          <input type="checkbox">
+          <span class="checkmark"></span>
+        </label>
+        <label class="container"> Asics
+          <input type="checkbox">
+          <span class="checkmark"></span>
+        </label>
+        <label class="container"> Diesel
+          <input type="checkbox">
+          <span class="checkmark"></span>
+        </label>
+        <label class="container"> Gucci
+          <input type="checkbox">
+          <span class="checkmark"></span>
+        </label>
 
-      <section id="Shoes">
-        <h2>All of our accessoires!!</h2>
+<p id = "font-adjust">-Price adjust-</p>
+
+       <div class="slidecontainer">
+  <input type="range" min="1" max="15000" value="" class="slider" id="myRange">
+  <p id = price-amount>Amount: <span id="demo"></span></p>
+</div>
+</div>
+     
+        
+      
+
+      <div id="Shoes">
+        
         <div class="shoe-container">
           <div class="shoe">
             <h3>1DR logo-buckle leather belt</h3>
@@ -564,11 +677,20 @@
             </div>
           </div>
         </div>
-      </section>
+   </div>
+
     </div>
-    <footer>
-      <p>&copy; 2024 shoe store| Exclusive sneakers</p>
-    </footer>
+
+    </div>
+   <footer>
+    <h3 id = social-font>-SOCIALS-</h3>
+  <div class="socials">
+    <h4><a href="#">Instagram</a></h4>
+    <h4><a href="#">Facebook</a></h4>
+    <h4><a href="#">Twitter</a></h4>
+    <h4><a href="#">TikTok</a></h4>
+  </div>
+    <p id="copyrighttxt">-2025- D's Store @D's_store.</p></footer>
   </body>
   <script>
     function changeLanguage() {
@@ -576,6 +698,15 @@
       "Language changed to: " + (lang === "de" ? "Deutsch" : "Nederlands");
     }
   </script>
+  <script>
+    var slider = document.getElementById("myRange");
+    var output = document.getElementById("demo");
+    output.innerHTML = slider.value;
+    
+    slider.oninput = function() {
+      output.innerHTML = this.value;
+    }
+    </script>
 
   <script src="assets/js/app.js"></script>
 </html>

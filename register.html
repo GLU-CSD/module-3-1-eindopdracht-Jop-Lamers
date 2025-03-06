@@ -10,79 +10,122 @@
       rel="stylesheet"
     />
   </head>
+  <style>
+    body {
+      font-family: "Darumadrop One", sans-serif;
+      font-weight: 400;
+      font-style: normal;
+      background-image: url("pexels-padrinan-19670.jpg");
+      background-size: cover;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      margin: 0;
+    }
+    .container {
+      text-align: center;
+      background-color: rgba(226, 226, 226, 0.1);
+      padding: 20px;
+      border-radius: 10px;
+    }
+    .form {
+      text-align: left;
+      font-size: 20px;
+      background-color: rgba(226, 226, 226, 0.1);
+      border: 2px solid black;
+      margin: 20px;
+      padding: 30px;
+      border-radius: 10px;
+      display: inline-block;
+      justify-content: center;
+    }
+    button {
+      font-size: larger;
+      font-family: "Darumadrop One", sans-serif;
+      padding: 10px;
+      margin-top: 20px;
+      border: none;
+      border-radius: 10px;
+      background: #fff;
+      color: #000;
+      cursor: pointer;
+    }
+    button:hover {
+      background: transparent;
+      color: #000000;
+      outline: 2px solid #000;
+    }
+    header img {
+      width: 200px;
+    }
+    img {
+      width: 100%;
+      border: 2px solid #444;
+    }
+  </style>
   <body>
-    <style>
-      body {
-        font-family: "Darumadrop One", sans-serif;
-        font-weight: 400;
-        font-style: normal;
-        background-color: #000;
-      }
-      .form {
-        font-size: 20px;
-        background-color: white;
-        margin: 20px;
-        text-align: left;
-        padding: 30px;
-        border-radius: 10px;
-        display: inline-block;
-      }
-      #knop {
-        background-color: #e8e8e8;
-        color: rgb(0, 0, 0);
-        border: 2px solid black;
-        padding: 10px 20px;
-        text-align: center;
-        display: inline-block;
-        font-size: 18px;
-        margin: 4px 2px;
-        cursor: pointer;
-        border-radius: 10px;
-        font-family: "Darumadrop One", sans-serif;
-      }
-    </style>
-    <form action="#" method="POST">
-      <section class="form">
-        <label>Preposition:</label>
-        <input type="radio" id="male" name="Gender" value="male" required />
-        <label for="male"> Dhr. </label>
-        <input type="radio" id="female" name="Gender" value="female" required />
-        <label for="male"> Mvr. </label>
-        <input type="radio" id="other" name="Gender" value="other" required />
-        <label for="other"> Other </label><br /><br />
+    <div class="container">
+      <header>
+        <div id="logo">
+          <img src="logo shoe stor.jpeg" alt="Shoe store" />
+          <h1>~D's store~</h1>
+          <p>Exclusive Sneakers | Clothing | Accessoires</p>
+        </div>
+      </header>
+      <form action="#" method="POST">
+        <section class="form">
+          <label>Preposition:</label>
+          <input type="radio" id="male" name="Gender" value="male" required />
+          <label for="male"> Dhr. </label>
+          <input
+            type="radio"
+            id="female"
+            name="Gender"
+            value="female"
+            required
+          />
+          <label for="male"> Mvr. </label>
+          <input type="radio" id="other" name="Gender" value="other" required />
+          <label for="other"> Other </label><br /><br />
 
-        <label>First name:</label>
-        <input type="text" name="First name" required /><br /><br />
+          <label>First name:</label>
+          <input type="text" name="First name" required /><br /><br />
 
-        <label>Last name:</label>
-        <input type="text" name="Last name" required /><br /><br />
+          <label>Last name:</label>
+          <input type="text" name="Last name" required /><br /><br />
 
-        <label>Street:</label>
-        <input type="text" name="Street" required /><br /><br />
+          <label>Street:</label>
+          <input type="text" name="Street" required /><br /><br />
 
-        <label>Housenumber:</label>
-        <input type="text" name="huiHousenumbersnummer" required /><br /><br />
+          <label>Housenumber:</label>
+          <input
+            type="text"
+            name="huiHousenumbersnummer"
+            required
+          /><br /><br />
 
-        <label>Address:</label>
-        <input type="text" name="Address" required /><br /><br />
+          <label>Address:</label>
+          <input type="text" name="Address" required /><br /><br />
 
-        <label>Country:</label>
-        <input type="text" name="Country" required /><br /><br />
+          <label>Country:</label>
+          <input type="text" name="Country" required /><br /><br />
 
-        <label>E-mailaddress:</label>
-        <input type="email" name="E-mailaddress" required /><br /><br />
+          <label>E-mailaddress:</label>
+          <input type="email" name="E-mailaddress" required /><br /><br />
 
-        <label>Telefoonnumber:</label>
-        <input type="tel" name="Telefoonnumber" required /><br /><br />
+          <label>Telefoonnumber:</label>
+          <input type="tel" name="Telefoonnumber" required /><br /><br />
 
-        <label>Date of birth:</label>
-        <input type="date" name="Date of birth" required /><br /><br />
+          <label>Date of birth:</label>
+          <input type="date" name="Date of birth" required /><br /><br />
 
-        <input type="checkbox" name="policy's" required />
-        <label>I accept the policy's</label><br /><br />
+          <input type="checkbox" name="policy's" required />
+          <label>I accept the policy's</label><br /><br />
 
-        <button id="knop" type="submit">Send</button>
-      </section>
-    </form>
+          <button type="submit">Send</button>
+        </section>
+      </form>
+    </div>
   </body>
 </html>
