@@ -18,7 +18,7 @@ body {
   font-style: normal;
   align-items: center;
   height: 100vh;
-  background-image: url(pexels-padrinan-19670.jpg);
+  background-image: url("../img/pexels-padrinan-19670.jpg");
   background-size: cover;
 }
 .glazen-box {
