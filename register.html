@@ -1,74 +1,67 @@
+<!DOCTYPE html>
 <html lang="nl">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Checkout Form</title>
-    <link rel="stylesheet" href="assets/css/register.css" />
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Darumadrop+One&display=swap"
-      rel="stylesheet"
-    />
-  </head>
-  <body>
-    <div class="container">
-      <header>
-        <div id="logo">
-          <img src="assets/img/logo shoe stor.jpeg" alt="Shoe store" />
-          <h1>~D's store~</h1>
-          <p>Exclusive Sneakers | Clothing | Accessoires</p>
-        </div>
-      </header>
-      <form action="#" method="POST">
-        <section class="form">
-          <label>Preposition:</label>
-          <input type="radio" id="male" name="Gender" value="male" required />
-          <label for="male"> Dhr. </label>
-          <input
-            type="radio"
-            id="female"
-            name="Gender"
-            value="female"
-            required
-          />
-          <label for="male"> Mvr. </label>
-          <input type="radio" id="other" name="Gender" value="other" required />
-          <label for="other"> Other </label><br /><br />
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Register Form</title>
+  <link rel="stylesheet" href="assets/css/register.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Darumadrop+One&family=Noto+Sans:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+</head>
+<body>
+  <div class="container">
+    <header>
+      <div id="logo">
+        <img src="assets/img/logo shoe stor.jpeg" alt="Shoe store">
+        <h1>~D's store~</h1>
+        <p>Exclusive Sneakers | Clothing | Accessoires</p>
+      </div>
+    </header>
+    <form id="registerForm" onsubmit="return validateForm()">
+      <section class="form">
+        <label>Preposition:</label>
+        <input type="radio" id="male" name="Gender" value="male" required>
+        <label for="male"> Dhr. </label>
+        <input type="radio" id="female" name="Gender" value="female" required>
+        <label for="female"> Mvr. </label>
+        <input type="radio" id="other" name="Gender" value="other" required>
+        <label for="other"> Other </label><br><br>
 
-          <label>First name:</label>
-          <input type="text" name="First name" required /><br /><br />
+        <label>First name:</label>
+        <input type="text" id="firstName" name="First name" required><br><br>
 
-          <label>Last name:</label>
-          <input type="text" name="Last name" required /><br /><br />
+        <label>Last name:</label>
+        <input type="text" id="lastName" name="Last name" required><br><br>
 
-          <label>Street:</label>
-          <input type="text" name="Street" required /><br /><br />
+        <label>Street:</label>
+        <input type="text" id="street" name="Street" required><br><br>
 
-          <label>Housenumber:</label>
-          <input type="text" name="Housenumber" required /><br /><br />
+        <label>Housenumber:</label>
+        <input type="text" id="houseNumber" name="Housenumber" required><br><br>
 
-          <label>Address:</label>
-          <input type="text" name="Address" required /><br /><br />
+        <label>Address:</label>
+        <input type="text" id="address" name="Address" required><br><br>
 
-          <label>Country:</label>
-          <input type="text" name="Country" required /><br /><br />
+        <label>Country:</label>
+        <input type="text" id="country" name="Country" required><br><br>
 
-          <label>E-mailaddress:</label>
-          <input type="email" name="E-mailaddress" required /><br /><br />
+        <label>E-mailaddress:</label>
+        <input type="email" id="email" name="E-mailaddress" required><br><br>
 
-          <label>Telefoonnumber:</label>
-          <input type="tel" name="Telefoonnumber" required /><br /><br />
+        <label>Telephonenumber:</label>
+        <input type="tel" id="phoneNumber" name="Telefoonnumber" required><br><br>
 
-          <label>Date of birth:</label>
-          <input type="date" name="Date of birth" required /><br /><br />
+        <label>Date of birth:</label>
+        <input type="date" id="dob" name="Date of birth" required><br><br>
 
-          <input type="checkbox" name="policy's" required />
-          <label>I accept the policy's</label><br /><br />
+        <input type="checkbox" id="policy" name="policy" required>
+        <label for="policy">I accept the policy's</label><br><br>
 
-          <button type="submit">Send</button>
-        </section>
-      </form>
-    </div>
-  </body>
+        <button type="submit">Send</button>
+      </section>
+    </form>
+  </div>
+  <script src="assets/js/result.js"></script>
+</body>
 </html>

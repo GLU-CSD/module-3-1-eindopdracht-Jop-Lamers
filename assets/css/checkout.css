@@ -1,0 +1,132 @@
+header {
+  display: flex;
+  flex-direction: column;
+  background-image: url("../img/witttt.jpg");
+  background-size: 100%;
+  padding: 10px;
+}
+
+header #balk1 {
+  position: sticky;
+  width: 100%;
+  display: flex;
+  background-color: rgb(230, 230, 230);
+}
+
+header img {
+  /* logo */
+  width: 200px;
+}
+nav {
+  background-color: #e3e3e3;
+  position: sticky;
+  top: 0;
+  margin: 15px 0;
+}
+nav a {
+  font-size: 30px;
+  margin: 0 15px;
+  color: #000000;
+}
+section {
+  margin: 20px;
+}
+#social-font,
+#info-font,
+#contact-font {
+  font-size: 24px;
+  margin-top: 20px;
+}
+
+#copyrighttxt {
+  margin-top: 20px;
+  font-size: 16px;
+}
+#main {
+  display: flex;
+  flex-direction: row;
+}
+#filter {
+  width: 400px;
+  background-color: #e0e0e0;
+  padding: 20px;
+}
+#filter-text {
+  background-color: #e0e0e0;
+  font-size: 40px;
+}
+#talen {
+  width: 20%;
+  height: 20%;
+  display: flex;
+}
+#search {
+  border-radius: 25px;
+  width: 380px;
+  height: 35px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+#zoekicoon {
+  width: 47px;
+  height: 32px;
+  margin-top: 2px;
+  margin-right: 3px;
+  margin-left: 20px;
+}
+
+#inloggen {
+  display: flex;
+  margin-left: 10px;
+  margin-right: 20px;
+}
+#Register {
+  display: flex;
+  margin-left: auto;
+  margin-right: 20px;
+}
+.prijs {
+  font-size: 20px;
+}
+#font-adjust {
+  background-color: #dedede;
+  font-size: 30px;
+}
+.filter-text {
+  background-color: #cccccc;
+  font-size: 40px;
+}
+#price-amount {
+  background-color: #cccccc;
+  font-size: 30px;
+}
+#cart {
+  margin-top: 12px;
+  width: 40px;
+  height: 40px;
+}
+#invisblock {
+  margin-left: 260px;
+}
+.product-container {
+  width: 85%;
+}
+body {
+  font-family: "Darumadrop One", serif;
+  background-color: #f0f0f0;
+  color: #000000;
+  text-align: center;
+}
+
+body a {
+  font-size: 1.5em;
+  text-decoration: none;
+  color: black;
+}
+body a:visited {
+  color: black;
+}
+body a:hover {
+  color: black;
+}
