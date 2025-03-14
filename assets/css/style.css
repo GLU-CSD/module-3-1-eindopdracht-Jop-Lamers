@@ -146,20 +146,19 @@ input[type="text"]:focus {
 }
 
 @media screen and (max-width: 1024px) {
-  .sidenav{
+  .sidenav {
     display: none;
   }
-  }
-  .shoe {
-    flex: 1 1 calc(25% - 30px);
-    box-sizing: border-box;
-    border: 1px solid #636262;
-    padding: 20px;
-    background-color: #f1f0f1;
+}
+.shoe {
+  flex: 1 1 calc(25% - 30px);
+  box-sizing: border-box;
+  border: 1px solid #636262;
+  padding: 20px;
+  background-color: #f1f0f1;
 
-    max-width: 50% !important;
-  }
-
+  max-width: 50% !important;
+}
 
 header {
   display: flex;
@@ -207,6 +206,15 @@ section {
   padding: 20px;
   background-color: #f1f0f1;
   max-width: calc(25% - 30px);
+}
+.add-to-cart {
+  font-family: "Darumadrop One", serif;
+  font-size: larger;
+  background-color: #d0d0d0;
+  border: 2px solid #000000;
+  color: #000000;
+  border-radius: 5px;
+  display: inline-block;
 }
 
 img {

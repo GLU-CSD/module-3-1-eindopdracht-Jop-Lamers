@@ -1,43 +1,104 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Shopping Cart</title>
-  <link rel="stylesheet" href="assets/css/style.css">
-</head>
-<body>
-  <header>
-    <h1>Your Shopping Cart</h1>
-  </header>
-  <main>
-    <div id="cart-container"></div>
-  </main>
-  <script>
-    function displayCart() {
-      const cart = JSON.parse(localStorage.getItem('cart')) || [];
-      const cartContainer = document.getElementById('cart-container');
-      cartContainer.innerHTML = '';
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Shopping Cart</title>
+    <link rel="stylesheet" href="assets/css/shoppingcart.css" />
+    <link rel="stylesheet" href="assets/css/style.css" />
 
-      if (cart.length === 0) {
-        cartContainer.innerHTML = '<p>Your cart is empty.</p>';
-        return;
-      }
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Darumadrop+One&family=Noto+Sans:ital,wght@0,100..900;1,100..900&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <header>
+      <div id="balk1">
+        <div class="language-selector">
+          <label for="language">Language: </label>
+          <select id="language" onchange="changeLanguage()">
+            <option value="de">Deutsch</option>
+            <option value="nl">Nederlands</option>
+          </select>
+        </div>
+        <div id="Register">
+          <a href="checkout.php">Register</a>
+        </div>
+        <div id="login">
+          <a href="login.html">Login</a>
+        </div>
+      </div>
+      <div>
+        <p>Free shipping on orders over $300</p>
+        <img src="assets/img/logo shoe stor.jpeg" alt="Shoe store" />
+        <h1>~D's store~</h1>
+        <p>Exclusive Sneakers | Clothing | Accessoires</p>
+      </div>
+    </header>
+    <nav style="display: flex; justify-content: space-between">
+      <div id="invisblock"></div>
+      <div>
+        <a href="index.html">Shoes</a>
+        <a href="clothing.html">Clothing</a>
+        <a href="accessoires.html">Accessoires</a>
+      </div>
+      <div>
+        <a href="shoppingcart.html">
+          <img
+            id="cart"
+            src="assets/img/shopping cart-Photoroom.png"
+            alt="Cart"
+          />
+        </a>
+      </div>
+    </nav>
 
-      cart.forEach(product => {
-        const productElement = document.createElement('div');
-        productElement.className = 'cart-item';
-        productElement.innerHTML = `
+    <main>
+      <div id="cart-container"></div>
+      <button class="clear-cart" onclick="clearCart()">Clear Cart</button>
+      <a class="clear-cart" href="checkout.php">To checkout</a>
+    </main>
+    <script>
+      function displayCart() {
+        const cart = JSON.parse(localStorage.getItem("cart")) || [];
+        const cartContainer = document.getElementById("cart-container");
+        cartContainer.innerHTML = "";
+
+        if (cart.length === 0) {
+          cartContainer.innerHTML = "<p>Your cart is empty.</p>";
+          return;
+        }
+
+        cart.forEach((product, index) => {
+          const productElement = document.createElement("div");
+          productElement.className = "cart-item";
+          productElement.innerHTML = `
           <h3>${product.name}</h3>
           <p>Price: $${product.price.toFixed(2)}</p>
           <p>Quantity: ${product.quantity}</p>
+          <button onclick="removeFromCart(${index})">Remove</button>
         `;
-        cartContainer.appendChild(productElement);
-      });
-    }
+          cartContainer.appendChild(productElement);
+        });
+      }
 
-    // Call displayCart when the page loads
-    window.onload = displayCart;
-  </script>
-</body>
+      function clearCart() {
+        localStorage.removeItem("cart");
+        displayCart();
+      }
+
+      function removeFromCart(index) {
+        let cart = JSON.parse(localStorage.getItem("cart")) || [];
+        cart.splice(index, 1);
+        localStorage.setItem("cart", JSON.stringify(cart));
+        displayCart();
+      }
+
+      // Call displayCart when the page loads
+      window.onload = displayCart;
+    </script>
+  </body>
 </html>

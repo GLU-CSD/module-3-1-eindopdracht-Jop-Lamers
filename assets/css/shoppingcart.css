@@ -1,0 +1,81 @@
+body {
+  font-family: "Darumadrop One", serif;
+  background-color: #e3e3e3;
+  color: #000000;
+  text-align: center;
+  margin: 0;
+  padding: 0;
+}
+
+header {
+  background-image: url("assets/img/witttt.jpg");
+  background-size: 100%;
+  color: #000000;
+  padding: 20px 0;
+  margin-bottom: 20px;
+}
+
+header h1 {
+  margin: 0;
+}
+
+main {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+#cart-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin-top: 20px;
+  width: 80%;
+  max-width: 1200px;
+}
+
+.cart-item {
+  background-color: #ffffff;
+  border: 1px solid #000000;
+  border-radius: 5px;
+  padding: 20px;
+  margin: 10px;
+  width: 100%;
+  max-width: 600px;
+  text-align: left;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.cart-item h3 {
+  margin-top: 0;
+}
+
+button {
+  font-family: "Darumadrop One", serif;
+  background-color: #bcbcbc;
+  color: #ffffff;
+  border: none;
+  padding: 10px;
+  cursor: pointer;
+  margin-top: 10px;
+}
+
+button:hover {
+  background-color: #ff000051;
+}
+
+.clear-cart {
+  font-family: "Darumadrop One", serif;
+  background-color: #e0e0e0;
+  color: #000000;
+  border: 2px solid #000000;
+  padding: 15px 30px;
+  cursor: pointer;
+  margin-top: 20px;
+}
+
+.clear-cart:hover {
+  background-color: #9e9e9e;
+}
