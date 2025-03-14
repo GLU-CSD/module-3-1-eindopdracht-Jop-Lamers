@@ -63,13 +63,13 @@
     //     $sql = "INSERT INTO persoonlijke_gegevens (firstname, lastname, street)
     // VALUES ('" . $firstname . "' '" . $lastname . "' '" . $street . "')";
 
-    // if ($conn->query($query) === TRUE) {
-    //     echo "New record created successfully";
-    // } else {
-    //     echo "Error: " . $sql . "<br>" . $conn->error;
-    // }
+    if ($conn->query($query) === TRUE) {
+        echo "New record created successfully";
+    } else {
+        echo "Error: " . $sql . "<br>" . $conn->error;
+    }
 
-    // $conn->close();
+    $conn->close();
 
 
 
