@@ -37,7 +37,7 @@ main {
 }
 
 .cart-item {
-  background-color: #ffffff;
+  background-color: #ebebeb;
   border: 1px solid #000000;
   border-radius: 5px;
   padding: 20px;
@@ -63,7 +63,7 @@ button {
 }
 
 button:hover {
-  background-color: #ff000051;
+  background-color: #ff000075;
 }
 
 .clear-cart {
