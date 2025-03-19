@@ -15,46 +15,10 @@
     />
   </head>
   <body>
-    <header>
-      <div id="balk1">
-        <div class="language-selector">
-          <label for="language">Language: </label>
-          <select id="language" onchange="changeLanguage()">
-            <option value="de">Deutsch</option>
-            <option value="nl">Nederlands</option>
-          </select>
-        </div>
-        <div id="Register">
-          <a href="checkout.php">Register</a>
-        </div>
-        <div id="login">
-          <a href="login.html">Login</a>
-        </div>
-      </div>
-      <div>
-        <p>Free shipping on orders over $300</p>
-        <img src="assets/img/logo shoe stor.jpeg" alt="Shoe store" />
-        <h1>~D's store~</h1>
-        <p>Exclusive Sneakers | Clothing | Accessoires</p>
-      </div>
-    </header>
-    <nav style="display: flex; justify-content: space-between">
-      <div id="invisblock"></div>
-      <div>
-        <a href="index.html">Shoes</a>
-        <a href="clothing.html">Clothing</a>
-        <a href="accessoires.html">Accessoires</a>
-      </div>
-      <div>
-        <a href="shoppingcart.html">
-          <img
-            id="cart"
-            src="assets/img/shopping cart-Photoroom.png"
-            alt="Cart"
-          />
-        </a>
-      </div>
-    </nav>
+
+  <?php include 'includes/header.php'; ?>
+  <?php include 'includes/nav.php'; ?>
+  <?php include 'includes/footer.php'; ?>
 
     <main>
       <div id="cart-container"></div>

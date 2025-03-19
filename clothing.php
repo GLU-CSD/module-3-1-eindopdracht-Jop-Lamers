@@ -27,46 +27,10 @@
   <head>
   </head>
   <body>
-    <header>
-      <div id="balk1">
-        <div class="language-selector">
-          <label for="language">Language: </label>
-          <select id="language" onchange="changeLanguage()">
-            <option value="de">Deutsch</option>
-            <option value="nl">Nederlands</option>
-          </select>
-        </div>
-        <div id="Register">
-          <a href="checkout.php">Checkout</a>
-        </div>
-        <div id="login">
-          <a href="login.html">Login</a>
-        </div>
 
-        <img id="zoekicoon" src="assets/img/zoek icoon-Photoroom.png" alt="zoek-icoon" />
-        <input type="text" name="search" placeholder="Search..">
-      </div>
-      <div>
-        <p>Free shipping on orders over $300</p>
-        <img src="assets/img/logo shoe stor.jpeg" alt="Shoe store" />
-        <h1>~D's store~</h1>
-        <p>Exclusive Sneakers | Clothing | Accessoires</p>
-      </div>
-    </header>
-
-    <nav style="display:flex; justify-content: space-between;">
-      <div id="invisblock"></div>
-      <div>
-      <a href="index.html">Shoes</a>
-      <a href="clothing.html">Clothing</a>
-      <a href="accessoires.html">Accessoires</a>
-    </div>
-    <div>
-      <a href="shoppingcart.html">
-        <img id="cart" src="assets/img/shopping cart-Photoroom.png" alt="Cart">
-      </a>
-    </div>
-    </nav>
+  <?php include 'includes/header.php'; ?>
+  <?php include 'includes/nav.php'; ?>
+  <?php include 'includes/footer.php'; ?>
 
     <div id="main">
 
@@ -401,31 +365,6 @@
     </div>
 
     </div>
-    <footer>
-      <div class="footer-container">
-        <div class="information">
-          <h3 id="info-font">-INFORMATION-</h3>
-          <h4><a href="#">About Us</a></h4>
-          <h4><a href="#">Privacy Policy</a></h4>
-          <h4><a href="#">Terms & Conditions</a></h4>
-          <h4><a href="#">FAQ</a></h4>
-        </div>
-        <div class="socials">
-          <h3 id="social-font">-SOCIALS-</h3>
-          <h4><a href="#">Instagram</a></h4>
-          <h4><a href="#">Facebook</a></h4>
-          <h4><a href="#">Twitter</a></h4>
-          <h4><a href="#">TikTok</a></h4>
-        </div>
-        <div class="contact">
-          <h3 id="contact-font">-CONTACT-</h3>
-          <h4>Email: <a href="mailto:info@dstore.com">info@dstore.com</a></h4>
-          <h4>Phone: <a href="tel:+1234567890">+123 456 7890</a></h4>
-          <h4>Address: 123 Sneaker St, Shoe City, SC 12345</h4>
-        </div>
-      </div>
-      <p id="copyrighttxt">copyright&copy; -2025- D's Store @D's_store.</p>
-    </footer>
   </body>
   <script>
     function changeLanguage() {
