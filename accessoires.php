@@ -30,21 +30,6 @@
 
   <?php include 'includes/header.php'; ?>
   <?php include 'includes/nav.php'; ?>
-  <?php include 'includes/footer.php'; ?>
-
-    <nav style="display:flex; justify-content: space-between;">
-      <div id="invisblock"></div>
-      <div>
-      <a href="index.html">Shoes</a>
-      <a href="clothing.html">Clothing</a>
-      <a href="accessoires.html">Accessoires</a>
-    </div>
-    <div>
-      <a href="shoppingcart.html">
-        <img id="cart" src="assets/img/shopping cart-Photoroom.png" alt="Cart">
-      </a>
-    </div>
-    </nav>
 
     <div id="main">
 
@@ -393,6 +378,7 @@
     </div>
 
     </div>
+    <?php include 'includes/footer.php'; ?>
   </body>
   <script>
     function changeLanguage() {

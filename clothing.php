@@ -30,7 +30,7 @@
 
   <?php include 'includes/header.php'; ?>
   <?php include 'includes/nav.php'; ?>
-  <?php include 'includes/footer.php'; ?>
+
 
     <div id="main">
 
@@ -365,6 +365,7 @@
     </div>
 
     </div>
+    <?php include 'includes/footer.php'; ?>
   </body>
   <script>
     function changeLanguage() {

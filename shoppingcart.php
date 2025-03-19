@@ -18,7 +18,7 @@
 
   <?php include 'includes/header.php'; ?>
   <?php include 'includes/nav.php'; ?>
-  <?php include 'includes/footer.php'; ?>
+ 
 
     <main>
       <div id="cart-container"></div>
@@ -64,5 +64,6 @@
       // Call displayCart when the page loads
       window.onload = displayCart;
     </script>
+     <?php include 'includes/footer.php'; ?>
   </body>
 </html>
