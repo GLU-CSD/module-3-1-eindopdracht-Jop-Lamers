@@ -188,6 +188,8 @@ section {
 #Shoes {
   display: flex;
   flex-wrap: wrap;
+  gap: 30px;
+  margin-left: 80px;
 }
 
 .shoe-container {

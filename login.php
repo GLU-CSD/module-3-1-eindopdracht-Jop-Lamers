@@ -48,7 +48,7 @@
             <p>
               Heb je geen account?
               <nav>
-              <a href="register.html" id="register">Checkout</a>
+              <a href="register.php" id="register">Register</a>
             </nav>
             </p>
           </div>

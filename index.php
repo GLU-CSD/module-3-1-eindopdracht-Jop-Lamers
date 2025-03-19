@@ -215,8 +215,31 @@
         "40 - 47",
         "41 - 45 - 47 - 49"
       ];
+      $array_addtocart = [
+        "addToCart('Asics gel nyc cream beige pink', 239.99)",
+        "addToCart('Asics gel nyc cream kale', 979.99)",
+        "addToCart('Asics gel nyc panelled', 319.99)",
+        "addToCart('Asics gel-NYC smoke grey', 279.99)",
+        "addToCart('x Gnarhunters SB Dunk Low sneakers', 699.99)",
+        "addToCart('x Grateful Dead SB Dunk Low Orange', 9829.99)",
+        "addToCart('SB Dunk Low Mummy sneakers', 779.99)",
+        "addToCart('Air Jordan 4 Retro Taupe Haze', 728.99)",
+        "addToCart('Air Jordan 4 Retro SP Union Off Noir', 1375.99)",
+        "addToCart('x Travis Scott Air Jordan 1 Low Golf', 1129.99)",
+        "addToCart('Air Jordan 4 Retro Black Cat 2020', 2149.99)",
+        "addToCart('Air Jordan 4 Retro Motorsports', 959.99)",
+        "addToCart('x Air Jordan 1 High OG Dusted Clay', 289.99)",
+        "addToCart('Air Jordan 1 Retro High OG Chicago', 2129.99)",
+        "addToCart('Air Jordan 4 Retro Pure Money', 2878.99)",
+        "addToCart('Air Jordan 4 Retro Levis NRG white denim', 1868.99)",
+        "addToCart('Air Jordan 4 SB Pine Green sneakers', 839.99)",
+        "addToCart('Air Jordan 1 Retro High Off-White-UNC', 3429.99)",
+        "addToCart('Off-White The 10: Air Jordan 1 Chicago', 14894.99)",
+        "addToCart('Kaws Air Jordan 4 Retro sneakers', 736.99)"
+      ];
 
       for ($a = 0; $a < count($array_titels); $a++) {
+
 
       ?>
 
@@ -229,7 +252,7 @@
           <div class="info">
             <p><strong>Brand name:</strong> <?php echo ($array_brands[$a]); ?></p>
             <p><strong>Sizes Available:</strong> <?php echo ($array_sizes[$a]); ?></p>
-            <button class="add-to-cart" onclick="addToCart('Asics gel nyc cream beige pink', 239.99)">Add to cart</button>
+            <button class="add-to-cart" onclick="<?php echo ($array_addtocart[$a]); ?>">Add to cart</button>
           </div>
         </div>
 
