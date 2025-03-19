@@ -145,19 +145,10 @@ input[type="text"]:focus {
   }
 }
 
-@media screen and (max-width: 1024px) {
+@media screen and (max-width: 100px) {
   .sidenav {
     display: none;
   }
-}
-.shoe {
-  flex: 1 1 calc(25% - 30px);
-  box-sizing: border-box;
-  border: 1px solid #636262;
-  padding: 20px;
-  background-color: #f1f0f1;
-
-  max-width: 50% !important;
 }
 
 header {
@@ -193,6 +184,12 @@ nav a {
 section {
   margin: 20px;
 }
+
+#Shoes {
+  display: flex;
+  flex-wrap: wrap;
+}
+
 .shoe-container {
   display: flex;
   flex-wrap: wrap;
