@@ -106,9 +106,9 @@
 
       <?php
       $array_titels = [
-        "Asics gel nyc cream beige pink",
-        "Asics gel nyc cream kale",
-        "Asics gel nyc panelled",
+        "Asics gel-NYC cream beige pink",
+        "Asics gel-NYC cream kale",
+        "Asics gel-NYC panelled",
         "Asics gel-NYC smoke grey",
         "x Gnarhunters SB Dunk Low sneakers",
         "x Grateful Dead SB Dunk Low Orange",
