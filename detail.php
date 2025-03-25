@@ -4,46 +4,29 @@
 <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>D's shoe store</title>
+    <title><?php echo $product["title"]; ?> - Details</title>
     <link rel="stylesheet" href="assets/css/detail.css" />
     <link rel="icon" type="image/jpeg" href="logo shoe stor.jpeg" />
-    <meta name="description" content="" />
-
-    <meta property="og:title" content="" />
-    <meta property="og:type" content="" />
-    <meta property="og:url" content="" />
-    <meta property="og:image" content="" />
-    <meta property="og:image:alt" content="" />
-
-    <link rel="icon" href="/favicon.ico" sizes="any" />
-    <link rel="icon" href="/icon.svg" type="image/svg+xml" />
-    <link rel="apple-touch-icon" href="icon.png" />
-
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Darumadrop+One&family=Noto+Sans:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
 
-    <meta name="theme-color" content="#fafafa" />
+    <meta name="description" content="" />
 </head>
 
 <body>
-
     <?php include 'includes/header.php'; ?>
     <?php include 'includes/nav.php'; ?>
 
-
     <div id="main">
-
         <div id="Shoes" class="product-container">
-
             <?php
-
             $products = [
                 [
                     "id" => 1,
                     "title" => "Asics gel-NYC cream beige pink",
                     "price" => 239.99,
-                    "image" => "assets/img/pink gel nyc pink.webp",
+                    "images" => ["assets/img/pink gel nyc pink.webp","assets/img2/pink gel nyc pink2.webp","assets/img3/pink gel nyc pink3.webp"],
                     "brand" => "Asics",
                     "sizes" => "36 - 38 - 42 - 43 - 45",
                     "addToCart" => "addToCart('Asics gel nyc cream beige pink', 239.99)"
@@ -220,45 +203,36 @@
                     "addToCart" => "addToCart('Kaws Air Jordan 4 Retro sneakers', 736.99)"
                 ]
             ];
-            ?>
-            <?php foreach ($products as $product):
 
+            foreach ($products as $product) {
                 if ($_GET["id"] == $product["id"]) {
             ?>
-                    <div class="shoe_detail">
-                        <h1><?php echo $product["title"]; ?></h1>
-                        <img src="<?php echo $product["image"]; ?>" alt="<?php echo $product["title"]; ?>" />
-                        <div class="info">
+                    <div class="product-detail">
+
+                        <div class="product-image">
+                            <img src="<?php echo $product["image"]; ?>" alt="<?php echo $product["title"]; ?>" />
+                        </div>
+
+
+                        <div class="product-info">
+                            <h1><?php echo $product["title"]; ?></h1>
+                            <p><strong>Price:</strong> $<?php echo number_format($product["price"], 2); ?></p>
+                            <p><strong>Brand:</strong> <?php echo $product["brand"]; ?></p>
+                            <p><strong>Sizes:</strong> <?php echo $product["sizes"]; ?></p>
                             <button class="add-to-cart" onclick="addToCart('<?php echo $product["title"]; ?>', <?php echo $product["price"]; ?>)">Add to cart</button>
                         </div>
                     </div>
             <?php
                 }
-            endforeach; ?>
-
+            }
+            ?>
         </div>
     </div>
 
-    </div>
-
-    </div>
     <?php include 'includes/footer.php'; ?>
 </body>
-<script>
-    function changeLanguage() {
-        let lang = document.getElementById("language").value;
-        "Language changed to: " + (lang === "de" ? "Deutsch" : "Nederlands");
-    }
-</script>
-<script>
-    var slider = document.getElementById("myRange");
-    var output = document.getElementById("demo");
-    output.innerHTML = slider.value;
 
-    slider.oninput = function() {
-        output.innerHTML = this.value;
-    }
-
+<script>
     let cart = JSON.parse(localStorage.getItem('cart')) || [];
 
     function addToCart(productName, productPrice) {
@@ -268,7 +242,6 @@
             quantity: 1
         };
 
-
         const existingProduct = cart.find(item => item.name === productName);
         if (existingProduct) {
             existingProduct.quantity += 1;
@@ -276,10 +249,7 @@
             cart.push(product);
         }
 
-
         localStorage.setItem('cart', JSON.stringify(cart));
-
-        console.log(cart);
         alert(`${productName} has been added to your cart.`);
     }
 </script>

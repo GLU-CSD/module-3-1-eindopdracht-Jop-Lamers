@@ -205,14 +205,55 @@ section {
   background-color: #f1f0f1;
   max-width: 700px;
 }
+
+.product-detail {
+  display: flex;
+  align-items: flex-start;
+  gap: 20px;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+.product-image img {
+  max-width: 400px;
+  width: 100%;
+  height: auto;
+  border: 1px solid #ccc;
+  border-radius: 10px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.product-info {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.product-info h1 {
+  font-size: 25px;
+  margin-bottom: 10px;
+}
+
+.product-info p {
+  font-size: 20px;
+  margin: 0;
+}
+
 .add-to-cart {
   font-family: "Darumadrop One", serif;
-  font-size: larger;
-  background-color: #d0d0d0;
-  border: 2px solid #000000;
-  color: #000000;
+  padding: 10px 20px;
+  background-color: #dedede;
+  color: rgb(0, 0, 0);
+  border: none;
   border-radius: 5px;
-  display: inline-block;
+  cursor: pointer;
+  font-size: 24px;
+}
+
+.add-to-cart:hover {
+  background-color: #949494;
 }
 
 img {
