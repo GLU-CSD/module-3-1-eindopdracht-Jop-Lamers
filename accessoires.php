@@ -111,168 +111,186 @@
 
       <?php
 
-      $array_titels = [
-        "1DR logo-buckle leather belt",
-        "C-Braff distressed-effect cap",
-        "logo-print passport wallet",
-        "GG1244S mask-frame sunglasses",
-        "check cashmere scarf",
-        "x New Era® box logo beanie",
-        "GG Supreme leather belt",
-        "dog vest",
-        "SL572 square-frame tinted sunglasses",
-        "Arrow belt",
-        "Off Currency wallet",
-        "Military Camp FW 23 baseball cap",
-        "Symbole rectangle-frame sunglasses",
-        "abstract-print iPhone 14 Plus case",
-        "mask-shaped sunglasses",
-        "Orb buckle belt",
-        "x Ducati x Spidi C1 racing gloves",
-        "Catalina square-frame sunglasses",
-        "logo-stamp baseball cap",
-        "intarsia-logo beanie hat"
-      ];
+      $products = [
 
-      $array_prijzen = [
-        189.99,
-        89.99,
-        919.99,
-        1479.99,
-        739.99,
-        139.99,
-        779.99,
-        624.99,
-        455.99,
-        374.99,
-        239.99,
-        219.99,
-        269.99,
-        129.99,
-        478.99,
-        368.99,
-        699.99,
-        444.99,
-        329.99,
-        228.99
-      ];
-
-      $array_images = [
-        "assets/img/diesel riem.webp",
-        "assets/img/diesel cap effect.webp",
-        "assets/img/logo-print passport wallet.webp",
-        "assets/img/gucci eyewear.webp",
-        "assets/img/burberry sjaal.webp",
-        "assets/img/new era supreme.webp",
-        "assets/img/gucci riem.webp",
-        "assets/img/mocler dog veste.webp",
-        "assets/img/SL572 square-frame tinted sunglasses.webp",
-        "assets/img/arrow belt.webp",
-        "assets/img/off wallet.webp",
-        "assets/img/Military Camp FW 23 baseball cap.webp",
-        "assets/img/Symbole rectangle-frame sunglasses.webp",
-        "assets/img/abstract-print iPhone 14 Plus case.webp",
-        "assets/img/mask-shaped sunglasses.webp",
-        "assets/img/Orb buckle belt.webp",
-        "assets/img/supreme gloves.webp",
-        "assets/img/Catalina square-frame sunglasses.webp",
-        "assets/img/logo-stamp baseball cap.webp",
-        "assets/img/intarsia-logo beanie hat.webp"
-      ];
-
-      $array_brands = [
-        "Diesel",
-        "Diesel",
-        "Balenciaga",
-        "Gucci",
-        "Burberry",
-        "Supreme x New era",
-        "Gucci",
-        "Moncler x Poldo",
-        "Saint-Laurent Eyewear",
-        "Off-White",
-        "Off-White",
-        "Supreme",
-        "Prada",
-        "BAPE",
-        "Guccie",
-        "Vivienne Westwood",
-        "Supreme",
-        "Off-White",
-        "Acne studios",
-        "Supreme"
-      ];
-
-      $array_sizes = [
-        "90 - 100 - 110",
-        "One size",
-        "One size",
-        "One size",
-        "One size",
-        "One size",
-        "90 - 110",
-        "One size",
-        "One size",
-        "110 - 120",
-        "One size",
-        "One size",
-        "One size",
-        "iphone 14 plus",
-        "One size",
-        "110 - 120",
-        "s - m - l - xl",
-        "One size",
-        "One size",
-        "One size"
-      ];
-
-      $array_addtocart = [
-        "addToCart('1DR logo-buckle leather belt', 189.99)",
-        "addToCart('C-Braff distressed-effect cap', 89.99)",
-        "addToCart('logo-print passport wallet', 919.99)",
-        "addToCart('GG1244S mask-frame sunglasses', 1479.99)",
-        "addToCart('check cashmere scarf', 739.99)",
-        "addToCart('x New Era® box logo beanie', 139.99)",
-        "addToCart('GG Supreme leather belt', 779.99)",
-        "addToCart('dog vest', 624.99)",
-        "addToCart('SL572 square-frame tinted sunglasses', 455.99)",
-        "addToCart('Arrow belt', 374.99)",
-        "addToCart('Off Currency wallet', 239.99)",
-        "addToCart('Military Camp FW 23 baseball cap', 219.99)",
-        "addToCart('Symbole rectangle-frame sunglasses', 269.99)",
-        "addToCart('abstract-print iPhone 14 Plus case', 129.99)",
-        "addToCart('mask-shaped sunglasses', 478.99)",
-        "addToCart('Orb buckle belt', 368.99)",
-        "addToCart('x Ducati x Spidi C1 racing gloves', 699.99)",
-        "addToCart('Catalina square-frame sunglasses', 444.99)",
-        "addToCart('logo-stamp baseball cap', 329.99)",
-        "addToCart('intarsia-logo beanie hat', 228.99)"
-      ];
-
-      for ($a = 0; $a < count($array_titels); $a++) {
-
-
-      ?>
-
-        <div class="shoe">
-          <h3><?php echo ($array_titels[$a]); ?></h3>
-          <img
-            src="<?php echo ($array_images[$a]) ?>"
-            alt="Asics gel nyc cream mineral beige pink" />
-          <p class="prijs">Price: -<?php echo ($array_prijzen[$a]); ?>-</p>
-          <div class="info">
-            <p><strong>Brand name:</strong> <?php echo ($array_brands[$a]); ?></p>
-            <p><strong>Sizes Available:</strong> <?php echo ($array_sizes[$a]); ?></p>
-            <button class="add-to-cart" onclick="<?php echo ($array_addtocart[$a]); ?>">Add to cart</button>
-          </div>
-        </div>
-
-      <?php
-      }
-      ?>
-
+        [
+          "title" => "1DR logo-buckle leather belt",
+          "price" => 189.99,
+          "image" => "assets/img/diesel riem.webp",
+          "brand" => "Diesel",
+          "sizes" => "90 - 100 - 110",
+          "addToCart" => "addToCart('1DR logo-buckle leather belt', 189.99)"
+        ],
+        [
+          "title" => "C-Braff distressed-effect cap",
+          "price" => 89.99,
+          "image" => "assets/img/diesel cap effect.webp",
+          "brand" => "Diesel",
+          "sizes" => "One size",
+          "addToCart" => "addToCart('C-Braff distressed-effect cap', 89.99)"
+        ],
+        [
+          "title" => "logo-print passport wallet",
+          "price" => 919.99,
+          "image" => "assets/img/logo-print passport wallet.webp",
+          "brand" => "Balenciaga",
+          "sizes" => "One size",
+          "addToCart" => "addToCart('logo-print passport wallet', 919.99)"
+        ],
+        [
+          "title" => "GG1244S mask-frame sunglasses",
+          "price" => 1479.99,
+          "image" => "assets/img/gucci eyewear.webp",
+          "brand" => "Gucci",
+          "sizes" => "One size",
+          "addToCart" => "addToCart('GG1244S mask-frame sunglasses', 1479.99)"
+        ],
+        [
+          "title" => "check cashmere scarf",
+          "price" => 739.99,
+          "image" => "assets/img/burberry sjaal.webp",
+          "brand" => "Burberry",
+          "sizes" => "One size",
+          "addToCart" => "addToCart('check cashmere scarf', 739.99)"
+        ],
+        [
+          "title" => "x New Era® box logo beanie",
+          "price" => 139.99,
+          "image" => "assets/img/new era supreme.webp",
+          "brand" => "Supreme x New era",
+          "sizes" => "One size",
+          "addToCart" => "addToCart('x New Era® box logo beanie', 139.99)"
+        ],
+        [
+          "title" => "GG Supreme leather belt",
+          "price" => 779.99,
+          "image" => "assets/img/gucci riem.webp",
+          "brand" => "Gucci",
+          "sizes" => "90 - 110",
+          "addToCart" => "addToCart('GG Supreme leather belt', 779.99)"
+        ],
+        [
+          "title" => "dog vest",
+          "price" => 624.99,
+          "image" => "assets/img/mocler dog veste.webp",
+          "brand" => "Moncler x Poldo",
+          "sizes" => "One size",
+          "addToCart" => "addToCart('dog vest', 624.99)"
+        ],
+        [
+          "title" => "SL572 square-frame tinted sunglasses",
+          "price" => 455.99,
+          "image" => "assets/img/SL572 square-frame tinted sunglasses.webp",
+          "brand" => "Saint-Laurent Eyewear",
+          "sizes" => "One size",
+          "addToCart" => "addToCart('SL572 square-frame tinted sunglasses', 455.99)"
+        ],
+        [
+          "title" => "Arrow belt",
+          "price" => 374.99,
+          "image" => "assets/img/arrow belt.webp",
+          "brand" => "Off-White",
+          "sizes" => "110 - 120",
+          "addToCart" => "addToCart('Arrow belt', 374.99)"
+        ],
+        [
+          "title" => "Off Currency wallet",
+          "price" => 239.99,
+          "image" => "assets/img/off wallet.webp",
+          "brand" => "Off-White",
+          "sizes" => "One size",
+          "addToCart" => "addToCart('Off Currency wallet', 239.99)"
+        ],
+        [
+          "title" => "Military Camp FW 23 baseball cap",
+          "price" => 219.99,
+          "image" => "assets/img/Military Camp FW 23 baseball cap.webp",
+          "brand" => "Supreme",
+          "sizes" => "One size",
+          "addToCart" => "addToCart('Military Camp FW 23 baseball cap', 219.99)"
+        ],
+        [
+          "title" => "Symbole rectangle-frame sunglasses",
+          "price" => 269.99,
+          "image" => "assets/img/Symbole rectangle-frame sunglasses.webp",
+          "brand" => "Prada",
+          "sizes" => "One size",
+          "addToCart" => "addToCart('Symbole rectangle-frame sunglasses', 269.99)"
+        ],
+        [
+          "title" => "abstract-print iPhone 14 Plus case",
+          "price" => 129.99,
+          "image" => "assets/img/abstract-print iPhone 14 Plus case.webp",
+          "brand" => "BAPE",
+          "sizes" => "iphone 14 plus",
+          "addToCart" => "addToCart('abstract-print iPhone 14 Plus case', 129.99)"
+        ],
+        [
+          "title" => "mask-shaped sunglasses",
+          "price" => 478.99,
+          "image" => "assets/img/mask-shaped sunglasses.webp",
+          "brand" => "Guccie",
+          "sizes" => "One size",
+          "addToCart" => "addToCart('mask-shaped sunglasses', 478.99)"
+        ],
+        [
+          "title" => "Orb buckle belt",
+          "price" => 368.99,
+          "image" => "assets/img/Orb buckle belt.webp",
+          "brand" => "Vivienne Westwood",
+          "sizes" => "110 - 120",
+          "addToCart" => "addToCart('Orb buckle belt', 368.99)"
+        ],
+        [
+          "title" => "x Ducati x Spidi C1 racing gloves",
+          "price" => 699.99,
+          "image" => "assets/img/supreme gloves.webp",
+          "brand" => "Supreme",
+          "sizes" => "s - m - l - xl",
+          "addToCart" => "addToCart('x Ducati x Spidi C1 racing gloves', 699.99)"
+        ],
+        [
+          "title" => "Catalina square-frame sunglasses",
+          "price" => 444.99,
+          "image" => "assets/img/Catalina square-frame sunglasses.webp",
+          "brand" => "Off-White",
+          "sizes" => "One size",
+          "addToCart" => "addToCart('Catalina square-frame sunglasses', 444.99)"
+        ],
+        [
+          "title" => "logo-stamp baseball cap",
+          "price" => 329.99,
+          "image" => "assets/img/logo-stamp baseball cap.webp",
+          "brand" => "Acne studios",
+          "sizes" => "One size",
+          "addToCart" => "addToCart('logo-stamp baseball cap', 329.99)"
+        ],
+        [
+          "title" => "intarsia-logo beanie hat",
+          "price" => 228.99,
+          "image" => "assets/img/intarsia-logo beanie hat.webp",
+          "brand" => "Supreme",
+          "sizes" => "One size",
+          "addToCart" => "addToCart('intarsia-logo beanie hat', 228.99)"
+          ]
+        ];
+     
+           foreach ($products as $product) {
+           ?>
+             <div class="shoe">
+               <h3><?php echo $product["title"]; ?></h3>
+               <img src="<?php echo $product["image"]; ?>" alt="<?php echo $product["title"]; ?>" />
+               <p class="prijs">Price: -<?php echo $product["price"]; ?>-</p>
+               <div class="info">
+             <p><strong>Brand name:</strong> <?php echo $product["brand"]; ?></p>
+             <p><strong>Sizes Available:</strong> <?php echo $product["sizes"]; ?></p>
+             <button class="add-to-cart" onclick="addToCart('<?php echo $product["title"]; ?>', <?php echo $product["price"]; ?>)">Add to cart</button>
+               </div>
+             </div>
+           <?php
+           }
+           ?>
     </div>
-
   </div>
 
   </div>

@@ -111,162 +111,166 @@
     <div id="Shoes" class="product-container">
 
       <?php
-      $array_titels = [
-        "Archive denim trucker jacket",
-        "Brim FW 22 zip-up hoodie",
-        "Andre 3000 photograph-print T-shirt",
-        "x CCM All Stars hockey jersey T-shirt",
-        "Box Logo hoodie",
-        "Box Logo hoodie",
-        "Box Logo hoodie",
-        "box logo hoodie",
-        "Arc logo zip hoodie",
-        "x The North Face Baltoro padded jacket",
-        "Trompe L'oeil bomber jacket",
-        "x The North Face Nuptse jacket",
-        "S.Matthew cotton track pants",
-        "Levis Wreath-print straight-leg jeans",
-        "x Damiano David P-Martyans sweatpants",
-        "ToFF graphic-print slim-fit jeans",
-        "logo-print drawstring sweatpants",
-        "Glory track pants",
-        "logo-print straight-leg jeans",
-        "Blown jeans"
-      ];
-      $array_prijzen = [
-        1049.99,
-        574.99,
-        327.99,
-        465.99,
-        529.99,
-        529.99,
-        529.99,
-        529.99,
-        749.99,
-        2074.99,
-        1379.99,
-        1579.99,
-        289.99,
-        249.99,
-        287.99,
-        1868.99,
-        680.99,
-        1074.99,
-        1346.99,
-        728.99
-      ];
-      $array_images = [
-        "assets/img/supreme.webp",
-        "assets/img/zip hoodie supreme.webp",
-        "assets/img/supreme shirt met man erop.webp",
-        "assets/img/supreme jersey.webp",
-        "assets/img/beige Box Logo hoodie.webp",
-        "assets/img/box logo grijs.webp",
-        "assets/img/box logo zwart.webp",
-        "assets/img/box logo roze.webp",
-        "assets/img/arc logo zip hoodie.webp",
-        "assets/img/x The North Face Baltoro padded jacket.webp",
-        "assets/img/Trompe L'oeil bomber jacket.webp",
-        "assets/img/x The North Face Nuptse jacket.webp",
-        "assets/img/S.Matthew cotton track pants.webp",
-        "assets/img/x Levi's Cotton Wreath-print straight-leg jeans.webp",
-        "assets/img/x Damiano David P-Martyans sweatpants.webp",
-        "assets/img/x ToFF graphic-print slim-fit jeans.webp",
-        "assets/img/logo-print drawstring sweatpants.webp",
-        "assets/img/Glory track pants.webp",
-        "assets/img/logo-print straight-leg jeans.webp",
-        "assets/img/Blown jeans.webp"
-      ];
-      $array_brands = [
-        "Supreme",
-        "Supreme",
-        "Supreme",
-        "Supreme",
-        "Supreme",
-        "Supreme",
-        "Supreme",
-        "Supreme",
-        "Supreme",
-        "Supreme | The North Face",
-        "Supreme",
-        "Supreme | The North Face",
-        "Off-White",
-        "Denim Tears x levi's",
-        "Diesel",
-        "Diesel",
-        "Palm Angels",
-        "Who Decides War",
-        "Heron Preston",
-        "Who Decides War"
-      ];
-      $array_sizes = [
-        "xs - s - m - l - xl",
-        "xs - s - m - l - xl",
-        "xs - s - m - l - xl",
-        "xs - s - m - l - xl",
-        "xs - s - m - l - xl",
-        "xs - s - m - l - xl",
-        "xs - s - m - l - xl",
-        "xs - s - m - l - xl",
-        "xs - s - m - l - xl",
-        "xs - s - m - l - xl",
-        "xs - s - m - l - xl",
-        "xs - s - m - l - xl",
-        "xs - s - m - l - xl",
-        "xs - s - m - l - xl",
-        "xs - s - m - l - xl",
-        "xs - s - m - l - xl",
-        "xs - s - m - l - xl",
-        "xs - s - m - l - xl",
-        "xs - s - m - l - xl",
-        "xs - s - m - l - xl"
-      ];
-      $array_addtocart = [
-        "addToCart('Archive denim trucker jacket', 1049.99)",
-        "addToCart('Brim FW 22 zip-up hoodie', 574.99)",
-        "addToCart('Andre 3000 photograph-print T-shirt', 327.99)",
-        "addToCart('x CCM All Stars hockey jersey T-shirt', 465.99)",
-        "addToCart('Box Logo hoodie', 529.99)",
-        "addToCart('Box Logo hoodie', 529.99)",
-        "addToCart('Box Logo hoodie', 529.99)",
-        "addToCart('box logo hoodie', 529.99)",
-        "addToCart('Arc logo zip hoodie', 749.99)",
-        "addToCart('x The North Face Baltoro padded jacket', 2074.99)",
-        "addToCart('Trompe Loeil bomber jacket', 1379.99)",
-        "addToCart('x The North Face Nuptse jacket', 1579.99)",
-        "addToCart('S.Matthew cotton track pants', 289.99)",
-        "addToCart('Levis Wreath-print straight-leg jeans', 249.99)",
-        "addToCart('x Damiano David P-Martyans sweatpants', 287.99)",
-        "addToCart('ToFF graphic-print slim-fit jeans', 1868.99)",
-        "addToCart('logo-print drawstring sweatpants', 680.99)",
-        "addToCart('Glory track pants', 1074.99)",
-        "addToCart('logo-print straight-leg jeans', 1346.99)",
-        "addToCart('Blown jeans', 728.99)"
-      ];
-
-      for ($a = 0; $a < count($array_titels); $a++) {
-
-
-      ?>
-
-        <div class="shoe">
-          <h3><?php echo ($array_titels[$a]); ?></h3>
-          <img
-            src="<?php echo ($array_images[$a]) ?>"
-            alt="Asics gel nyc cream mineral beige pink" />
-          <p class="prijs">Price: -<?php echo ($array_prijzen[$a]); ?>-</p>
-          <div class="info">
-            <p><strong>Brand name:</strong> <?php echo ($array_brands[$a]); ?></p>
-            <p><strong>Sizes Available:</strong> <?php echo ($array_sizes[$a]); ?></p>
-            <button class="add-to-cart" onclick="<?php echo ($array_addtocart[$a]); ?>">Add to cart</button>
-          </div>
-        </div>
-
-      <?php
-      }
-      ?>
-
-      --
+      
+       $products = [
+         [
+           "title" => "Archive denim trucker jacket",
+           "price" => 1049.99,
+           "image" => "assets/img/supreme.webp",
+           "brand" => "Supreme",
+           "sizes" => "xs - s - m - l - xl"
+         ],
+         [
+           "title" => "Brim FW 22 zip-up hoodie",
+           "price" => 574.99,
+           "image" => "assets/img/zip hoodie supreme.webp",
+           "brand" => "Supreme",
+           "sizes" => "xs - s - m - l - xl"
+         ],
+          [
+            "title" => "Andre 3000 photograph-print T-shirt",
+            "price" => 327.99,
+            "image" => "assets/img/supreme shirt met man erop.webp",
+            "brand" => "Supreme",
+            "sizes" => "xs - s - m - l - xl"
+          ],
+       [
+        "title" => "x CCM All Stars hockey jersey T-shirt",
+        "price" => 465.99,
+        "image" => "assets/img/supreme jersey.webp",
+        "brand" => "Supreme",
+        "sizes" => "xs - s - m - l - xl"
+      ],
+      [
+        "title" => "Box Logo hoodie",
+        "price" => 529.99,
+        "image" => "assets/img/beige Box Logo hoodie.webp",
+        "brand" => "Supreme",
+        "sizes" => "xs - s - m - l - xl"
+      ],
+      [
+        "title" => "Box Logo hoodie",
+        "price" => 529.99,
+        "image" => "assets/img/box logo grijs.webp",
+        "brand" => "Supreme",
+        "sizes" => "xs - s - m - l - xl"
+      ],
+      [
+        "title" => "Box Logo hoodie",
+        "price" => 529.99,
+        "image" => "assets/img/box logo zwart.webp",
+        "brand" => "Supreme",
+        "sizes" => "xs - s - m - l - xl"
+      ],
+      [
+        "title" => "box logo hoodie",
+        "price" => 529.99,
+        "image" => "assets/img/box logo roze.webp",
+        "brand" => "Supreme",
+        "sizes" => "xs - s - m - l - xl"
+      ],
+      [
+        "title" => "Arc logo zip hoodie",
+        "price" => 749.99,
+        "image" => "assets/img/arc logo zip hoodie.webp",
+        "brand" => "Supreme",
+        "sizes" => "xs - s - m - l - xl"
+      ],
+      [
+        "title" => "x The North Face Baltoro padded jacket",
+        "price" => 2074.99,
+        "image" => "assets/img/x The North Face Baltoro padded jacket.webp",
+        "brand" => "Supreme | The North Face",
+        "sizes" => "xs - s - m - l - xl"
+      ],
+      [
+        "title" => "Trompe L'oeil bomber jacket",
+        "price" => 1379.99,
+        "image" => "assets/img/Trompe L'oeil bomber jacket.webp",
+        "brand" => "Supreme",
+        "sizes" => "xs - s - m - l - xl"
+      ],
+      [
+        "title" => "x The North Face Nuptse jacket",
+        "price" => 1579.99,
+        "image" => "assets/img/x The North Face Nuptse jacket.webp",
+        "brand" => "Supreme | The North Face",
+        "sizes" => "xs - s - m - l - xl"
+      ],
+      [
+        "title" => "S.Matthew cotton track pants",
+        "price" => 289.99,
+        "image" => "assets/img/S.Matthew cotton track pants.webp",
+        "brand" => "Off-White",
+        "sizes" => "xs - s - m - l - xl"
+      ],
+      [
+        "title" => "Levis Wreath-print straight-leg jeans",
+        "price" => 249.99,
+        "image" => "assets/img/x Levi's Cotton Wreath-print straight-leg jeans.webp",
+        "brand" => "Denim Tears x levi's",
+        "sizes" => "xs - s - m - l - xl"
+      ],
+      [
+        "title" => "x Damiano David P-Martyans sweatpants",
+        "price" => 287.99,
+        "image" => "assets/img/x Damiano David P-Martyans sweatpants.webp",
+        "brand" => "Diesel",
+        "sizes" => "xs - s - m - l - xl"
+      ],
+      [
+        "title" => "ToFF graphic-print slim-fit jeans",
+        "price" => 1868.99,
+        "image" => "assets/img/x ToFF graphic-print slim-fit jeans.webp",
+        "brand" => "Diesel",
+        "sizes" => "xs - s - m - l - xl"
+      ],
+      [
+        "title" => "logo-print drawstring sweatpants",
+        "price" => 680.99,
+        "image" => "assets/img/logo-print drawstring sweatpants.webp",
+        "brand" => "Palm Angels",
+        "sizes" => "xs - s - m - l - xl"
+      ],
+      [
+        "title" => "Glory track pants",
+        "price" => 1074.99,
+        "image" => "assets/img/Glory track pants.webp",
+        "brand" => "Who Decides War",
+        "sizes" => "xs - s - m - l - xl"
+      ],
+      [
+        "title" => "logo-print straight-leg jeans",
+        "price" => 1346.99,
+        "image" => "assets/img/logo-print straight-leg jeans.webp",
+        "brand" => "Heron Preston",
+        "sizes" => "xs - s - m - l - xl"
+      ],
+      [
+        "title" => "Blown jeans",
+        "price" => 728.99,
+        "image" => "assets/img/Blown jeans.webp",
+        "brand" => "Who Decides War",
+        "sizes" => "xs - s - m - l - xl"
+      ]
+    ];
+ 
+       foreach ($products as $product) {
+       ?>
+         <div class="shoe">
+           <h3><?php echo $product["title"]; ?></h3>
+           <img src="<?php echo $product["image"]; ?>" alt="<?php echo $product["title"]; ?>" />
+           <p class="prijs">Price: -<?php echo $product["price"]; ?>-</p>
+           <div class="info">
+         <p><strong>Brand name:</strong> <?php echo $product["brand"]; ?></p>
+         <p><strong>Sizes Available:</strong> <?php echo $product["sizes"]; ?></p>
+         <button class="add-to-cart" onclick="addToCart('<?php echo $product["title"]; ?>', <?php echo $product["price"]; ?>)">Add to cart</button>
+           </div>
+         </div>
+       <?php
+       }
+       ?>
+       
     </div>
 
   </div>
