@@ -108,6 +108,7 @@
 
       $products = [
         [
+          "id" => 1,
           "title" => "Asics gel-NYC cream beige pink",
           "price" => 239.99,
           "image" => "assets/img/pink gel nyc pink.webp",
@@ -116,6 +117,7 @@
           "addToCart" => "addToCart('Asics gel nyc cream beige pink', 239.99)"
         ],
         [
+          "id" => 2,
           "title" => "Asics gel-NYC cream kale",
           "price" => 979.99,
           "image" => "assets/img/cream kale nyc.webp",
@@ -124,6 +126,7 @@
           "addToCart" => "addToCart('Asics gel nyc cream kale', 979.99)"
         ],
         [
+          "id" => 3,
           "title" => "Asics gel-NYC panelled",
           "price" => 319.99,
           "image" => "assets/img/pannelled.webp",
@@ -132,6 +135,7 @@
           "addToCart" => "addToCart('Asics gel nyc panelled', 319.99)"
         ],
         [
+          "id" => 4,
           "title" => "Asics gel-NYC smoke grey",
           "price" => 279.99,
           "image" => "assets/img/smoke grey.webp",
@@ -140,6 +144,7 @@
           "addToCart" => "addToCart('Asics gel-NYC smoke grey', 279.99)"
         ],
         [
+          "id" => 5,
           "title" => "x Gnarhunters SB Dunk Low sneakers",
           "price" => 699.99,
           "image" => "assets/img/gnarhunters.webp",
@@ -148,6 +153,7 @@
           "addToCart" => "addToCart('x Gnarhunters SB Dunk Low sneakers', 699.99)"
         ],
         [
+          "id" => 6,
           "title" => "x Grateful Dead SB Dunk Low Orange",
           "price" => 9829.99,
           "image" => "assets/img/grateful dreads.webp",
@@ -156,6 +162,7 @@
           "addToCart" => "addToCart('x Grateful Dead SB Dunk Low Orange', 9829.99)"
         ],
         [
+          "id" => 7,
           "title" => "SB Dunk Low Mummy sneakers",
           "price" => 779.99,
           "image" => "assets/img/mummy dunks.webp",
@@ -164,6 +171,7 @@
           "addToCart" => "addToCart('SB Dunk Low Mummy sneakers', 779.99)"
         ],
         [
+          "id" => 8,
           "title" => "Air Jordan 4 Retro Taupe Haze",
           "price" => 728.99,
           "image" => "assets/img/taupe haze.webp",
@@ -172,6 +180,7 @@
           "addToCart" => "addToCart('Air Jordan 4 Retro Taupe Haze', 728.99)"
         ],
         [
+          "id" => 9,
           "title" => "Air Jordan 4 Retro SP Union Off Noir",
           "price" => 1375.99,
           "image" => "assets/img/unions.webp",
@@ -180,6 +189,7 @@
           "addToCart" => "addToCart('Air Jordan 4 Retro SP Union Off Noir', 1375.99)"
         ],
         [
+          "id" => 10,
           "title" => "x Travis Scott Air Jordan 1 Low Golf",
           "price" => 1129.99,
           "image" => "assets/img/travis golfs.webp",
@@ -188,6 +198,7 @@
           "addToCart" => "addToCart('x Travis Scott Air Jordan 1 Low Golf', 1129.99)"
         ],
         [
+          "id" => 11,
           "title" => "Air Jordan 4 Retro Black Cat 2020",
           "price" => 2149.99,
           "image" => "assets/img/black cats.webp",
@@ -196,6 +207,7 @@
           "addToCart" => "addToCart('Air Jordan 4 Retro Black Cat 2020', 2149.99)"
         ],
         [
+          "id" => 12,
           "title" => "Air Jordan 4 Retro Motorsports",
           "price" => 959.99,
           "image" => "assets/img/motorsports.webp",
@@ -204,6 +216,7 @@
           "addToCart" => "addToCart('Air Jordan 4 Retro Motorsports', 959.99)"
         ],
         [
+          "id" => 13,
           "title" => "x Air Jordan 1 High OG Dusted Clay",
           "price" => 289.99,
           "image" => "assets/img/dusted clay.webp",
@@ -212,6 +225,7 @@
           "addToCart" => "addToCart('x Air Jordan 1 High OG Dusted Clay', 289.99)"
         ],
         [
+          "id" => 14,
           "title" => "Air Jordan 1 Retro High OG Chicago",
           "price" => 2129.99,
           "image" => "assets/img/chicago.webp",
@@ -220,6 +234,7 @@
           "addToCart" => "addToCart('Air Jordan 1 Retro High OG Chicago', 2129.99)"
         ],
         [
+          "id" => 15,
           "title" => "Air Jordan 4 Retro Pure Money",
           "price" => 2878.99,
           "image" => "assets/img/pure moneys.webp",
@@ -228,6 +243,7 @@
           "addToCart" => "addToCart('Air Jordan 4 Retro Pure Money', 2878.99)"
         ],
         [
+          "id" => 16,
           "title" => "Air Jordan 4 Retro Levis white denim",
           "price" => 1868.99,
           "image" => "assets/img/levi.webp",
@@ -236,6 +252,7 @@
           "addToCart" => "addToCart('Air Jordan 4 Retro Levis NRG white denim', 1868.99)"
         ],
         [
+          "id" => 17,
           "title" => "Air Jordan 4 SB Pine Green sneakers",
           "price" => 839.99,
           "image" => "assets/img/Air Jordan 4 SB Pine Green sneakers.webp",
@@ -244,6 +261,7 @@
           "addToCart" => "addToCart('Air Jordan 4 SB Pine Green sneakers', 839.99)"
         ],
         [
+          "id" => 18,
           "title" => "Air Jordan 1 Retro High Off-White-UNC",
           "price" => 3429.99,
           "image" => "assets/img/unc jordan off white.webp",
@@ -252,6 +270,7 @@
           "addToCart" => "addToCart('Air Jordan 1 Retro High Off-White-UNC', 3429.99)"
         ],
         [
+          "id" => 19,
           "title" => "Off-White The 10: Air Jordan 1 Chicago",
           "price" => 14894.99,
           "image" => "assets/img/chicago off white.webp",
@@ -260,30 +279,30 @@
           "addToCart" => "addToCart('Off-White The 10: Air Jordan 1 Chicago', 14894.99)"
         ],
         [
+          "id" => 20,
           "title" => "Kaws Air Jordan 4 Retro sneakers",
           "price" => 736.99,
           "image" => "assets/img/kaws.webp",
           "brand" => "Nike Air Jordan",
           "sizes" => "41 - 45 - 47 - 49",
           "addToCart" => "addToCart('Kaws Air Jordan 4 Retro sneakers', 736.99)"
-          ]
-        ];
-     
-           foreach ($products as $product) {
-           ?>
-             <div class="shoe">
-               <h3><?php echo $product["title"]; ?></h3>
-               <img src="<?php echo $product["image"]; ?>" alt="<?php echo $product["title"]; ?>" />
-               <p class="prijs">Price: -<?php echo $product["price"]; ?>-</p>
-               <div class="info">
-             <p><strong>Brand name:</strong> <?php echo $product["brand"]; ?></p>
-             <p><strong>Sizes Available:</strong> <?php echo $product["sizes"]; ?></p>
-             <button class="add-to-cart" onclick="addToCart('<?php echo $product["title"]; ?>', <?php echo $product["price"]; ?>)">Add to cart</button>
-               </div>
-             </div>
-           <?php
-           }
-           ?>
+        ]
+      ];
+      ?>
+      <?php foreach ($products as $product): ?>
+        <div class="shoe">
+          <h3><?php echo $product["title"]; ?></h3>
+          <img src="<?php echo $product["image"]; ?>" alt="<?php echo $product["title"]; ?>" />
+          <p class="prijs">Price: -<?php echo $product["price"]; ?>-</p>
+          <div class="info">
+            <p><strong>Brand name:</strong> <?php echo $product["brand"]; ?></p>
+            <p><strong>Sizes Available:</strong> <?php echo $product["sizes"]; ?></p>
+            <a href="detail.php ?id=<?php echo $product["id"]; ?>">View Details</a>
+            <br></br>
+            <button class="add-to-cart" onclick="addToCart('<?php echo $product["title"]; ?>', <?php echo $product["price"]; ?>)">Add to cart</button>
+          </div>
+        </div>
+      <?php endforeach; ?>
 
     </div>
   </div>
@@ -307,8 +326,7 @@
   slider.oninput = function() {
     output.innerHTML = this.value;
   }
-  // ...existing code...
-
+  
   let cart = JSON.parse(localStorage.getItem('cart')) || [];
 
   function addToCart(productName, productPrice) {
@@ -318,7 +336,7 @@
       quantity: 1
     };
 
-    // Check if the product is already in the cart
+   
     const existingProduct = cart.find(item => item.name === productName);
     if (existingProduct) {
       existingProduct.quantity += 1;
@@ -326,14 +344,14 @@
       cart.push(product);
     }
 
-    // Save the cart to localStorage
+    
     localStorage.setItem('cart', JSON.stringify(cart));
 
     console.log(cart);
     alert(`${productName} has been added to your cart.`);
   }
 
-  // ...existing code...
+  
 </script>
 
 </html>
