@@ -3,6 +3,7 @@ body {
   background-color: #f0f0f0;
   color: #000000;
   text-align: center;
+  box-shadow: #d0d0d0 0px 0px 10px;
 }
 
 body a {
@@ -160,6 +161,7 @@ header {
 }
 
 header #balk1 {
+  box-shadow: #d0d0d0 0px 0px 10px;
   position: sticky;
   width: 100%;
   display: flex;
@@ -167,6 +169,7 @@ header #balk1 {
 }
 
 header img {
+  box-shadow: #d0d0d0 0px 0px 10px;
   width: 200px;
 }
 nav {
@@ -200,7 +203,6 @@ section {
 .shoe_detail {
   flex: 1 1 calc(25% - 30px);
   box-sizing: border-box;
-  border: 1px solid #636262;
   padding: 20px;
   background-color: #f1f0f1;
   max-width: 700px;
@@ -228,28 +230,28 @@ section {
   flex: 1;
   display: flex;
   flex-direction: column;
-  gap: 20px;
+  gap: 30px;
 }
 
 .product-info h1 {
-  font-size: 25px;
+  font-size: 36px;
   margin-bottom: 10px;
 }
 
 .product-info p {
-  font-size: 20px;
+  font-size: 30px;
   margin: 0;
 }
 
 .add-to-cart {
   font-family: "Darumadrop One", serif;
-  padding: 10px 20px;
+  padding: 10px 15px;
   background-color: #dedede;
   color: rgb(0, 0, 0);
   border: none;
   border-radius: 5px;
   cursor: pointer;
-  font-size: 24px;
+  font-size: 32px;
 }
 
 .add-to-cart:hover {
@@ -258,7 +260,7 @@ section {
 
 img {
   width: 100%;
-  border: 2px solid #444;
+  box-shadow: #d0d0d0 0px 0px 10px;
 }
 .info {
   font-size: large;
@@ -337,6 +339,7 @@ footer a:hover {
   display: flex;
 }
 #search {
+  box-shadow: #d0d0d0 0px 0px 10px;
   border-radius: 25px;
   width: 380px;
   height: 35px;
@@ -345,6 +348,7 @@ footer a:hover {
   align-items: center;
 }
 #zoekicoon {
+  box-shadow: #d0d0d0 0px 0px 10px;
   width: 47px;
   height: 32px;
   margin-top: 2px;
@@ -378,6 +382,7 @@ footer a:hover {
   font-size: 30px;
 }
 #cart {
+  box-shadow: #d0d0d0 0px 0px 10px;
   margin-top: 12px;
   width: 40px;
   height: 40px;
@@ -386,5 +391,29 @@ footer a:hover {
   margin-left: 260px;
 }
 .product-container {
-  width: 85%;
+  width: 100%;
+}
+.gallery {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.thumbnails {
+  display: flex;
+  justify-content: center;
+  margin-top: 10px;
+}
+.thumbnails img {
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+  border-radius: 10px;
+  width: 250px;
+  height: 300px;
+  margin: 3px;
+  cursor: pointer;
+}
+.large-photo {
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+  border-radius: 10px;
+  width: 590px;
+  height: 720px;
 }
