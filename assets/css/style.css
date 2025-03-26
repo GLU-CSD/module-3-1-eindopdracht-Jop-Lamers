@@ -124,7 +124,7 @@ input[type="text"]:focus {
 .sidenav {
   height: 100%;
   width: 15%;
-  background-color: #e7e7e7;
+  background-color:  #f0f0f0;
   padding-top: 20px;
 }
 
@@ -132,7 +132,7 @@ input[type="text"]:focus {
   padding: 6px 8px 6px 16px;
   text-decoration: none;
   font-size: 25px;
-  color: #777777;
+  color: #dadada;
   display: block;
 }
 
@@ -290,7 +290,7 @@ footer a:hover {
   padding: 20px;
 }
 #filter-text {
-  background-color: #e0e0e0;
+  background-color: #e7e7e7;
   font-size: 40px;
 }
 #talen {
@@ -332,11 +332,11 @@ footer a:hover {
   font-size: 30px;
 }
 .filter-text {
-  background-color: #cccccc;
+  background-color: #e7e7e7;
   font-size: 40px;
 }
 #price-amount {
-  background-color: #cccccc;
+  background-color: #efefef;
   font-size: 30px;
 }
 #cart {

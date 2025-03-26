@@ -30,11 +30,11 @@
                     <div class="product-detail">
 
                         <div class="gallery">
-                            <img id="large-photo" class="large-photo" src="assets/img/pink gel nyc pink.webp" alt="Grote foto">
+                            <img id="large-photo" class="large-photo" src="<?php echo $product["images"][0]; ?>" alt="Grote foto">
                             <div class="thumbnails">
-                                <img class="thumbnail" src="assets/img/pink gel nyc pink.webp" data-large="assets/img/pink gel nyc pink.webp" alt="Thumbnail 1">
-                                <img class="thumbnail" src="assets/img2/pink gel nyc pink2.webp" data-large="assets/img2/pink gel nyc pink2.webp" alt="Thumbnail 2">
-                                <img class="thumbnail" src="assets/img3/pink gel nyc pink3.webp" data-large="assets/img3/pink gel nyc pink3.webp" alt="Thumbnail 3">
+                                <img class="thumbnail" src="<?php echo $product["images"][0]; ?>" data-large="<?php echo $product["images"][0]; ?>" alt="Thumbnail 1">
+                                <img class="thumbnail" src="<?php echo $product["images"][1]; ?>" data-large="<?php echo $product["images"][1]; ?>" alt="Thumbnail 2">
+                                <img class="thumbnail" src="<?php echo $product["images"][2]; ?>" data-large="<?php echo $product["images"][2]; ?>" alt="Thumbnail 3">
                             </div>
                         </div>
 

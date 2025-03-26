@@ -74,10 +74,50 @@ button:hover {
   padding: 15px 30px;
   cursor: pointer;
   margin-top: 20px;
-
 }
 
 .clear-cart:hover {
   background-color: #9e9e9e;
 }
+.cart-item {
+  border: 1px solid #ccc;
+  padding: 10px;
+  margin-bottom: 10px;
+  border-radius: 5px;
+  background-color: #f9f9f9;
+}
 
+.cart-item h3 {
+  margin: 0 0 10px;
+}
+
+.cart-item p {
+  margin: 5px 0;
+}
+
+.cart-item button {
+  padding: 5px 10px;
+  background-color: #ff4d4d;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.cart-item button:hover {
+  background-color: #cc0000;
+}
+
+#cart-summary {
+  font-size: 20px;
+  color: #000000;
+  margin-top: 20px;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  background-color: #f1f1f1;
+}
+
+#cart-summary h3 {
+  margin-bottom: 10px;
+}

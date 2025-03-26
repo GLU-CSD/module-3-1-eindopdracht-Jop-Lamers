@@ -112,7 +112,7 @@
       <?php foreach ($products as $product): ?>
         <div class="shoe">
           <h3><?php echo $product["title"]; ?></h3>
-          <img src="<?php echo $product["image"] ?>" alt="<?php echo $product["title"]; ?>" />
+          <img src="<?php echo $product["images"][0] ?>" alt="<?php echo $product["title"]; ?>" />
           <p class="prijs">Price: -$<?php echo $product["price"]; ?>-</p>
           <div class="info">
             <p><strong>Brand name:</strong> <?php echo $product["brand"]; ?></p>

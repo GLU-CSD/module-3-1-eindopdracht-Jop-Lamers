@@ -4,7 +4,7 @@ $products = [
         "id" => 21,
         "title" => "Archive denim trucker jacket",
         "price" => 1049.99,
-        "image" => "assets/img/supreme.webp",
+        "images" => ["assets/img/supreme.webp"],
         "brand" => "Supreme",
         "sizes" => "xs - s - m - l - xl"
     ],
@@ -12,7 +12,7 @@ $products = [
         "id" => 22,
         "title" => "Brim FW 22 zip-up hoodie",
         "price" => 574.99,
-        "image" => "assets/img/zip hoodie supreme.webp",
+        "images" => ["assets/img/zip hoodie supreme.webp"],
         "brand" => "Supreme",
         "sizes" => "xs - s - m - l - xl"
     ],
@@ -20,7 +20,7 @@ $products = [
         "id" => 23,
         "title" => "Andre 3000 photograph-print T-shirt",
         "price" => 327.99,
-        "image" => "assets/img/supreme shirt met man erop.webp",
+        "images" => ["assets/img/supreme shirt met man erop.webp"],
         "brand" => "Supreme",
         "sizes" => "xs - s - m - l - xl"
     ],
@@ -28,7 +28,7 @@ $products = [
         "id" => 24,
         "title" => "x CCM All Stars hockey jersey T-shirt",
         "price" => 465.99,
-        "image" => "assets/img/supreme jersey.webp",
+        "images" => ["assets/img/supreme jersey.webp"],
         "brand" => "Supreme",
         "sizes" => "xs - s - m - l - xl"
     ],
@@ -36,7 +36,7 @@ $products = [
         "id" => 25,
         "title" => "Box Logo hoodie",
         "price" => 529.99,
-        "image" => "assets/img/beige Box Logo hoodie.webp",
+        "images" => ["assets/img/beige Box Logo hoodie.webp"],
         "brand" => "Supreme",
         "sizes" => "xs - s - m - l - xl"
     ],
@@ -44,7 +44,7 @@ $products = [
         "id" => 26,
         "title" => "Box Logo hoodie",
         "price" => 529.99,
-        "image" => "assets/img/box logo grijs.webp",
+        "images" => ["assets/img/box logo grijs.webp"],
         "brand" => "Supreme",
         "sizes" => "xs - s - m - l - xl"
     ],
@@ -52,7 +52,7 @@ $products = [
         "id" => 27,
         "title" => "Box Logo hoodie",
         "price" => 529.99,
-        "image" => "assets/img/box logo zwart.webp",
+        "images" => ["assets/img/box logo zwart.webp"],
         "brand" => "Supreme",
         "sizes" => "xs - s - m - l - xl"
     ],
@@ -60,7 +60,7 @@ $products = [
         "id" => 28,
         "title" => "box logo hoodie",
         "price" => 529.99,
-        "image" => "assets/img/box logo roze.webp",
+        "images" => ["assets/img/box logo roze.webp"],
         "brand" => "Supreme",
         "sizes" => "xs - s - m - l - xl"
     ],
@@ -68,7 +68,7 @@ $products = [
         "id" => 29,
         "title" => "Arc logo zip hoodie",
         "price" => 749.99,
-        "image" => "assets/img/arc logo zip hoodie.webp",
+        "images" => [ "assets/img/arc logo zip hoodie.webp"],
         "brand" => "Supreme",
         "sizes" => "xs - s - m - l - xl"
     ],
@@ -76,7 +76,7 @@ $products = [
         "id" => 30,
         "title" => "x The North Face Baltoro padded jacket",
         "price" => 2074.99,
-        "image" => "assets/img/x The North Face Baltoro padded jacket.webp",
+        "images" => ["assets/img/x The North Face Baltoro padded jacket.webp"],
         "brand" => "Supreme | The North Face",
         "sizes" => "xs - s - m - l - xl"
     ],
@@ -84,7 +84,7 @@ $products = [
         "id" => 31,
         "title" => "Trompe L'oeil bomber jacket",
         "price" => 1379.99,
-        "image" => "assets/img/Trompe L'oeil bomber jacket.webp",
+        "images" => ["assets/img/Trompe L'oeil bomber jacket.webp"],
         "brand" => "Supreme",
         "sizes" => "xs - s - m - l - xl"
     ],
@@ -92,7 +92,7 @@ $products = [
         "id" => 32,
         "title" => "x The North Face Nuptse jacket",
         "price" => 1579.99,
-        "image" => "assets/img/x The North Face Nuptse jacket.webp",
+        "images" => ["assets/img/x The North Face Nuptse jacket.webp"],
         "brand" => "Supreme | The North Face",
         "sizes" => "xs - s - m - l - xl"
     ],
@@ -100,7 +100,7 @@ $products = [
         "id" => 33,
         "title" => "S.Matthew cotton track pants",
         "price" => 289.99,
-        "image" => "assets/img/S.Matthew cotton track pants.webp",
+        "images" => ["assets/img/S.Matthew cotton track pants.webp"],
         "brand" => "Off-White",
         "sizes" => "xs - s - m - l - xl"
     ],
@@ -108,7 +108,7 @@ $products = [
         "id" => 34,
         "title" => "Levis Wreath-print straight-leg jeans",
         "price" => 249.99,
-        "image" => "assets/img/x Levi's Cotton Wreath-print straight-leg jeans.webp",
+        "images" => ["assets/img/x Levi's Cotton Wreath-print straight-leg jeans.webp"],
         "brand" => "Denim Tears x levi's",
         "sizes" => "xs - s - m - l - xl"
     ],
@@ -116,7 +116,7 @@ $products = [
         "id" => 35,
         "title" => "x Damiano David P-Martyans sweatpants",
         "price" => 287.99,
-        "image" => "assets/img/x Damiano David P-Martyans sweatpants.webp",
+        "images" => ["assets/img/x Damiano David P-Martyans sweatpants.webp"],
         "brand" => "Diesel",
         "sizes" => "xs - s - m - l - xl"
     ],
@@ -124,7 +124,7 @@ $products = [
         "id" => 36,
         "title" => "ToFF graphic-print slim-fit jeans",
         "price" => 1868.99,
-        "image" => "assets/img/x ToFF graphic-print slim-fit jeans.webp",
+        "images" => ["assets/img/x ToFF graphic-print slim-fit jeans.webp"],
         "brand" => "Diesel",
         "sizes" => "xs - s - m - l - xl"
     ],
@@ -132,7 +132,7 @@ $products = [
         "id" => 37,
         "title" => "logo-print drawstring sweatpants",
         "price" => 680.99,
-        "image" => "assets/img/logo-print drawstring sweatpants.webp",
+        "images" => ["assets/img/logo-print drawstring sweatpants.webp"],
         "brand" => "Palm Angels",
         "sizes" => "xs - s - m - l - xl"
     ],
@@ -140,7 +140,7 @@ $products = [
         "id" => 38,
         "title" => "Glory track pants",
         "price" => 1074.99,
-        "image" => "assets/img/Glory track pants.webp",
+        "images" => ["assets/img/Glory track pants.webp"],
         "brand" => "Who Decides War",
         "sizes" => "xs - s - m - l - xl"
     ],
@@ -148,7 +148,7 @@ $products = [
         "id" => 39,
         "title" => "logo-print straight-leg jeans",
         "price" => 1346.99,
-        "image" => "assets/img/logo-print straight-leg jeans.webp",
+        "images" => ["assets/img/logo-print straight-leg jeans.webp"],
         "brand" => "Heron Preston",
         "sizes" => "xs - s - m - l - xl"
     ],
@@ -156,7 +156,7 @@ $products = [
         "id" => 40,
         "title" => "Blown jeans",
         "price" => 728.99,
-        "image" => "assets/img/Blown jeans.webp",
+        "images" => ["assets/img/Blown jeans.webp"],
         "brand" => "Who Decides War",
         "sizes" => "xs - s - m - l - xl"
     ]
