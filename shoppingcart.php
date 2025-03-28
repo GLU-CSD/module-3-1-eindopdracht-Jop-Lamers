@@ -59,12 +59,12 @@
       });
 
 
-      totalVAT = totalOrderPrice * 0.21;
+      totalVAT = totalOrderPrice / 121 * 100;
 
       cartSummary.innerHTML = `
           <h3>Order Summary</h3>
-          <p>Total Order Price (Excl. BTW): $${(totalOrderPrice - totalVAT).toFixed(2)}</p>
-          <p>BTW (21%): $${totalVAT.toFixed(2)}</p>
+          <p>Total Order Price (Excl. BTW): $${totalVAT.toFixed(2)} </p>
+          <p>BTW (21%): $${(totalOrderPrice - totalVAT).toFixed(2)}</p>
           <p>Total Order Price (Incl. BTW): $${totalOrderPrice.toFixed(2)}</p>
         `;
     }

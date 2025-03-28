@@ -124,7 +124,7 @@ input[type="text"]:focus {
 .sidenav {
   height: 100%;
   width: 15%;
-  background-color:  #f0f0f0;
+  background-color: #f0f0f0;
   padding-top: 20px;
 }
 
@@ -161,6 +161,7 @@ header {
 
 header #balk1 {
   position: sticky;
+  height: 40px;
   width: 100%;
   display: flex;
   background-color: rgb(230, 230, 230);

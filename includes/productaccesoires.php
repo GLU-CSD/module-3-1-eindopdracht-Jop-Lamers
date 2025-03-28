@@ -1,6 +1,5 @@
 <?php
 $products = [
-
     [
         "id" => 41,
         "title" => "1DR logo-buckle leather belt",

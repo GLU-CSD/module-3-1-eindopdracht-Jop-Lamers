@@ -19,7 +19,7 @@
         <input type="text" name="search" placeholder="Search..">
     </div>
     <div>
-        <p>Free shipping on orders over $300</p>
+        <p>Free shipping on orders over $750</p>
         <img src="assets/img/logo shoe stor.jpeg" alt="Shoe store" />
         <h1>~D's store~</h1>
         <p>Exclusive Sneakers | Clothing | Accessoires</p>

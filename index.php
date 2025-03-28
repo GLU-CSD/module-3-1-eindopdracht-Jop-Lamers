@@ -106,7 +106,7 @@
 
       <?php
 
-      include 'includes/products.php';
+      include 'includes/productsshoes.php';
 
       ?>
       <?php foreach ($products as $product): ?>
@@ -164,11 +164,7 @@
       cart.push(product);
     }
 
-
     localStorage.setItem('cart', JSON.stringify(cart));
-
-    console.log(cart);
-    alert(`${productName} has been added to your cart.`);
   }
 </script>
 

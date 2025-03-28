@@ -22,7 +22,9 @@
     <div id="main">
         <div id="Shoes" class="product-container">
             <?php
+
             include 'includes/products.php';
+
 
             foreach ($products as $product) {
                 if ($_GET["id"] == $product["id"]) {

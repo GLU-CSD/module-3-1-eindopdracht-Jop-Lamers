@@ -155,7 +155,7 @@
   slider.oninput = function() {
     output.innerHTML = this.value;
   }
-  // ...existing code...
+  
 
   let cart = JSON.parse(localStorage.getItem('cart')) || [];
 
@@ -166,7 +166,6 @@
       quantity: 1
     };
 
-    // Check if the product is already in the cart
     const existingProduct = cart.find(item => item.name === productName);
     if (existingProduct) {
       existingProduct.quantity += 1;
@@ -174,14 +173,9 @@
       cart.push(product);
     }
 
-    // Save the cart to localStorage
+    
     localStorage.setItem('cart', JSON.stringify(cart));
-
-    console.log(cart);
-    alert(`${productName} has been added to your cart.`);
   }
-
-  // ...existing code...
 </script>
 
 </html>

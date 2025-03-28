@@ -1,6 +1,6 @@
 <?php
 $products = [
-    [
+[
         "id" => 21,
         "title" => "Archive denim trucker jacket",
         "price" => 1049.99,
@@ -68,7 +68,7 @@ $products = [
         "id" => 29,
         "title" => "Arc logo zip hoodie",
         "price" => 749.99,
-        "images" => [ "assets/img/arc logo zip hoodie.webp"],
+        "images" => ["assets/img/arc logo zip hoodie.webp"],
         "brand" => "Supreme",
         "sizes" => "xs - s - m - l - xl"
     ],
