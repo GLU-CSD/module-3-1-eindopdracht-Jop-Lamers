@@ -150,6 +150,7 @@
   slider.oninput = function() {
     output.innerHTML = this.value;
   }
+ 
 
   let cart = JSON.parse(localStorage.getItem('cart')) || [];
 
@@ -169,7 +170,12 @@
 
    
     localStorage.setItem('cart', JSON.stringify(cart));
+
+    console.log(cart);
+    alert(`${productName} has been added to your cart.`);
   }
+
+  
 </script>
 
 </html>

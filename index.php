@@ -146,6 +146,7 @@
   slider.oninput = function() {
     output.innerHTML = this.value;
   }
+ 
 
   let cart = JSON.parse(localStorage.getItem('cart')) || [];
 
@@ -156,7 +157,6 @@
       quantity: 1
     };
 
-
     const existingProduct = cart.find(item => item.name === productName);
     if (existingProduct) {
       existingProduct.quantity += 1;
@@ -164,8 +164,12 @@
       cart.push(product);
     }
 
+   
     localStorage.setItem('cart', JSON.stringify(cart));
-  }
-</script>
 
+    console.log(cart);
+    alert(`${productName} has been added to your cart.`);
+  }
+
+</script>
 </html>

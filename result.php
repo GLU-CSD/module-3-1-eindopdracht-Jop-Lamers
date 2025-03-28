@@ -65,6 +65,7 @@
 
     if ($conn->query($query) === TRUE) {
         echo "New record created successfully";
+        echo "Redirect to new thank you page! <script>window.location.href='thanks.php';</script>";
     } else {
         echo "Error: " . $sql . "<br>" . $conn->error;
     }
