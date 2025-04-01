@@ -4,8 +4,9 @@
         <div class="language-selector">
             <label for="language">Language: </label>
             <select id="language" onchange="changeLanguage()">
-                <option value="de">Deutsch</option>
-                <option value="nl">Nederlands</option>
+                <option value="Netherlands">Netherlands</option>
+                <option value="Belgium">Belgium</option>
+                <option value="Germany">Germany</option>
             </select>
         </div>
         <div id="Register">

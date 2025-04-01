@@ -117,13 +117,13 @@
       ?>
         <div class="shoe">
           <h3><?php echo $product["title"]; ?></h3>
-          <img src="<?php echo $product["images"][0]; ?>" alt="<?php echo $product["title"]; ?>" />
+          <a href="detail.php?id=<?php echo $product["id"]; ?>">
+            <img src="<?php echo $product["images"][0] ?>" alt="<?php echo $product["title"]; ?>" />
+          </a>
           <p class="prijs">Price: -$<?php echo $product["price"]; ?>-</p>
           <div class="info">
             <p><strong>Brand name:</strong> <?php echo $product["brand"]; ?></p>
             <p><strong>Sizes Available:</strong> <?php echo $product["sizes"]; ?></p>
-            <a href="detail.php ?id=<?php echo $product["id"]; ?>">View Details</a>
-            <br></br>
             <button class="add-to-cart" onclick="addToCart('<?php echo $product["title"]; ?>', <?php echo $product["price"]; ?>)">Add to cart</button>
           </div>
         </div>
@@ -150,7 +150,7 @@
   slider.oninput = function() {
     output.innerHTML = this.value;
   }
- 
+
 
   let cart = JSON.parse(localStorage.getItem('cart')) || [];
 
@@ -168,14 +168,12 @@
       cart.push(product);
     }
 
-   
+
     localStorage.setItem('cart', JSON.stringify(cart));
 
     console.log(cart);
     alert(`${productName} has been added to your cart.`);
   }
-
-  
 </script>
 
 </html>

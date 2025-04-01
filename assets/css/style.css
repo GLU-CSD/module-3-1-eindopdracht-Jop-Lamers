@@ -121,6 +121,7 @@ input[type="text"]:focus {
   -ms-transform: rotate(45deg);
   transform: rotate(45deg);
 }
+
 .sidenav {
   height: 100%;
   width: 15%;
@@ -199,6 +200,7 @@ section {
   gap: 30px;
   margin-left: 80px;
 }
+
 .shoe {
   flex: 1 1 calc(25% - 30px);
   box-sizing: border-box;
@@ -207,6 +209,7 @@ section {
   background-color: #f1f0f1;
   max-width: calc(25% - 30px);
 }
+
 .add-to-cart {
   font-family: "Darumadrop One", serif;
   font-size: larger;
@@ -216,6 +219,7 @@ section {
   border: none;
   display: inline-block;
 }
+
 .add-to-cart:hover {
   background-color: #949494;
 }
@@ -302,14 +306,14 @@ footer a:hover {
 #search {
   border-radius: 25px;
   width: 380px;
-  height: 35px;
+  height: 30px;
   display: flex;
   justify-content: center;
   align-items: center;
 }
 #zoekicoon {
   width: 47px;
-  height: 32px;
+  height: 33px;
   margin-top: 2px;
   margin-right: 3px;
   margin-left: 20px;

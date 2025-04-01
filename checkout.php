@@ -77,9 +77,6 @@
         <label>Address:</label>
         <input type="text" id="address" name="address" required /><br /><br />
 
-        <label>Country:</label>
-        <input type="text" id="country" name="country" required /><br /><br />
-
         <label>E-mailaddress:</label>
         <input
           type="email"
@@ -88,13 +85,23 @@
 
           required /><br /><br />
 
-        <label>Telephonenumber:</label>
+          <label>Telephonenumber:</label>
         <input
           type="tel"
           id="phoneNumber"
           name="telephonenumber"
 
           required /><br /><br />
+
+
+        <label>Country:</label>
+        <select id="country" name="country" required>
+          <option value="Netherlands">Netherlands</option>
+          <option value="Belgium">Belgium</option>
+          <option value="Germany">Germany</option>
+        </select>
+        <br /><br />
+
 
         <label>Date of birth:</label>
         <input type="date" id="dob" name="date_of_birth" required /><br /><br />
