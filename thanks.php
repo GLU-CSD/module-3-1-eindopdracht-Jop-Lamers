@@ -28,13 +28,15 @@
     <?php include 'includes/footer.php'; ?>
 
     <script>
-      
+        //   haal data uit mijn winkelwagen
         const cart = JSON.parse(localStorage.getItem("cart")) || [];
+        // haalt de bestelling op
         const orderSummary = document.getElementById("order-summary");
-
+        // kijkt of de winkelwagen leeg is
         if (cart.length === 0) {
             orderSummary.innerHTML = "<p>Your cart was empty. No items were ordered.</p>";
         } else {
+        // genereerd de bestelling
             let orderHTML = "<ul>";
             cart.forEach(product => {
                 orderHTML += `
@@ -47,7 +49,7 @@
             orderSummary.innerHTML = orderHTML;
         }
 
-      
+// maakt mijn winkelwagen leeg
         localStorage.removeItem("cart");
     </script>
 </body>
