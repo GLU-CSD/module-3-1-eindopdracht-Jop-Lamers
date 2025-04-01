@@ -5,8 +5,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <title> Details</title>
-    <link rel="stylesheet" href="assets/css/style.css" />
-    <link rel="stylesheet" href="assets/css/detail.css" />
+    <link rel="stylesheet" href="assets/css/style.css?v1.1" />
     <link rel="icon" type="image/jpeg" href="logo shoe stor.jpeg" />
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>

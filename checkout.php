@@ -5,7 +5,7 @@
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>D's shoe store</title>
-  <link rel="stylesheet" href="assets/css/checkout.css" />
+  <link rel="stylesheet" href="assets/css/style.css?v=1.1" />
 
   <link rel="icon" type="image/jpeg" href="logo shoe stor.jpeg" />
   <meta name="description" content="" />
