@@ -209,7 +209,22 @@ section {
   padding: 20px;
   background-color: #f1f0f1;
   max-width: calc(25% - 30px);
+  transition: transform 0.3s ease, box-shadow 0.3s ease; 
 }
+
+.shoe:hover {
+  transform: scale(1.05); 
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
+}
+
+.shoe img {
+  transition: transform 0.3s ease; 
+}
+
+.shoe:hover img {
+  transform: scale(1.1); 
+}
+
 
 .add-to-cart {
   font-family: "Darumadrop One", serif;
