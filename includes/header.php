@@ -16,13 +16,13 @@
             <a href="login.php">Login</a>
         </div>
 
-        <img id="zoekicoon" src="assets/img/zoek icoon-Photoroom.png" alt="zoek-icoon" />
+        <img class="zonder-schaduw " id="zoekicoon" src="assets/img/zoek icoon-Photoroom.png" alt="zoek-icoon" />
         <input type="text" name="search" placeholder="Search..">
     </div>
     <div>
         <p>Free shipping on orders over $750</p>
-        <img src="assets/img/logo shoe stor.jpeg" alt="Shoe store" />
-        <h1>~D's store~</h1>
-        <p>Exclusive Sneakers | Clothing | Accessoires</p>
+        <img class="logo" src="assets/img/nieuw logo-Photoroom.png" alt="Shoe store"></img>
+        <h1>- D's store -</h1>
+
     </div>
 </header>

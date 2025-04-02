@@ -57,6 +57,7 @@
             <button class="add-to-cart" onclick="addToCart('<?php echo $product["title"]; ?>', <?php echo $product["price"]; ?>)">Add to cart</button>
           </div>
         </div>
+
       <?php endforeach; ?>
 
     </div>

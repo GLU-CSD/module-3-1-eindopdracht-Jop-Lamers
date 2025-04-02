@@ -7,7 +7,7 @@
     </div>
     <div>
         <a href="shoppingcart.php">
-            <img id="cart" src="assets/img/shopping cart-Photoroom.png" alt="Cart">
+            <img class = "zonder-schaduw" id="cart" src="assets/img/shopping cart-Photoroom.png" alt="Cart"></img>
         </a>
     </div>
 </nav>

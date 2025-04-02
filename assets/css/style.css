@@ -1,6 +1,6 @@
 body {
   font-family: "Darumadrop One", serif;
-  background-color: #f0f0f0;
+  background-color: #f9f9f9;
   color: #000000;
   text-align: center;
   box-sizing: border-box;
@@ -28,7 +28,7 @@ body a:hover {
   width: 90%;
   height: 15px;
   border-radius: 5px;
-  background: #d3d3d3;
+  background: #e1e1e1;
   outline: none;
   opacity: 0.7;
   -webkit-transition: 0.2s;
@@ -91,15 +91,15 @@ input[type="text"]:focus {
   left: 0;
   height: 25px;
   width: 25px;
-  background-color: #b8b8b8;
+  background-color: #d2d2d2;
 }
 
 .container:hover input ~ .checkmark {
-  background-color: #989898;
+  background-color: #d2d2d2;
 }
 
 .container input:checked ~ .checkmark {
-  background-color: #656565;
+  background-color: #afafaf;
 }
 
 .checkmark:after {
@@ -127,7 +127,8 @@ input[type="text"]:focus {
 .sidenav {
   height: 100%;
   width: 15%;
-  background-color: #f0f0f0;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+  background-color: #f9f9f9;
   padding-top: 20px;
 }
 
@@ -190,7 +191,7 @@ input {
 header {
   display: flex;
   flex-direction: column;
-  background-image: url("../img/witttt.jpg");
+  background-image: url("../img/header achtergrond.avif");
   background-size: 100%;
   padding: 3px;
 }
@@ -200,7 +201,7 @@ header #balk1 {
   height: 40px;
   width: 100%;
   display: flex;
-  background-color: rgb(230, 230, 230);
+  background-color: #f9f9f9;
 }
 
 header img {
@@ -208,7 +209,7 @@ header img {
   width: 200px;
 }
 nav {
-  background-color: #e3e3e3;
+  background-color: #f9f9f9;
   position: sticky;
   top: 0;
   margin: 15px 0;
@@ -241,7 +242,7 @@ section {
   box-sizing: border-box;
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
   padding: 20px;
-  background-color: #f1f0f1;
+  background-color: #ffffff;
   max-width: calc(25% - 30px);
   transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
@@ -262,7 +263,7 @@ section {
 .add-to-cart {
   font-family: "Darumadrop One", serif;
   font-size: larger;
-  background-color: #d0d0d0;
+  background-color: #e2e2e2;
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
   color: #000000;
   border-radius: 5px;
@@ -274,9 +275,22 @@ section {
 }
 
 img {
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
   width: 100%;
-  box-shadow: #d0d0d0 0px 0px 10px;
 }
+
+.zonder-schaduw {
+  box-shadow: none;
+  width: 100%;
+}
+
+.logo{
+  box-shadow: none;
+  width: 200px;
+  height: 180px;
+  margin-left: 20px;
+}
+
 .info {
   font-size: large;
   color: #1a1a1a;
@@ -284,7 +298,7 @@ img {
   margin: 10px auto;
 }
 footer {
-  background-color: #e3e3e3;
+  background-color: #f9f9f9;
   padding: 20px;
   text-align: center;
 }
@@ -382,15 +396,15 @@ footer a:hover {
   font-size: 20px;
 }
 #font-adjust {
-  background-color: #dedede;
+  background-color: #f9f9f9;
   font-size: 30px;
 }
 .filter-text {
-  background-color: #e7e7e7;
+  background-color: #f9f9f9;
   font-size: 40px;
 }
 #price-amount {
-  background-color: #efefef;
+  background-color: #f9f9f9;
   font-size: 30px;
 }
 #cart {
@@ -399,7 +413,7 @@ footer a:hover {
   height: 40px;
 }
 #invisblock {
-  margin-left: 260px;
+  margin-left: 145px;
 }
 .product-container {
   width: 85%;
@@ -479,7 +493,7 @@ select {
   padding: 6px;
   background-color: rgb(255, 255, 255);
   border-radius: 8px;
-  border: 2px solid #000000;
+  border: 1px solid #000000;
   margin-top: 3px;
 }
 
