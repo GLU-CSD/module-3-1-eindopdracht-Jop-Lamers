@@ -54,7 +54,7 @@
           <div class="info">
             <p><strong>Brand name:</strong> <?php echo $product["brand"]; ?></p>
             <p><strong>Sizes Available:</strong> <?php echo $product["sizes"]; ?></p>
-            <button class="add-to-cart" onclick="addToCart('<?php echo $product["title"]; ?>', <?php echo $product["price"]; ?>)">Add to cart</button>
+            <button class="add-to-cart" onclick="winkelWagenAdd()" onclick="addToCart('<?php echo $product["title"]; ?>', <?php echo $product["price"]; ?>)">Add to cart</button>
           </div>
         </div>
 
