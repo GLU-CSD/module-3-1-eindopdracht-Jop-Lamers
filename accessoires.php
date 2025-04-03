@@ -108,5 +108,5 @@
     alert(`${productName} has been added to your cart.`);
   }
 </script>
-
+<script src="assets/js/app.js"></script>
 </html>

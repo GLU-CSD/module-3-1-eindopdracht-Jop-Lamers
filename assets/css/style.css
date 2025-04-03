@@ -685,3 +685,28 @@ button:hover {
 #cart-summary h3 {
   margin-bottom: 10px;
 }
+
+/* bolletje */
+
+.bolletje {
+  color: white;
+  justify-content: center;
+  display: flex;
+  /*de bovenste 3 regels code zijn voor het stijlen van de cijfers in het bolletje*/
+  width: 20px;
+  /* Grootte van het bolletje */
+  height: 20px;
+  /* Grootte van het bolletje */
+  border-radius: 50%;
+  /* Maakt het bolletje rond */
+  background-color: rgb(223, 0, 0);
+  /* Kleur van het bolletje */
+  position: absolute;
+  /* Absolute positionering */
+  right: 0;
+  /* Plaatst het bolletje aan de rechterkant van het scherm */
+  top: 25%;
+  /* Verticaal centreren */
+  transform: translateY(-50%);
+  /* Corrigeert de positie zodat het bolletje perfect in het midden zit */
+}
