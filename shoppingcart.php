@@ -1,3 +1,9 @@
+<?php
+session_start();
+// session_destroy();
+
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -5,7 +11,7 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Shopping Cart</title>
- <link rel="stylesheet" href="assets/css/style.css?v=1.1" />
+  <link rel="stylesheet" href="assets/css/style.css?v=1.1" />
 
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -19,8 +25,33 @@
   <?php include 'includes/nav.php'; ?>
 
   <main>
-    <div id="cart-container"></div>
-    <div id="cart-summary"></div>
+    <div id="cart-container">
+    </div>
+    <?php
+    $totalPrice = 0;
+    if (isset($_SESSION['cart'])) {
+      foreach ($_SESSION['cart'] as $product) {
+        echo '<div class="cart-item">';
+        echo '<h3>' . $product['name'] . '</h3>';
+        echo '<p>Unit Price: $' . $product['price'] . '</p>';
+        echo '<p>Quantity: ' . $product['quantity'] . '</p>';
+        echo '<p>Total Price: $' . $product['price'] . '</p>';
+        $totalPrice += $product['price'] * $product['quantity'];
+        echo '<p>Brand: ' . $product['brand'] . '</p>';
+        echo '<button class="cart-item" onclick="removeFromCart(' . $product['id'] . ')">Remove</button>';
+        echo '</div>';
+      }
+    }
+    ?>
+    <div id="cart-summary">
+
+      <?php
+      $totalVAT = $totalPrice / 121 * 100;
+      echo "Total Order Price (Excl. BTW): $$totalVAT,- <br>";
+      echo "Total Order Price (Incl. BTW): $$totalPrice,- <br>";
+
+      ?>
+    </div>
     <button class="clear-cart" onclick="clearCart()">Clear Cart</button>
     <a class="clear-cart" href="checkout.php">To checkout</a>
   </main>
@@ -80,10 +111,11 @@
       displayCart();
     }
 
-    window.onload = displayCart;
+    // window.onload = displayCart;
   </script>
 
-  <?php include 'includes/footer.php'; ?>
+  <?php
+  include 'includes/footer.php'; ?>
 </body>
 
 <script src="assets/js/app.js"></script>

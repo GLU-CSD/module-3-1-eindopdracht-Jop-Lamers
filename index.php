@@ -54,10 +54,9 @@
           <div class="info">
             <p><strong>Brand name:</strong> <?php echo $product["brand"]; ?></p>
             <p><strong>Sizes Available:</strong> <?php echo $product["sizes"]; ?></p>
-            <button class="add-to-cart" onclick="winkelWagenAdd()" onclick="addToCart('<?php echo $product["title"]; ?>', <?php echo $product["price"]; ?>)">Add to cart</button>
+            <button class="add-to-cart" onclick="addToCart('<?php echo $product["title"]; ?>', <?php echo $product["price"]; ?>,'<?php echo $product["brand"]; ?>','<?php echo $product["sizes"]; ?>','<?php echo $product["id"]; ?>')">Add to cart</button>
           </div>
         </div>
-
       <?php endforeach; ?>
 
     </div>
@@ -86,12 +85,26 @@
 
   let cart = JSON.parse(localStorage.getItem('cart')) || [];
 
-  function addToCart(productName, productPrice) {
+  function addToCart(productName, productPrice, productBrand, productSizes, productid) {
+
+    winkelWagenAdd();
     const product = {
       name: productName,
       price: productPrice,
-      quantity: 1
+      quantity: 1,
+      brand: productBrand,
+      sizes: productSizes,
+      id: productid,
     };
+    var xhr = new XMLHttpRequest();
+    xhr.open('POST', 'xhr_addtocart.php', product);
+    xhr.onload = function() {
+      //Here it is where I would like to call the function console.log(this.responseText);
+    }
+    const data = JSON.stringify(product);
+    const formData = new FormData();
+    formData.append('product', data);
+    xhr.send(formData);
 
     const existingProduct = cart.find(item => item.name === productName);
     if (existingProduct) {

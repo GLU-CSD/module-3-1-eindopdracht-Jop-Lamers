@@ -60,7 +60,7 @@
 
 </body>
 
-<script>
+<script> 
     let cart = JSON.parse(localStorage.getItem('cart')) || [];
 
     function addToCart(productName, productPrice) {

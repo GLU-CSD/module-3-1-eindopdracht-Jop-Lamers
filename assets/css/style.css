@@ -99,7 +99,7 @@ input[type="text"]:focus {
 }
 
 .container input:checked ~ .checkmark {
-  background-color: #afafaf;
+  background-color: #4e4e4e;
 }
 
 .checkmark:after {
@@ -411,7 +411,7 @@ footer a:hover {
 }
 
 #invisblock {
-  margin-left: 145px;
+  margin-left: 185px;
 }
 .product-container {
   width: 85%;
@@ -661,6 +661,7 @@ button:hover {
   padding: 5px 10px;
   background-color: #ff4d4d;
   color: white;
+  max-width: 50px;
   border: none;
   border-radius: 5px;
   cursor: pointer;

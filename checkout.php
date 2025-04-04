@@ -38,11 +38,11 @@
     <section class="form">
       <div class="fill-in-forms">
         <label>Preposition:</label>
-        <input type="radio" id="male" name="Gender" value="male" required />
+        <input type="radio" id="male" name="Gender" value="male" checked />
         <label for="male"> Dhr. </label>
-        <input type="radio" id="female" name="Gender" value="female" required />
+        <input type="radio" id="female" name="Gender" value="female" />
         <label for="female"> Mvr. </label>
-        <input type="radio" id="other" name="Gender" value="other" required />
+        <input type="radio" id="other" name="Gender" value="other" />
         <label for="other"> Other </label><br /><br />
 
 
@@ -51,51 +51,41 @@
         <input
           type="text"
           id="firstName"
-          name="firstname"
-
-          required /><br /><br />
+          name="firstname" /><br /><br />
 
         <label>Last name:</label>
         <input
           type="text"
           id="lastName"
-          name="lastname"
-
-          required /><br /><br />
+          name="lastname" /><br /><br />
 
         <label>Street:</label>
-        <input type="text" id="street" name="street" required /><br /><br />
+        <input type="text" id="street" name="street" /><br /><br />
 
         <label>Housenumber:</label>
         <input
           type="text"
           id="houseNumber"
-          name="housenumber"
-
-          required /><br /><br />
+          name="housenumber" /><br /><br />
 
         <label>Address:</label>
-        <input type="text" id="address" name="address" required /><br /><br />
+        <input type="text" id="address" name="address" /><br /><br />
 
         <label>E-mailaddress:</label>
         <input
           type="email"
           id="email"
-          name="e-mail_address"
+          name="e-mail_address" /><br /><br />
 
-          required /><br /><br />
-
-          <label>Telephonenumber:</label>
+        <label>Telephonenumber:</label>
         <input
           type="tel"
           id="phoneNumber"
-          name="telephonenumber"
-
-          required /><br /><br />
+          name="telephonenumber" /><br /><br />
 
 
         <label>Country:</label>
-        <select id="country" name="country" required>
+        <select id="country" name="country">
           <option value="Netherlands">Netherlands</option>
           <option value="Belgium">Belgium</option>
           <option value="Germany">Germany</option>
@@ -104,10 +94,10 @@
 
 
         <label>Date of birth:</label>
-        <input type="date" id="dob" name="date_of_birth" required /><br /><br />
+        <input type="date" id="dob" name="date_of_birth" /><br /><br />
 
-        <input type="checkbox" id="policy" name="policy" required />
-        <label for="policy">I accept the policy's</label><br /><br />
+        <input type="checkbox" id="policy" name="policy" />
+        <label for="policy" href="policy.php">I accept the policy's</label><br /><br />
       </div>
 
       <button class="knop" type="submit">Finish order</button>
@@ -117,4 +107,5 @@
   <?php include 'includes/footer.php'; ?>
 </body>
 <script src="assets/js/app.js"></script>
+
 </html>
