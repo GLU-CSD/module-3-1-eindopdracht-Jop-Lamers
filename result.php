@@ -5,28 +5,25 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-
 </head>
 
 <body>
     Results van mijn form:
     <?php
 
-    //read GET parameters
+    // Lees GET-parameters uit de URL (gegevens die via het formulier zijn verzonden)
+    $firstname = $_GET['firstname']; // Voornaam van de gebruiker
+    $lastname = $_GET['lastname']; // Achternaam van de gebruiker
+    $street = $_GET['street']; // Straatnaam
+    $housenumber = $_GET['housenumber']; // Huisnummer
+    $address = $_GET['address']; // Adres
+    $country = $_GET['country']; // Land
+    $email_address = $_GET['e-mail_address']; // E-mailadres
+    $telephonenumber = $_GET['telephonenumber']; // Telefoonnummer
+    $date_of_birth = $_GET['date_of_birth']; // Geboortedatum
+    $policy = $_GET['policy']; // Beleid (bijvoorbeeld akkoord met voorwaarden)
 
-    $firstname = $_GET['firstname'];
-    $lastname = $_GET['lastname'];
-    $street = $_GET['street'];
-    $housenumber = $_GET['housenumber'];
-    $address = $_GET['address'];
-    $country = $_GET['country'];
-    $email_address = $_GET['e-mail_address'];
-    $telephonenumber = $_GET['telephonenumber'];
-    $date_of_birth = $_GET['date_of_birth'];
-    $policy = $_GET['policy'];
-
-    //print GET parameters
-
+    // Print de ontvangen GET-parameters op de pagina
     echo ("<br>firstname " . $firstname);
     echo ("<br>lastname " . $lastname);
     echo ("<br>street " . $street);
@@ -37,42 +34,37 @@
     echo ("<br>telephonenumber " . $telephonenumber);
     echo ("<br>date_of_birth " . $date_of_birth);
     echo ("<br>policy " . $policy);
-    // echo ("<br>housenumber " . $housenumber);
 
-    //----------- database connection
+    // Databaseverbinding instellen
+    $servername = "localhost"; // Servernaam (meestal localhost)
+    $username = "root"; // Gebruikersnaam voor de database
+    $password = ""; // Wachtwoord voor de database
+    $dbname = "checkout_gegevens"; // Naam van de database
 
-    $servername = "localhost";
-    $username = "root";
-    $password = "";
-    $dbname = "checkout_gegevens";
-
-    // Create connection
+    // Maak een verbinding met de database
     $conn = new mysqli($servername, $username, $password, $dbname);
 
-    // Check connection
-    // if ($conn->connect_error) {
-    //     die("Connection failed: " . $conn->connect_error);
-    // }
-    // echo "<br><br>Connected successfully";
+    // Controleer of de verbinding succesvol is
+    if ($conn->connect_error) {
+        die("Connection failed: " . $conn->connect_error); // Stop script als de verbinding faalt
+    }
 
-    //------------ insert data into database
+    // SQL-query om gegevens in de database in te voegen
+    $query = "INSERT INTO `persoonlijke_gegevens`( `firstname`, `lastname`, `street`, `housenumber`, `address`, `country`, `e-mail_address`, `telephonenumber`, `date_of_birth`, `policy`) 
+              VALUES ('$firstname','$lastname','$street','$housenumber','$address','$country','$email_address','$telephonenumber','$date_of_birth','$policy')";
 
-    $query = "INSERT INTO `persoonlijke_gegevens`( `firstname`, `lastname`, `street`, `housenumber`, `address`, `country`, `e-mail_address`, `telephonenumber`, `date_of_birth`, `policy`) VALUES ('$firstname','$lastname','$street','$housenumber','$address','$country','$email_address','$telephonenumber','$date_of_birth','$policy')";
-
-
-    //     $sql = "INSERT INTO persoonlijke_gegevens (firstname, lastname, street)
-    // VALUES ('" . $firstname . "' '" . $lastname . "' '" . $street . "')";
-
+    // Voer de query uit en controleer of het succesvol is
     if ($conn->query($query) === TRUE) {
+        // Als de invoer succesvol is, toon een bericht en redirect naar een bedankpagina
         echo "New record created successfully";
         echo "Redirect to new thank you page! <script>window.location.href='thanks.php';</script>";
     } else {
-        echo "Error: " . $sql . "<br>" . $conn->error;
+        // Als er een fout is, toon de foutmelding
+        echo "Error: " . $query . "<br>" . $conn->error;
     }
 
+    // Sluit de databaseverbinding
     $conn->close();
-
-
 
     ?>
 </body>

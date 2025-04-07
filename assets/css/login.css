@@ -11,6 +11,7 @@ img {
   margin: 0;
   box-sizing: border-box;
 }
+
 body {
   margin: 0;
   font-family: "Darumadrop One", sans-serif;
@@ -21,6 +22,7 @@ body {
   background-image: url("../img/pexels-padrinan-19670.jpg");
   background-size: cover;
 }
+
 .glazen-box {
   padding: 16px;
   width: 320px;
@@ -47,11 +49,13 @@ h2 {
   margin-top: 20px;
   margin-bottom: -20px;
 }
+
 form {
   display: flex;
   flex-direction: column;
   margin-top: 20px;
 }
+
 input {
   font-family: "Darumadrop One", sans-serif;
   padding: 10px;
@@ -63,26 +67,32 @@ input {
   color: #000000;
   font-size: 13px;
 }
+
 input::placeholder {
   color: #000000;
 }
+
 input:focus {
   outline: none;
 }
+
 .opties {
   margin-top: 20px;
   font-size: 14px;
   color: rgb(0, 0, 0);
 }
+
 .opties input {
   margin-right: 12px;
   margin-top: 0px;
 }
+
 .opties a {
   text-decoration: none;
   color: rgb(0, 0, 0);
   margin-top: 0px;
 }
+
 button {
   font-family: "Darumadrop One", sans-serif;
   padding: 10px;
@@ -93,24 +103,29 @@ button {
   color: #000;
   cursor: pointer;
 }
+
 button:hover {
   background: transparent;
   color: #000000;
   outline: 1px solid #000;
 }
+
 p {
   font-size: 13px;
   color: #000000;
   margin-top: 15px;
 }
+
 #register {
   color: #000000;
   text-decoration: none;
   font-weight: bold;
 }
+
 nav {
   margin-top: 10px;
 }
+
 #container {
   display: flex;
   justify-content: center;
@@ -120,6 +135,7 @@ nav {
   position: absolute;
   top: 0;
 }
+
 #logo {
   display: flex;
   justify-content: center;

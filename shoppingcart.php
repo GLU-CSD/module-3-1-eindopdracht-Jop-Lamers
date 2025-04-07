@@ -1,18 +1,22 @@
 <?php
+// Start de sessie
 session_start();
-session_destroy();
 
+// Vernietig de sessie om de winkelwagen te resetten
+session_destroy();
 ?>
 
 <!DOCTYPE html>
 <html lang="en">
 
 <head>
+  <!-- Metadata en koppelingen naar CSS en lettertypen -->
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Shopping Cart</title>
   <link rel="stylesheet" href="assets/css/style.css?v=1.1" />
 
+  <!-- Google Fonts voor styling -->
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link
@@ -21,62 +25,77 @@ session_destroy();
 </head>
 
 <body>
+  <!-- Inclusie van de header en navigatiebalk -->
   <?php include 'includes/header.php'; ?>
   <?php include 'includes/nav.php'; ?>
 
   <main>
+    <!-- Container voor de winkelwagen -->
     <div id="cart-container">
     </div>
+
     <?php
+    // Variabele om de totale prijs bij te houden
     $totalPrice = 0;
+
+    // Controleer of er een winkelwagen in de sessie is opgeslagen
     if (isset($_SESSION['cart'])) {
+      // Loop door elk product in de winkelwagen
       foreach ($_SESSION['cart'] as $product) {
         echo '<div class="cart-item">';
-        echo '<h3>' . $product['name'] . '</h3>';
-        echo '<p>Unit Price: $' . $product['price'] . '</p>';
-        echo '<p>Quantity: ' . $product['quantity'] . '</p>';
-        echo '<p>Total Price: $' . $product['price'] . '</p>';
-        $totalPrice += $product['price'] * $product['quantity'];
-        echo '<p>Brand: ' . $product['brand'] . '</p>';
-        echo '<button class="cart-item" onclick="removeFromCart(' . $product['id'] . ')">Remove</button>';
+        echo '<h3>' . $product['name'] . '</h3>'; // Toon de productnaam
+        echo '<p>Unit Price: $' . $product['price'] . '</p>'; // Toon de eenheidsprijs
+        echo '<p>Quantity: ' . $product['quantity'] . '</p>'; // Toon de hoeveelheid
+        echo '<p>Total Price: $' . $product['price'] . '</p>'; // Toon de totale prijs
+        $totalPrice += $product['price'] * $product['quantity']; // Bereken de totale prijs
+        echo '<p>Brand: ' . $product['brand'] . '</p>'; // Toon het merk
+        echo '<button class="cart-item" onclick="removeFromCart(' . $product['id'] . ')">Remove</button>'; // Verwijderknop
         echo '</div>';
       }
     }
     ?>
-    <div id="cart-summary">
 
+    <!-- Samenvatting van de winkelwagen -->
+    <div id="cart-summary">
       <?php
+      // Bereken de totale prijs exclusief BTW
       $totalVAT = $totalPrice / 121 * 100;
+
+      // Toon de prijzen
       echo "Total Order Price (Excl. BTW): $" . number_format($totalVAT, 2) . "<br>";
       echo "Total Order Price (Incl. BTW): $" . number_format($totalPrice, 2) . "<br>";
-
-
       ?>
     </div>
+
+    <!-- Knoppen om de winkelwagen te legen of naar de checkout te gaan -->
     <button class="clear-cart" onclick="clearCart()">Clear Cart</button>
     <a class="clear-cart" href="checkout.php">To checkout</a>
   </main>
 
   <script>
+    // Functie om de winkelwagen weer te geven
     function displayCart() {
-      const cart = JSON.parse(localStorage.getItem("cart")) || [];
+      const cart = JSON.parse(localStorage.getItem("cart")) || []; // Haal de winkelwagen op uit localStorage
       const cartContainer = document.getElementById("cart-container");
       const cartSummary = document.getElementById("cart-summary");
-      cartContainer.innerHTML = "";
-      cartSummary.innerHTML = "";
+      cartContainer.innerHTML = ""; // Leeg de container
+      cartSummary.innerHTML = ""; // Leeg de samenvatting
 
+      // Controleer of de winkelwagen leeg is
       if (cart.length === 0) {
         cartContainer.innerHTML = "<p>Your cart is empty.</p>";
         return;
       }
 
-      let totalOrderPrice = 0;
-      let totalVAT = 0;
+      let totalOrderPrice = 0; // Totale prijs inclusief BTW
+      let totalVAT = 0; // Totale prijs exclusief BTW
 
+      // Loop door elk product in de winkelwagen
       cart.forEach((product, index) => {
-        const productTotalPrice = product.price * product.quantity;
-        totalOrderPrice += productTotalPrice;
+        const productTotalPrice = product.price * product.quantity; // Bereken de totale prijs van het product
+        totalOrderPrice += productTotalPrice; // Voeg toe aan de totale prijs
 
+        // Maak een HTML-element voor het product
         const productElement = document.createElement("div");
         productElement.className = "cart-item";
         productElement.innerHTML = `
@@ -86,12 +105,11 @@ session_destroy();
             <p>Total Price: $${productTotalPrice.toFixed(2)}</p>
             <button onclick="removeFromCart(${index})">Remove</button>
           `;
-        cartContainer.appendChild(productElement);
+        cartContainer.appendChild(productElement); // Voeg het product toe aan de container
       });
 
-
+      // Bereken de BTW en toon de samenvatting
       totalVAT = totalOrderPrice / 121 * 100;
-
       cartSummary.innerHTML = `
           <h3>Order Summary</h3>
           <p>Total Order Price (Excl. BTW): $${totalVAT.toFixed(2)} </p>
@@ -100,25 +118,29 @@ session_destroy();
         `;
     }
 
+    // Functie om de winkelwagen te legen
     function clearCart() {
-      localStorage.removeItem("cart");
-      displayCart();
+      localStorage.removeItem("cart"); // Verwijder de winkelwagen uit localStorage
+      displayCart(); // Werk de weergave bij
     }
 
+    // Functie om een product uit de winkelwagen te verwijderen
     function removeFromCart(index) {
-      let cart = JSON.parse(localStorage.getItem("cart")) || [];
-      cart.splice(index, 1);
-      localStorage.setItem("cart", JSON.stringify(cart));
-      displayCart();
+      let cart = JSON.parse(localStorage.getItem("cart")) || []; // Haal de winkelwagen op
+      cart.splice(index, 1); // Verwijder het product op de opgegeven index
+      localStorage.setItem("cart", JSON.stringify(cart)); // Sla de bijgewerkte winkelwagen op
+      displayCart(); // Werk de weergave bij
     }
 
+    // Uncomment de volgende regel om de winkelwagen weer te geven bij het laden van de pagina
     // window.onload = displayCart;
   </script>
 
-  <?php
-  include 'includes/footer.php'; ?>
+  <!-- Inclusie van de footer -->
+  <?php include 'includes/footer.php'; ?>
 </body>
 
+<!-- Koppeling naar een extra JavaScript-bestand -->
 <script src="assets/js/app.js"></script>
 
 </html>

@@ -1,3 +1,5 @@
+<?php
+?>
 <div class="sidenav">
       <h1 class="filter-text">-Filters-</h1>
 
