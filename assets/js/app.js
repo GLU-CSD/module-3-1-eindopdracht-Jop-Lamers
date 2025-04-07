@@ -31,12 +31,12 @@ function resetForm() {
   function validateForm() {
    
    
-      // Haal de geselecteerde aanhef op
-      let aanhef = document.querySelector('input[name="aanhef"]:checked').value;
+      // Haal de geselecteerde Preposition op
+      let Preposition = document.querySelector('input[name="Preposition"]:checked').value;
    
-      // Voeg de aanhef toe aan de querystring voor de resultpagina
+      // Voeg de Preposition toe aan de querystring voor de resultpagina
       let form = document.forms["mijnFormulier"];
-      form.action = "resultaat.php?aanhef=" + aanhef + "&" + new URLSearchParams(new FormData(form)).toString();
+      form.action = "result.php?Preposition=" + Preposition + "&" + new URLSearchParams(new FormData(form)).toString();
    
   //    return true;  // Verzendt het formulier
   //  }
@@ -61,30 +61,29 @@ function resetForm() {
     }
    
     ///---------
-    let houseNumber = document.forms["mijnFormulier"]["houseNumber"].value;
-    if (houseNumber == "") {
-      //alert("Name must be filled out");
-      document.getElementById("alertBijhuisnmr").innerHTML =
-        "houseNumber moet ingevuld worden.";
-      return false;
-    }
-   
-    ///---------
-    let straatnaam = document.forms["mijnFormulier"]["straatnaam"].value;
-    if (straatnaam == "") {
+    let street = document.forms["mijnFormulier"]["street"].value;
+    if (street == "") {
       //alert("Name must be filled out");
       document.getElementById("alertBijToev").innerHTML =
         "Toev. moet ingevuld worden.";
       return false;
       ///---------
     }
+     ///---------
+     let houseNumber = document.forms["mijnFormulier"]["houseNumber"].value;
+     if (houseNumber == "") {
+       //alert("Name must be filled out");
+       document.getElementById("alertBijhuisnmr").innerHTML =
+         "houseNumber moet ingevuld worden.";
+       return false;
+     }
    
     ///---------
-    let postcode = document.forms["mijnFormulier"]["postcode"].value;
-    if (postcode == "") {
+    let address = document.forms["mijnFormulier"]["address"].value;
+    if (address == "") {
       //alert("Name must be filled out");
       document.getElementById("alertBijPostcode").innerHTML =
-        "Postcode moet ingevuld worden.";
+        "address moet ingevuld worden.";
       return false;
       ///---------
     }
@@ -94,31 +93,31 @@ function resetForm() {
     if (email == "") {
       //alert("Name must be filled out");
       document.getElementById("alertBijEmail").innerHTML =
-        "Email moet ingevuld worden.";
+        "email moet ingevuld worden.";
       return false;
       ///---------
     }
    
     ///---------
-    let telefoonnummer = document.forms["mijnFormulier"]["telefoonnummer"].value;
-    if (telefoonnummer == "") {
+    let phoneNumber = document.forms["mijnFormulier"]["phoneNumber"].value;
+    if (phoneNumber == "") {
       //alert("Name must be filled out");
       document.getElementById("alertBijTelefoon").innerHTML =
-        "Telefoonnummer moet ingevuld worden.";
+        "phoneNumber moet ingevuld worden.";
       return false;
       ///---------
     }
    
     ///---------
-    let datum = document.forms["mijnFormulier"]["datum"].value;
-    if (datum == "") {
+    let dob = document.forms["mijnFormulier"]["dob"].value;
+    if (dob == "") {
       //alert("Name must be filled out");
       document.getElementById("alertBijDatum").innerHTML =
-        "Datum moet ingevuld worden.";
+        "dob moet ingevuld worden.";
       return false;
       ///---------
     }
-    let checkbpxchecked = document.getElementById("checkbox1").checked;
+    let checkbpxchecked = document.getElementById("policy").checked;
     if (checkbpxchecked == false) {
       //alert("Name must be filled out");
       document.getElementById("alertBijCheckbox").innerHTML =

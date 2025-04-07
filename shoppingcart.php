@@ -1,6 +1,6 @@
 <?php
 session_start();
-// session_destroy();
+session_destroy();
 
 ?>
 
@@ -47,8 +47,9 @@ session_start();
 
       <?php
       $totalVAT = $totalPrice / 121 * 100;
-      echo "Total Order Price (Excl. BTW): $$totalVAT,- <br>";
-      echo "Total Order Price (Incl. BTW): $$totalPrice,- <br>";
+      echo "Total Order Price (Excl. BTW): $" . number_format($totalVAT, 2) . "<br>";
+      echo "Total Order Price (Incl. BTW): $" . number_format($totalPrice, 2) . "<br>";
+
 
       ?>
     </div>
