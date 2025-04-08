@@ -3,7 +3,7 @@
 session_start();
 
 // Vernietig de sessie om de winkelwagen te resetten
-session_destroy();
+//session_destroy();
 ?>
 
 <!DOCTYPE html>

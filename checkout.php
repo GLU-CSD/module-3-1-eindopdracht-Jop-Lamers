@@ -41,7 +41,7 @@
   <?php include 'includes/nav.php'; ?>
 
   <!-- Formulier voor het afrekenen -->
-  <form action="result.php" method="get">
+  <form action="result.php" method="get" onsubmit="return validateForm()">
     <section class="form">
       <div class="fill-in-forms">
         <!-- Geslacht selectie -->
@@ -100,7 +100,7 @@
       </div>
 
       <!-- Knop om het formulier te verzenden -->
-      <button class="knop" type="submit">Finish order</button>
+      <input class="knop" type="submit">Finish order</input>
     </section>
   </form>
 

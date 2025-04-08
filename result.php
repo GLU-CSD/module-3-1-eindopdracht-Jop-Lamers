@@ -57,7 +57,7 @@
     if ($conn->query($query) === TRUE) {
         // Als de invoer succesvol is, toon een bericht en redirect naar een bedankpagina
         echo "New record created successfully";
-        echo "Redirect to new thank you page! <script>window.location.href='thanks.php';</script>";
+        // echo "Redirect to new thank you page! <script>window.location.href='thanks.php';</script>";
     } else {
         // Als er een fout is, toon de foutmelding
         echo "Error: " . $query . "<br>" . $conn->error;

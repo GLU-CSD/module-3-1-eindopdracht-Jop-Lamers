@@ -49,6 +49,17 @@
                             <p><strong>Price:</strong> $<?php echo number_format($product["price"], 2); ?></p>
                             <p><strong>Brand:</strong> <?php echo $product["brand"]; ?></p>
                             <p><strong>Sizes:</strong> <?php echo $product["sizes"]; ?></p>
+                            <!-- Star Rating -->
+                            <div class="star-rating">
+                                <span class="star" data-value="1">&#9733;</span>
+                                <span class="star" data-value="2">&#9733;</span>
+                                <span class="star" data-value="3">&#9733;</span>
+                                <span class="star" data-value="4">&#9733;</span>
+                                <span class="star" data-value="5">&#9733;</span>
+                            </div>
+                            <button id="apply-rating" class="apply-rating">Apply</button>
+                            <p id="rating-message" class="rating-message"></p>
+
                             <!-- Knop om product aan winkelwagen toe te voegen -->
                             <button class="add-to-cart" onclick="addToCart('<?php echo $product["title"]; ?>', <?php echo $product["price"]; ?>)">Add to cart</button>
                         </div>
@@ -106,4 +117,5 @@
     }
 </script>
 <script src="assets/js/app.js"></script>
+
 </html>
