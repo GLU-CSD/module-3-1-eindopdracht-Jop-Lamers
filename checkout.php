@@ -41,68 +41,80 @@
   <?php include 'includes/nav.php'; ?>
 
   <!-- Formulier voor het afrekenen -->
-  <form action="result.php" method="get" onsubmit="return validateForm()">
-    <section class="form">
-      <div class="fill-in-forms">
-        <h2>Fill in your details</h2>
-        
-        <!-- Geslacht selectie -->
-        <label>Preposition:</label>
-        <input type="radio" id="male" name="Gender" value="male" tabindex="1" checked />
-        <label for="male"> Dhr. </label>
-        <input type="radio" id="female" name="Gender" value="female" tabindex="2" />
-        <label for="female"> Mvr. </label>
-        <input type="radio" id="other" name="Gender" value="other" tabindex="3" />
-        <label for="other"> Other </label><br /><br />
+  <form id="checkoutForm" action="result.php" method="get"">
+    <section class=" form">
+    <div class="fill-in-forms">
+      <h2>Fill in your details</h2>
 
-        <!-- Voornaam invoerveld -->
-        <label>First name:</label>
-        <input type="text" id="firstName" name="firstname" tabindex="4" /><br /><br />
+      <!-- Geslacht selectie -->
+      <label>Preposition:</label>
+      <input type="radio" id="male" name="Gender" value="male" tabindex="1" checked />
+      <label for="male"> Dhr. </label>
+      <input type="radio" id="female" name="Gender" value="female" tabindex="2" />
+      <label for="female"> Mvr. </label>
+      <input type="radio" id="other" name="Gender" value="other" tabindex="3" />
+      <label for="other"> Other </label><br /><br />
 
-        <!-- Achternaam invoerveld -->
-        <label>Last name:</label>
-        <input type="text" id="lastName" name="lastname" tabindex="5" /><br /><br />
+      <!-- Voornaam invoerveld -->
+      <label>First name:</label>
+      <input type="text" id="firstName" name="firstname" tabindex="4" /><br /><br />
+      <div id="alertfirstName" style="color:red;"></div>
 
-        <!-- Straatnaam invoerveld -->
-        <label>Street:</label>
-        <input type="text" id="street" name="street" tabindex="6" /><br /><br />
+      <!-- Achternaam invoerveld -->
+      <label>Last name:</label>
+      <input type="text" id="lastName" name="lastname" tabindex="5" /><br /><br />
+      <div id="alertlastName" style="color:red;"></div>
 
-        <!-- Huisnummer invoerveld -->
-        <label>Housenumber:</label>
-        <input type="text" id="houseNumber" name="housenumber" tabindex="7" /><br /><br />
 
-        <!-- Adres invoerveld -->
-        <label>Address:</label>
-        <input type="text" id="address" name="address" tabindex="8" /><br /><br />
+      <!-- Straatnaam invoerveld -->
+      <label>Street:</label>
+      <input type="text" id="street" name="street" tabindex="6" /><br /><br />
+      <div id="alertstreet" style="color:red;"></div>
+      
 
-        <!-- E-mailadres invoerveld -->
-        <label>E-mailaddress:</label>
-        <input type="email" id="email" name="e-mail_address" tabindex="9" /><br /><br />
+      <!-- Huisnummer invoerveld -->
+      <label>Housenumber:</label>
+      <input type="text" id="houseNumber" name="housenumber" tabindex="7" /><br /><br />
+      <div id="alerthouseNumber" style="color:red;"></div>
 
-        <!-- Telefoonnummer invoerveld -->
-        <label>Telephonenumber:</label>
-        <input type="tel" id="phoneNumber" name="telephonenumber" tabindex="10" /><br /><br />
+      <!-- Adres invoerveld -->
+      <label>Address:</label>
+      <input type="text" id="address" name="address" tabindex="8" /><br /><br />
+      <div id="alertaddress" style="color:red;"></div>
 
-        <!-- Land selectie dropdown -->
-        <label>Country:</label>
-        <select id="country" name="country" tabindex="11">
-          <option value="Netherlands">Netherlands</option>
-          <option value="Belgium">Belgium</option>
-          <option value="Germany">Germany</option>
-        </select>
-        <br /><br />
+      <!-- E-mailadres invoerveld -->
+      <label>E-mailaddress:</label>
+      <input type="email" id="email" name="e-mail_address" tabindex="9" /><br /><br />
+      <div id="alertemail" style="color:red;"></div>
 
-        <!-- Geboortedatum invoerveld -->
-        <label>Date of birth:</label>
-        <input type="date" id="dob" name="date_of_birth" tabindex="12" /><br /><br />
+      <!-- Telefoonnummer invoerveld -->
+      <label>Telephonenumber:</label>
+      <input type="tel" id="phoneNumber" name="telephonenumber" tabindex="10" /><br /><br />
+      <div id="alertphoneNumber" style="color:red;"></div>
 
-        <!-- Checkbox voor acceptatie van de voorwaarden -->
-        <input type="checkbox" id="policy" name="policy" tabindex="13" />
-        <label for="policy" href="policy.php">I accept the policy's</label><br /><br />
-      </div>
+      <!-- Land selectie dropdown -->
+      <label>Country:</label>
+      <select id="country" name="country" tabindex="11">
+        <option value="Netherlands">Netherlands</option>
+        <option value="Belgium">Belgium</option>
+        <option value="Germany">Germany</option>
+      </select>
+      <br /><br />
+      
 
-      <!-- Knop om het formulier te verzenden -->
-      <input class="knop" type="submit" tabindex="14">Finish order</input>
+      <!-- Geboortedatum invoerveld -->
+      <label>Date of birth:</label>
+      <input type="date" id="dob" name="date_of_birth" tabindex="12" /><br /><br />
+      <div id="alertdob" style="color:red;"></div>
+
+      <!-- Checkbox voor acceptatie van de voorwaarden -->
+      <input type="checkbox" id="policy" name="policy" tabindex="13" />
+      <label for="policy" href="policy.php">I accept the terms and conditions</label><br /><br />
+       <div id="alertpolicy" style="color:red;"></div>
+    </div>
+
+    <!-- Knop om het formulier te verzenden -->
+    <input class="knop" type="submit" tabindex="14">Finish order</input>
     </section>
   </form>
 

@@ -54,6 +54,31 @@ session_start();
       }
     }
     ?>
+    <?php
+    include 'includes/products.php'; // Inclusie van het productbestand
+
+    // Haal de IDs van producten in de winkelwagen op
+    $cartProductIds = [];
+    if (isset($_SESSION['cart'])) {
+      foreach ($_SESSION['cart'] as $cartItem) {
+        $cartProductIds[] = $cartItem['id'];
+      }
+    }
+
+    // Filter producten die niet in de winkelwagen zitten
+    $availableProducts = array_filter($products, function ($product) use ($cartProductIds) {
+      return !in_array($product['id'], $cartProductIds);
+    });
+
+    // Selecteer 5 willekeurige producten
+    $randomProducts = [];
+    if (count($availableProducts) > 0) {
+      $randomKeys = array_rand($availableProducts, min(4, count($availableProducts)));
+      foreach ((array) $randomKeys as $key) {
+        $randomProducts[] = $availableProducts[$key];
+      }
+    }
+    ?>
 
     <!-- Samenvatting van de winkelwagen -->
     <div id="cart-summary">
@@ -70,6 +95,38 @@ session_start();
     <!-- Knoppen om de winkelwagen te legen of naar de checkout te gaan -->
     <button class="clear-cart" onclick="clearCart()">Clear Cart</button>
     <a class="clear-cart" href="checkout.php">To checkout</a>
+
+    <!-- Willekeurige producten sectie -->
+    <div id="random-products">
+      <h3>You might also like:</h3><br>
+      <div class="product-container">
+        <?php foreach ($randomProducts as $product): ?>
+          <div class="shoe">
+            <!-- Producttitel -->
+            <h3><?php echo $product["title"]; ?></h3>
+
+            <!-- Productafbeelding met link naar detailpagina -->
+            <a href="detail.php?id=<?php echo $product["id"]; ?>">
+              <img src="<?php echo $product["images"][0] ?>" alt="<?php echo $product["title"]; ?>" />
+            </a>
+
+            <!-- Productprijs -->
+            <p class="prijs">Price: -$<?php echo $product["price"]; ?>-</p>
+
+            <!-- Extra productinformatie -->
+            <div class="info">
+              <p><strong>Brand name:</strong> <?php echo $product["brand"]; ?></p>
+              <p><strong>Sizes Available:</strong> <?php echo $product["sizes"]; ?></p>
+
+              <!-- Knop om product aan winkelwagen toe te voegen -->
+              <button class="add-to-cart" onclick="addToCart('<?php echo $product["title"]; ?>', <?php echo $product["price"]; ?>,'<?php echo $product["brand"]; ?>','<?php echo $product["sizes"]; ?>','<?php echo $product["id"]; ?>')">Add to cart</button>
+            </div>
+          </div>
+        <?php endforeach; ?>
+
+      </div>
+    </div>
+
   </main>
 
   <script>

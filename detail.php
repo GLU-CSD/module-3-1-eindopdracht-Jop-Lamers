@@ -116,6 +116,67 @@
         });
     }
 </script>
+<script>//star rating
+const stars = document.querySelectorAll('.star');
+const applyButton = document.getElementById('apply-rating');
+const ratingMessage = document.getElementById('rating-message');
+let selectedRating = 0;
+let ratingApplied = false;
+
+stars.forEach(star => {
+    star.addEventListener('mouseover', function () {
+        if (!ratingApplied) {
+            highlightStars(this.getAttribute('data-value'));
+        }
+    });
+
+    star.addEventListener('mouseout', function () {
+        if (!ratingApplied) {
+            resetStars();
+        }
+    });
+
+    star.addEventListener('click', function () {
+        if (!ratingApplied) {
+            selectedRating = this.getAttribute('data-value');
+            highlightStars(selectedRating);
+        }
+    });
+});
+
+function highlightStars(rating) {
+    stars.forEach(star => {
+        if (star.getAttribute('data-value') <= rating) {
+            star.classList.add('selected');
+        } else {
+            star.classList.remove('selected');
+        }
+    });
+}
+
+function resetStars() {
+    stars.forEach(star => {
+        star.classList.remove('selected');
+    });
+}
+
+applyButton.addEventListener('click', function () {
+    if (selectedRating > 0 && !ratingApplied) {
+        ratingApplied = true;
+        ratingMessage.textContent = `You rated this product ${selectedRating} star(s).`;
+        applyButton.disabled = true;
+        applyButton.style.cursor = 'not-allowed';
+        stars.forEach(star => {
+            star.style.cursor = 'default';
+        });
+    } else if (selectedRating === 0) {
+        ratingMessage.textContent = 'Please select a rating before applying.';
+        ratingMessage.style.color = 'black';
+    }
+});
+
+
+</script>
 <script src="assets/js/app.js"></script>
 
 </html>
