@@ -22,16 +22,16 @@
             <div class="results">
                 <?php
                 // Lees GET-parameters uit de URL (gegevens die via het formulier zijn verzonden)
-                $firstname = $_GET['firstname']; // Voornaam van de gebruiker
-                $lastname = $_GET['lastname']; // Achternaam van de gebruiker
-                $street = $_GET['street']; // Straatnaam
-                $housenumber = $_GET['housenumber']; // Huisnummer
-                $address = $_GET['address']; // Adres
-                $country = $_GET['country']; // Land
-                $email_address = $_GET['e-mail_address']; // E-mailadres
-                $telephonenumber = $_GET['telephonenumber']; // Telefoonnummer
-                $date_of_birth = $_GET['date_of_birth']; // Geboortedatum
-                $policy = $_GET['policy']; // Beleid (bijvoorbeeld akkoord met voorwaarden)
+                $firstname = $_GET['firstname'] ?? ''; // Voornaam van de gebruiker
+                $lastname = $_GET['lastname'] ?? ''; // Achternaam van de gebruiker
+                $street = $_GET['street'] ?? ''; // Straatnaam
+                $housenumber = $_GET['housenumber'] ?? ''; // Huisnummer
+                $address = $_GET['address'] ?? ''; // Adres
+                $country = $_GET['country'] ?? ''; // Land
+                $email_address = $_GET['e-mail_address'] ?? ''; // E-mailadres
+                $telephonenumber = $_GET['telephonenumber'] ?? ''; // Telefoonnummer
+                $date_of_birth = $_GET['date_of_birth'] ?? ''; // Geboortedatum
+                $policy = $_GET['policy'] ?? ''; // Beleid (bijvoorbeeld akkoord met voorwaarden)
 
                 // Print de ontvangen GET-parameters op de pagina
                 echo "<p><strong>First Name:</strong> $firstname</p>";
@@ -44,6 +44,8 @@
                 echo "<p><strong>Telephone Number:</strong> $telephonenumber</p>";
                 echo "<p><strong>Date of Birth:</strong> $date_of_birth</p>";
                 echo "<p><strong>Policy Accepted:</strong> " . ($policy ? "Yes" : "No") . "</p>";
+
+                echo "<button class='finishOrderTXT' onclick=\"window.location.href='thanks.php'\">Finish order!</button>";
 
                 // Databaseverbinding instellen
                 $servername = "localhost"; // Servernaam (meestal localhost)

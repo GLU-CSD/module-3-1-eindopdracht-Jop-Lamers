@@ -125,6 +125,9 @@ document.addEventListener("DOMContentLoaded", function () {
     return false;
   }
 
+ //submit form
+ checkoutForm.submit();
+
       return true;
     });
   }

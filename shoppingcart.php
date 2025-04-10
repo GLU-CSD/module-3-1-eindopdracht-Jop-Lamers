@@ -190,7 +190,6 @@ session_start();
     }
 
     // Uncomment de volgende regel om de winkelwagen weer te geven bij het laden van de pagina
-    // window.onload = displayCart;
   </script>
 
   <!-- Inclusie van de footer -->
