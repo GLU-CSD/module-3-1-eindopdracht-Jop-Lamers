@@ -2,13 +2,13 @@
 <html class="no-js" lang="">
 
 <head>
-  <!-- Metadata en basisinstellingen voor de pagina -->
+  <!-- Metadata en basisinstellingen -->
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>D's shoe store</title>
   
   <!-- CSS-stylesheet koppelen -->
-  <link rel="stylesheet" href="assets/css/style.css?v1.1" />
+  <link rel="stylesheet" href="assets/css/style.css?v=1.1" />
   
   <!-- Favicon instellen -->
   <link rel="icon" type="image/jpeg" href="logo shoe stor.jpeg" />
@@ -20,51 +20,52 @@
   <meta property="og:url" content="" />
   <meta property="og:image" content="" />
   <meta property="og:image:alt" content="" />
-
+  
   <!-- Extra iconen voor verschillende apparaten -->
   <link rel="icon" href="/favicon.ico" sizes="any" />
   <link rel="icon" href="/icon.svg" type="image/svg+xml" />
   <link rel="apple-touch-icon" href="icon.png" />
-
+  
   <!-- Google Fonts koppelen -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Darumadrop+One&family=Noto+Sans:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
-
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&family=Merriweather:wght@400;700&display=swap" rel="stylesheet">
+  
   <!-- Thema-kleur instellen -->
   <meta name="theme-color" content="#fafafa" />
 </head>
 
 <body>
 
-  <!-- Header en navigatiebalk invoegen -->
+  <!-- Header en navigatiebalk insluiten -->
   <?php include 'includes/header.php'; ?>
   <?php include 'includes/nav.php'; ?>
 
   <div id="main">
-    <!-- Zijmenu invoegen -->
+    <!-- Zijmenu insluiten -->
     <?php include 'includes/sidenav.php'; ?>
 
-    <!-- Productcontainer voor kleding -->
+    <!-- Productcontainer voor schoenen -->
     <div id="Shoes" class="product-container">
 
       <?php
-      // Productgegevens ophalen en weergeven
+      // Productgegevens insluiten
       include 'includes/productsclothing.php';
-
-      // Door elk product in de lijst itereren
-      foreach ($products as $product) {
       ?>
+
+      <!-- Loop door alle producten en toon ze -->
+      <?php foreach ($products as $product): ?>
         <div class="shoe">
-          <!-- Producttitel weergeven -->
+          <!-- Producttitel -->
           <h3><?php echo $product["title"]; ?></h3>
           
-          <!-- Link naar productdetails met afbeelding -->
+          <!-- Productafbeelding met link naar detailpagina -->
           <a href="detail.php?id=<?php echo $product["id"]; ?>">
             <img src="<?php echo $product["images"][0] ?>" alt="<?php echo $product["title"]; ?>" />
           </a>
           
-          <!-- Prijs van het product -->
+          <!-- Productprijs -->
           <p class="prijs">Price: -$<?php echo $product["price"]; ?>-</p>
           
           <!-- Extra productinformatie -->
@@ -73,27 +74,27 @@
             <p><strong>Sizes Available:</strong> <?php echo $product["sizes"]; ?></p>
             
             <!-- Knop om product aan winkelwagen toe te voegen -->
-            <button class="add-to-cart" onclick="addToCart('<?php echo $product["title"]; ?>', <?php echo $product["price"]; ?>)">Add to cart</button>
+            <button class="add-to-cart" onclick="addToCart('<?php echo $product["title"]; ?>', <?php echo $product["price"]; ?>,'<?php echo $product["brand"]; ?>','<?php echo $product["sizes"]; ?>','<?php echo $product["id"]; ?>')">Add to cart</button>
           </div>
         </div>
-      <?php
-      }
-      ?>
+      <?php endforeach; ?>
 
     </div>
   </div>
 
-  <!-- Footer invoegen -->
+  <!-- Footer insluiten -->
   <?php include 'includes/footer.php'; ?>
 </body>
 
 <script>
-  // Functie om de taal te wijzigen (placeholder)
+  // Functie om taal te wijzigen (placeholder)
   function changeLanguage() {
     let lang = document.getElementById("language").value;
     "Language changed to: " + (lang === "de" ? "Deutsch" : "Nederlands");
   }
+</script>
 
+<script>
   // Slider functionaliteit
   var slider = document.getElementById("myRange");
   var output = document.getElementById("demo");
@@ -106,26 +107,42 @@
   // Winkelwagen functionaliteit
   let cart = JSON.parse(localStorage.getItem('cart')) || [];
 
-  // Product toevoegen aan winkelwagen
-  function addToCart(productName, productPrice) {
+  function addToCart(productName, productPrice, productBrand, productSizes, productid) {
+    // Functie om product toe te voegen aan winkelwagen
+    winkelWagenAdd();
     const product = {
       name: productName,
       price: productPrice,
-      quantity: 1
+      quantity: 1,
+      brand: productBrand,
+      sizes: productSizes,
+      id: productid,
     };
 
-    // Controleren of product al in winkelwagen zit
+    // AJAX-verzoek om product toe te voegen aan server-side winkelwagen
+    var xhr = new XMLHttpRequest();
+    xhr.open('POST', 'xhr_addtocart.php', product);
+    xhr.onload = function() {
+      // Hier kun je de serverrespons verwerken
+      console.log(this.responseText);
+    }
+    const data = JSON.stringify(product);
+    const formData = new FormData();
+    formData.append('product', data);
+    xhr.send(formData);
+
+    // Controleer of product al in winkelwagen zit
     const existingProduct = cart.find(item => item.name === productName);
     if (existingProduct) {
-      existingProduct.quantity += 1; // Aantal verhogen als het al bestaat
+      existingProduct.quantity += 1;
     } else {
-      cart.push(product); // Nieuw product toevoegen
+      cart.push(product);
     }
 
     // Winkelwagen opslaan in localStorage
     localStorage.setItem('cart', JSON.stringify(cart));
 
-    // Bevestigingsmelding
+    // Toon melding aan gebruiker
     console.log(cart);
     alert(`${productName} has been added to your cart.`);
   }
@@ -133,4 +150,5 @@
 
 <!-- Externe JavaScript-bestand koppelen -->
 <script src="assets/js/app.js"></script>
+
 </html>

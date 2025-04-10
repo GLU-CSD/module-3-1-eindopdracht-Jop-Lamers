@@ -201,7 +201,7 @@ header #balk1 {
   height: 40px;
   width: 100%;
   display: flex;
-  background-color: #f9f9f9;
+  background-color: #f7f7f7;
 }
 
 header img {
@@ -209,7 +209,7 @@ header img {
   width: 200px;
 }
 nav {
-  background-color: #f9f9f9;
+  background-color: #f7f7f7;
   position: sticky;
   top: 0;
   margin: 15px 0;
@@ -614,15 +614,14 @@ main {
 }
 
 button {
-  font-size: 18px;
-  margin-left: 50px;
-  margin-right: 50px;
-  text-align: center;
+  font-family: "Darumadrop One", serif;
+  font-size: larger;
+  background-color: #e2e2e2;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
   color: #000000;
-  font-family: "Darumadrop One", sans-serif;
-  border-radius: 20px;
-  border: #000000 2px solid;
-  padding: 5px;
+  border-radius: 5px;
+  border: none;
+  display: inline-block;
 }
 
 button:hover {
@@ -632,8 +631,9 @@ button:hover {
 .clear-cart {
   font-family: "Darumadrop One", serif;
   background-color: #e0e0e0;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
   color: #000000;
-  border: 2px solid #000000;
+  border-radius: 5px;
   padding: 15px 30px;
   cursor: pointer;
   margin-top: 20px;
@@ -801,16 +801,4 @@ h1 #form-results {
   margin-bottom: 20px;
   text-align: center;
   color: #333;
-}
-
-.finishOrderTXT button {
-  font-size: 24px;
-  margin-left: 50px;
-  margin-right: 50px;
-  text-align: center;
-  color: #333;
-  font-family: "Darumadrop One", sans-serif;
-  border-radius: 20px;
-  border: #000000 2px solid;
-  padding: 2px;
 }
