@@ -1,3 +1,7 @@
+<?php
+session_start();
+
+?>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -23,7 +27,9 @@
     <main>
         <div class="thank-you-container">
             <!-- Bedankbericht voor de gebruiker -->
-            <h1>Thank You for Your Order!</h1>
+            <?php
+            echo "<h1>Thank You for Your Order " . $_SESSION['firstname'] . " " . $_SESSION['lastname'] . "!</h1>";
+            ?>
             <p>Your order has been placed successfully. Here are the items you ordered:</p>
             <!-- Container waar de samenvatting van de bestelling wordt weergegeven -->
             <div id="order-summary" class="order-summary"></div>

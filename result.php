@@ -45,13 +45,11 @@
                 echo "<p><strong>Date of Birth:</strong> $date_of_birth</p>";
                 echo "<p><strong>Policy Accepted:</strong> " . ($policy ? "Yes" : "No") . "</p>";
 
-                echo "<button class='finishOrderTXT' onclick=\"window.location.href='thanks.php'\">Finish order!</button>";
-
                 // Databaseverbinding instellen
                 $servername = "localhost"; // Servernaam (meestal localhost)
-                $username = "root"; // Gebruikersnaam voor de database
-                $password = ""; // Wachtwoord voor de database
-                $dbname = "checkout_gegevens"; // Naam van de database
+                $username = "u240561_webshop"; // Gebruikersnaam voor de database
+                $password = "hyNbavUWWTvQAVR2MHvH"; // Wachtwoord voor de database
+                $dbname = "u240561_webshop"; // Naam van de database
 
                 // Maak een verbinding met de database
                 $conn = new mysqli($servername, $username, $password, $dbname);
