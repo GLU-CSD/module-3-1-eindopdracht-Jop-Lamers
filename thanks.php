@@ -1,6 +1,9 @@
 <?php
+// Start de sessie
 session_start();
 
+// Vernietig de sessie om de winkelwagen te resetten
+//session_destroy();
 ?>
 <!DOCTYPE html>
 <html lang="en">

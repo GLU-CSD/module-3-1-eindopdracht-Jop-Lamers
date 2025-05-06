@@ -1,3 +1,10 @@
+<?php
+// Start de sessie
+session_start();
+
+// Vernietig de sessie om de winkelwagen te resetten
+//session_destroy();
+?>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -33,6 +40,10 @@
                 $date_of_birth = $_GET['date_of_birth'] ?? ''; // Geboortedatum
                 $policy = $_GET['policy'] ?? ''; // Beleid (bijvoorbeeld akkoord met voorwaarden)
 
+               
+                $_SESSION['firstname'] = $firstname; // Sla de voornaam op in de sessie
+                $_SESSION['lastname'] = $lastname; // Sla de achternaam op in de sessie
+
                 // Print de ontvangen GET-parameters op de pagina
                 echo "<p><strong>First Name:</strong> $firstname</p>";
                 echo "<p><strong>Last Name:</strong> $lastname</p>";
@@ -45,11 +56,19 @@
                 echo "<p><strong>Date of Birth:</strong> $date_of_birth</p>";
                 echo "<p><strong>Policy Accepted:</strong> " . ($policy ? "Yes" : "No") . "</p>";
 
-                // Databaseverbinding instellen
+                echo "<button class='finishOrderTXT' onclick=\"window.location.href='thanks.php'\">Finish order!</button>";
+
                 $servername = "localhost"; // Servernaam (meestal localhost)
-                $username = "u240561_webshop"; // Gebruikersnaam voor de database
-                $password = "hyNbavUWWTvQAVR2MHvH"; // Wachtwoord voor de database
-                $dbname = "u240561_webshop"; // Naam van de database
+                $username = "root"; // Gebruikersnaam voor de database
+                $password = ""; // Wachtwoord voor de database
+                $dbname = "checkout_gegevens"; // Naam van de database
+
+
+
+                // $servername = "localhost"; // Servernaam (meestal localhost)
+                // $username = "u240561_webshop"; // Gebruikersnaam voor de database
+                // $password = "hyNbavUWWTvQAVR2MHvH"; // Wachtwoord voor de database
+                // $dbname = "u240561_webshop"; // Naam van de database
 
                 // Maak een verbinding met de database
                 $conn = new mysqli($servername, $username, $password, $dbname);
