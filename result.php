@@ -58,17 +58,17 @@ session_start();
 
                 echo "<button class='finishOrderTXT' onclick=\"window.location.href='thanks.php'\">Finish order!</button>";
 
-                $servername = "localhost"; // Servernaam (meestal localhost)
-                $username = "root"; // Gebruikersnaam voor de database
-                $password = ""; // Wachtwoord voor de database
-                $dbname = "checkout_gegevens"; // Naam van de database
-
-
-
                 // $servername = "localhost"; // Servernaam (meestal localhost)
-                // $username = "u240561_webshop"; // Gebruikersnaam voor de database
-                // $password = "hyNbavUWWTvQAVR2MHvH"; // Wachtwoord voor de database
-                // $dbname = "u240561_webshop"; // Naam van de database
+                // $username = "root"; // Gebruikersnaam voor de database
+                // $password = ""; // Wachtwoord voor de database
+                // $dbname = "checkout_gegevens"; // Naam van de database
+
+
+
+                $servername = "localhost"; // Servernaam (meestal localhost)
+                $username = "u240561_webshop"; // Gebruikersnaam voor de database
+                $password = "hyNbavUWWTvQAVR2MHvH"; // Wachtwoord voor de database
+                $dbname = "u240561_webshop"; // Naam van de database
 
                 // Maak een verbinding met de database
                 $conn = new mysqli($servername, $username, $password, $dbname);
